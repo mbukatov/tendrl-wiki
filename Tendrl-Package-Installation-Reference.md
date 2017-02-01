@@ -121,6 +121,6 @@ The following procedure outlines the procedure to install tendrl server componen
 ## SELinux Configuration
 
    Tendrl does not currently support running on SELinux enabled systems. In case there are problems
-   running tendrl on such systems, please turn SELinux off.
+   running tendrl on such systems, please set SELinux to 'Permissive' mode.
 
    
