@@ -1,0 +1,54 @@
+# Guidelines for filing bugs against Tendrl
+
+Please follow these guidelines to file bugs with sufficient information to allow the Tendrl team to debug the issues. Before filing the bugs, please ensure that you've understood the roles and responsibilities of the various https://github.com/Tendrl/documentation/blob/master/tendrl-core-components-overview.adoc[components of the Tendrl core stack].
+
+IMPORTANT: The bugs filed need to be accompanied with all the information requested in https://github.com/Tendrl/documentation/wiki/Information-required-for-debugging-issues-on-the-Tendrl-stack. Any data required below is in addition to this data.
+
+## Rendering related bugs
+
+* There's a problem with the layout
+* There's a problem while interacting with any of the UI elements
+* UI elements don't behave as expected
+
+File at: https://github.com/Tendrl/dashboard/issues
+
+**The following are NOT dashboard bugs**:
+
+* Wrong information displayed in any of the list views.
+* Wrong information displayed during cluster import.
+
+## Wrong data displayed
+
+### State information
+
+For any issues pertaining to this section, the following information needs to be provided, in addition to the link above: 
+
+* Output of the `GetNodeList` and `GetClusterList` API calls
+* A recursive dump of etcd from the root
+
+If the cluster state information displayed is wrong, it is more likely to be an API or a backend problem rather than a dashboard problem. The information in this category consists of the following:
+
+* Cluster status (up/down/error etc.)
+* List of nodes in the cluster and their roles
+* Status (up/down/error etc.) of specific objects in the cluster (pools, osds, volumes etc.)
+* Status of nodes (up/down/error etc.)
+
+For any of these issues, use the following steps to file the bugs:
+
+Have you validated the output of `GetNodeList` and `GetClusterList` API calls?::
+If not, do so. Check if the values returned from the API calls match with the values expected.
+Do the API calls provide the correct information?::
+If yes, there's a problem with the dashboard displaying the information. File the bug at https://github.com/Tendrl/dashboard/issues. Include the output of both the API calls in the issue along with the screenshots of the UI rendering the information incorrectly.
+Do the API calls provide incorrect information?::
+If yes, a dump of etcd is required. File the bugs at:
+* https://github.com/Tendrl/gluster-integration/issues for gluster object lists
+* https://github.com/Tendrl/ceph-integration/isssues for ceph object lists
+* https://github.com/Tendrl/node-agent/isssues for hosts list, cluster list, import cluster workflow
+
+### Utilisation or performance data
+
+This includes data usage data displayed anywhere on the UI __over a period of time__. This means graphs or pie diagrams (except presently for the ceph pool utilisation data). Any bugs related to this need to be filed at github.com/Tendrl/performance-monitoring/issues.
+
+Bugs against wrong ceph pools utilisation display are to be filed at https://github.com/Tendrl/ceph-integration/issues
+
+
