@@ -66,23 +66,74 @@ The following procedure outlines the procedure to install tendrl server componen
 
    `yum install tendrl-dashboard`
 
-10. Restart httpd
+10. Install tendrl api httpd(until https://github.com/Tendrl/dashboard/issues/118 is fixed)
+   
+    `yum install tendrl-api-httpd`
+
+11. Restart httpd
    
     `systemctl restart httpd`
 
-11. Firewall configurations
+12. Disable Firewall
 
-    `firewall-cmd --permanent --zone=public --add-port=2379/tcp`
+    `service firewalld stop`
 
-    `firewall-cmd --permanent --zone=public --add-port=9292/tcp`
+    `systemctl disable firewalld`
 
-    `firewall-cmd --permanent --zone=public --add-port=80/tcp`
+    `iptables --flush`
 
-    `firewall-cmd --reload`
-
-12. Open the following URL in the browser
+13. Open the following URL in the browser
 
     `http://<IP of the server>`
+
+## Performance Monitoring installation
+
+    Note:
+    This can be installed either on
+
+        1. Node where etcd is installed
+                or
+        2. New node
+           Please follow steps 1 and 2 above in addition to below steps
+
+1. Install Performance Monitoring yum install tendrl-performance-monitoring
+
+   `yum install tendrl-performance-monitoring`
+
+2. Init graphite-db
+
+   `/usr/lib/python2.7/site-packages/graphite/manage.py syncdb --noinput`
+
+   `chown apache:apache /var/lib/graphite-web/graphite.db`
+
+3. Enable and start carbon-cache service
+
+   `systemctl enable carbon-cache`
+
+   `systemctl start carbon-cache`
+
+4. Restart httpd
+
+   `systemctl restart httpd`
+
+5. Configure performance monitoring
+
+    `Open /etc/tendrl/performance-monitoring/performance-monitoring.conf.yaml`
+   
+    `update -->`
+
+    `etcd_connection = <IP of etcd server>`
+
+    `time_series_db_server = <IP of current node>`
+
+    `api_server_addr = <IP of current node>`
+
+6. Enable and start performance monitoring service
+
+   `systemctl enable tendrl-performance-monitoring`
+
+   `systemctl start tendrl-performance-monitoring`
+     
 
 ## Storage Node Installation
 
@@ -116,7 +167,23 @@ The following procedure outlines the procedure to install tendrl server componen
 
    `systemctl start tendrl-node-agent`
 
-6. Now the node gets registered to etcd server and the same will be listed in the UI
+6. Install node-monitoring
+
+   `yum install tendrl-node-monitoring`
+
+7. Configure node-monitoring
+
+   `Open /etc/tendrl/node-monitoring/node-monitoring.conf.yaml`
+
+   `Update →`
+
+   `etcd_connection = <IP of etcd server>`
+
+8. Enable and start node-monitoring
+
+   `systemctl enable tendrl-node-monitoring`
+
+   `systemctl start tendrl-node-monitoring`
 
 ## SELinux Configuration
 
