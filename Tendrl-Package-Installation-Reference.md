@@ -179,7 +179,15 @@ The following procedure outlines the procedure to install tendrl server componen
 
    `etcd_connection = <IP of etcd server>`
 
-8. Enable and start node-monitoring
+8. Disable Firewall
+
+    `service firewalld stop`
+
+    `systemctl disable firewalld`
+
+    `iptables --flush`
+
+9. Enable and start node-monitoring
 
    `systemctl enable tendrl-node-monitoring`
 
@@ -189,5 +197,3 @@ The following procedure outlines the procedure to install tendrl server componen
 
    Tendrl does not currently support running on SELinux enabled systems. In case there are problems
    running tendrl on such systems, please set SELinux to 'Permissive' mode.
-
-   
