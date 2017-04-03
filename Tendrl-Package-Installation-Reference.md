@@ -137,6 +137,8 @@ The following procedure outlines the procedure to install tendrl server componen
 
 ## Storage Node Installation
 
+Note: If you are configuring the v 1.2.2 release, please refer to the sequence of steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.2.2 This document has instructions specific to tags to be appended to the YAML files for tendrl-node-agent
+
 1. Install CentOS 7.3
 
 2. Enable the following repositories
