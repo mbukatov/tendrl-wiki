@@ -12,15 +12,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `yum install epel-release`
     
-    `yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/rhscon-2-rhel-7-compose/latest-RHSCON-2-RHEL-7/compose/Installer/x86_64/os/`
-
-    `Update -->` 
-
-    `/etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_rhscon-2-rhel-7-compose_latest-RHSCON-2-RHEL-7_compose_Installer_x86_64_os_.repo`
-
-    `remove added from: part of repo name`
-
-    `Disable the gpgcheck --> gpgcheck=0`
+    configure the ceph-installer repo (as made available by the project).
 
 3. Install Etcd
 
@@ -187,25 +179,7 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
 
     `yum install epel-release`
 
-    `yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/MON/x86_64/os/`
-
-    `Update -->` 
-
-    `/etc/yum.repos.d//etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_ceph-2-rhel-7-compose_latest-RHCEPH-2-RHEL-7_compose_MON_x86_64_os_.repo`
-
-    `remove added from: part of repo name`
-
-    `Disable the gpgcheck --> gpgcheck=0`
-
-    `yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/OSD/x86_64/os/`
-
-    `Update -->` 
-
-    `/etc/yum.repos.d//etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_ceph-2-rhel-7-compose_latest-RHCEPH-2-RHEL-7_compose_OSD_x86_64_os_.repo`
-
-    `remove added from: part of repo name`
-
-    `Disable the gpgcheck --> gpgcheck=0`
+    configure the ceph-mon and ceph-osd repo (as made available by the project). Make sure to disable the gpgcheck if the keys are not setup properly
 
 
 3. Install Node Agent
