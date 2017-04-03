@@ -11,6 +11,16 @@ The following procedure outlines the procedure to install tendrl server componen
     `cp tendrl-tendrl-epel-7.repo /etc/yum.repos.d`
 
     `yum install epel-release`
+    
+    `yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/rhscon-2-rhel-7-compose/latest-RHSCON-2-RHEL-7/compose/Installer/x86_64/os/`
+
+    `Update -->` 
+
+    `/etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_rhscon-2-rhel-7-compose_latest-RHSCON-2-RHEL-7_compose_Installer_x86_64_os_.repo`
+
+    `remove added from: part of repo name`
+
+    `Disable the gpgcheck --> gpgcheck=0`
 
 3. Install Etcd
 
@@ -62,19 +72,47 @@ The following procedure outlines the procedure to install tendrl server componen
 
    `systemctl start tendrl-apid`
 
-9. Install tendrl dashboard
+9. Install Node Agent
 
-   `yum install tendrl-dashboard`
+    `yum install tendrl-node-agent`
 
-10. Install tendrl api httpd(until https://github.com/Tendrl/dashboard/issues/118 is fixed)
+10. Configure Node Agent
+
+    Edit the below configurations for connecting to the etcd server
+
+    `Open /etc/tendrl/node-agent/node-agent.conf.yaml`
+
+    `Update →`
+
+    `etcd_connection = <IP of etcd server>`
+
+    `Add a new tag under tags:`
+
+    `provisioner/ceph`
+
+11. Enable and start Node Agent
+
+    `systemctl enable tendrl-node-agent`
+
+    `systemctl start tendrl-node-agent`
+
+12. Install ceph installer
+
+    `yum install ceph-installer`
+
+13. Install tendrl dashboard
+
+    `yum install tendrl-dashboard`
+
+14. Install tendrl api httpd(until https://github.com/Tendrl/dashboard/issues/118 is fixed)
    
     `yum install tendrl-api-httpd`
 
-11. Restart httpd
+15. Restart httpd
    
     `systemctl restart httpd`
 
-12. Disable Firewall
+16. Disable Firewall
 
     `service firewalld stop`
 
@@ -82,7 +120,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `iptables --flush`
 
-13. Open the following URL in the browser
+17. Open the following URL in the browser
 
     `http://<IP of the server>`
 
@@ -148,6 +186,27 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
     `cp tendrl-tendrl-epel-7.repo /etc/yum.repos.d`
 
     `yum install epel-release`
+
+    `yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/MON/x86_64/os/`
+
+    `Update -->` 
+
+    `/etc/yum.repos.d//etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_ceph-2-rhel-7-compose_latest-RHCEPH-2-RHEL-7_compose_MON_x86_64_os_.repo`
+
+    `remove added from: part of repo name`
+
+    `Disable the gpgcheck --> gpgcheck=0`
+
+    `yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/OSD/x86_64/os/`
+
+    `Update -->` 
+
+    `/etc/yum.repos.d//etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_ceph-2-rhel-7-compose_latest-RHCEPH-2-RHEL-7_compose_OSD_x86_64_os_.repo`
+
+    `remove added from: part of repo name`
+
+    `Disable the gpgcheck --> gpgcheck=0`
+
 
 3. Install Node Agent
 
