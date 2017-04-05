@@ -4,6 +4,8 @@ This release includes
 * APIs for Create {Cluster, Pool, RBDs, EC Profile}
 * APIs for Delete {Cluster, Pool, RBDs, EC Profile)
 * Misc fixes for various issues around Import Cluster; Listing of nodes
+* Performance and node monitoring 
+* Alerting (node and cluster)
 
 Pre-requisites for Creating Ceph cluster via tendrl-api
 - Install tendrl-node-agent on node which is running tendrl-api and central store
