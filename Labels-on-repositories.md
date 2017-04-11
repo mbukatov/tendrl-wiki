@@ -17,3 +17,5 @@ I am adding the following list of labels to all the repositories. I will be addi
 * test coverage
 * UI flows
 * wontfix
+* ux-feedback
+* test-blocker
