@@ -96,15 +96,11 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `yum install tendrl-dashboard`
 
-14. Install tendrl api httpd(until https://github.com/Tendrl/dashboard/issues/118 is fixed)
-   
-    `yum install tendrl-api-httpd`
-
-15. Restart httpd
+14. Restart httpd
    
     `systemctl restart httpd`
 
-16. Disable Firewall
+15. Disable Firewall
 
     `service firewalld stop`
 
@@ -112,7 +108,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `iptables --flush`
 
-17. Open the following URL in the browser
+16. Open the following URL in the browser
 
     `http://<IP of the server>`
 
