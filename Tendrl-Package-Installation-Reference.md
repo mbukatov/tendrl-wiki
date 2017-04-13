@@ -7,8 +7,10 @@ The following procedure outlines the procedure to install tendrl server componen
 2. Enable the following repositories
 
    `wget https://copr.fedorainfracloud.org/coprs/tendrl/tendrl/repo/epel-7/tendrl-tendrl-epel-7.repo`
+   
+   `wget https://copr.fedorainfracloud.org/coprs/tendrl/dependencies/repo/epel-7/tendrl-dependencies-epel-7.repo`
 
-    `cp tendrl-tendrl-epel-7.repo /etc/yum.repos.d`
+    `cp tendrl-*.repo /etc/yum.repos.d`
 
     `yum install epel-release`
     
