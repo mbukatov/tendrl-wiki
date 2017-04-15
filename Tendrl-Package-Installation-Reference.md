@@ -173,11 +173,13 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
 
    `wget https://copr.fedorainfracloud.org/coprs/tendrl/tendrl/repo/epel-7/tendrl-tendrl-epel-7.repo`
 
-    `cp tendrl-tendrl-epel-7.repo /etc/yum.repos.d`
+   `wget https://copr.fedorainfracloud.org/coprs/tendrl/dependencies/repo/epel-7/tendrl-dependencies-epel-7.repo`
 
-    `yum install epel-release`
+   `cp tendrl-*.repo /etc/yum.repos.d`
 
-    configure the ceph-mon and ceph-osd repo (as made available by the project). Make sure to disable the gpgcheck if the keys are not setup properly
+   `yum install epel-release`
+
+    configure the ceph-mon, ceph-osd repo and gluster repo (as made available by the project). Make sure to disable the gpgcheck if the keys are not setup properly
 
 
 3. Install Node Agent
