@@ -13,3 +13,6 @@ Pre-requisites for Creating Ceph cluster via tendrl-api
 - Install **[ceph-installer <=1.2.2](https://www.redhat.com/archives/tendrl-devel/2017-April/msg00036.html)** on the tendrl-api node
 - Configure appropriate ceph repositories on all cluster nodes as required by ceph-installer
 - Disable gpg key check for ceph repositories on all cluster nodes
+
+
+Install: https://github.com/Tendrl/documentation/wiki/Tendrl-Package-Installation-Reference
