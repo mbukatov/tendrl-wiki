@@ -1,6 +1,6 @@
 This release includes
 
-* Fixes for the bugs/defects/topics reported on previous builds
+* Fixes for the bugs/defects/topics reported on previous builds (including those listed [here](https://github.com/Tendrl/usmqe-tests/wiki#blockers))
 * APIs for Create {Ceph Cluster, Pool, RBDs, EC Profile}
 * APIs for Update/Delete {Pool, RBDs, EC Profile)
 * APIs for Create {Gluster Cluster, Brick, Volume}
