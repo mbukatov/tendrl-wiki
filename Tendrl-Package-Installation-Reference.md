@@ -179,7 +179,9 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
 
    `yum install epel-release`
 
-    configure the ceph-mon, ceph-osd repo and gluster repo (as made available by the project). Make sure to disable the gpgcheck if the keys are not setup properly
+    configure the ceph-mon, ceph-osd repo (as made available by the project and required only for ceph nodes). Make sure to disable the gpgcheck if the keys are not setup properly
+
+    Configure the gdeploy repo - https://copr.fedorainfracloud.org/coprs/sac/gdeploy/repo/epel-7/sac-gdeploy-epel-7.repo - required only for gluster nodes
 
 
 3. Install Node Agent
