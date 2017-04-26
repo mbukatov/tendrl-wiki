@@ -197,6 +197,10 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
    `Update →`
 
    `etcd_connection = <IP of etcd server>`
+   
+   `Add a new tag under tags:`
+
+   `provisioner/gluster`
 
 5. Enable and start Node Agent
 
