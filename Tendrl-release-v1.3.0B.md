@@ -9,4 +9,5 @@ This beta release includes
 * Dashboard detail for Day2 administrative operations
 
 Latest packages: https://copr.fedorainfracloud.org/coprs/tendrl/release/packages/
+
 Install: https://github.com/Tendrl/documentation/wiki/Tendrl-Package-Installation-Reference
