@@ -8,4 +8,5 @@ This beta release includes
 * Improvements to Alerting (node and cluster)
 * Dashboard detail for Day2 administrative operations
 
+Latest packages: https://copr.fedorainfracloud.org/coprs/tendrl/release/packages/
 Install: https://github.com/Tendrl/documentation/wiki/Tendrl-Package-Installation-Reference
