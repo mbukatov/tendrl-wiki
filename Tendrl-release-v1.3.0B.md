@@ -16,6 +16,7 @@ This beta release includes
 
 Pre-requisites (mandatory):
 - Install tendrl-node-agent on the node running tendrl-api and central store
+- tendrl-release v1.3.0 is not backward compatible with central store for tendrl-release v1.2.3, please use a new central store (etcd) instance, old data will not be migrated.
 
 Pre-requisites for Creating Ceph cluster via tendrl-api
 - Install **[ceph-installer <=1.2.2](https://www.redhat.com/archives/tendrl-devel/2017-April/msg00036.html)** on the tendrl-api node
