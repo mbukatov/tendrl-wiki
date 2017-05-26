@@ -1,4 +1,4 @@
-This beta release includes
+This beta2 release includes
 
 * Fixes for the bugs/defects/topics reported on previous builds
 * UI flows for Create {Ceph Cluster, Pool, RBDs}
