@@ -14,7 +14,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `yum install epel-release`
     
-    configure the ceph-installer repo (as made available by the project).
+    configure the ceph-installer repo (as made available by the project) if you want to manage/create ceph clusters.
 
 3. Install Etcd
 
@@ -90,7 +90,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `systemctl start tendrl-node-agent`
 
-12. Install ceph installer
+12. Install ceph installer if you want to manage/create ceph clusters
 
     `yum install ceph-installer`
 
