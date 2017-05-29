@@ -202,9 +202,9 @@ The following procedure outlines the procedure to install tendrl server componen
     follow the template as in: /etc/tendrl/alerting/email_auth.conf.yaml.sample
           And accordingly enable the following:
 
-        `auth = <ssl/tls>`
+        auth = <ssl/tls>
 
-        `email_pass = <password corresponding to email_id for authenticating to smtp server>`
+        email_pass = <password corresponding to email_id for authenticating to smtp server>
 
 4. Enable and start alerting service::
 
