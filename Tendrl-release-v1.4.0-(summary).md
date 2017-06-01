@@ -1,5 +1,3 @@
-# Tendrl release v1.4.0
-
 **This release includes**
 
 * Fixes for the bugs/defects/topics reported on previous builds
