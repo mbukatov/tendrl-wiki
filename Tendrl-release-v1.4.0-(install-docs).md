@@ -1,6 +1,6 @@
-- Latest packages: https://copr.fedorainfracloud.org/coprs/tendrl/release/packages/
-- Latest dependencies: https://copr.fedorainfracloud.org/coprs/tendrl/dependencies/packages/
-- Install: https://github.com/Tendrl/documentation/wiki/Tendrl-Package-Installation-Reference
+- **Latest packages**: https://copr.fedorainfracloud.org/coprs/tendrl/release/packages/
+- **Latest dependencies**: https://copr.fedorainfracloud.org/coprs/tendrl/dependencies/packages/
+- **Install**: https://github.com/Tendrl/documentation/wiki/Tendrl-Package-Installation-Reference
 
 
 **Pre-requisites (mandatory):**
