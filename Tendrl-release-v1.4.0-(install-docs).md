@@ -6,6 +6,7 @@
 **Pre-requisites (mandatory):**
 - Install tendrl-node-agent on the node running tendrl-api and central store
 - tendrl-release v1.4.0 is not backward compatible with central store for tendrl-release v1.3.0, please use a new central store (etcd) instance, old data will not be migrated.
+- The Node hosting tendrl-api/central_store should have minimum 12 GB of memory and 4 VCPUs (or equivalent)
 
 **Pre-requisites for Creating Ceph cluster via tendrl-api**
 - Install ceph-installer <=1.3.0 on the tendrl-api node
