@@ -11,6 +11,8 @@
 * Dashboard detail for Day2 administrative operations
 * Cluster IOPS
 
+**Known "open" issues:**
+* https://github.com/Tendrl/dashboard/issues/394
 
 **List of issues fixed per component:**
 
