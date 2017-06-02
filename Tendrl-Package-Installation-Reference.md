@@ -62,9 +62,9 @@ The following procedure outlines the procedure to install tendrl server componen
 
 8. Enable and start API service
 
-   `systemctl enable tendrl-apid`
+   `systemctl enable tendrl-api`
 
-   `systemctl start tendrl-apid`
+   `systemctl start tendrl-api`
 
 9. Install Node Agent
 
@@ -80,9 +80,6 @@ The following procedure outlines the procedure to install tendrl server componen
 
     `etcd_connection = <IP of etcd server>`
 
-    `Add a new tag under tags:`
-
-    `provisioner/ceph`
 
 11. Enable and start Node Agent
 
