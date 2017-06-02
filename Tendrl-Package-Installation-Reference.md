@@ -223,7 +223,7 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
 
 2. Enable the following repositories
 
-   `wget https://copr.fedorainfracloud.org/coprs/tendrl/tendrl/repo/epel-7/tendrl-tendrl-epel-7.repo`
+   `wget https://copr.fedorainfracloud.org/coprs/tendrl/release/repo/epel-7/tendrl-release-epel-7.repo`
 
    `wget https://copr.fedorainfracloud.org/coprs/tendrl/dependencies/repo/epel-7/tendrl-dependencies-epel-7.repo`
 
