@@ -46,8 +46,8 @@
 * https://github.com/Tendrl/alerting/pull/79
 * https://github.com/Tendrl/alerting/pull/78
 
-**tendrl-api v1.4.0:**
-* No new fixes, version remains same
+**tendrl-api v1.4.1:**
+* https://github.com/Tendrl/api/pull/204
 
 **tendrl-dashboard v1.4.1:**
 * https://github.com/Tendrl/dashboard/issues/405
