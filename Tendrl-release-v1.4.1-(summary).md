@@ -37,6 +37,7 @@
 
 **tendrl-performance-monitoring v1.4.1:**
 * https://github.com/Tendrl/performance-monitoring/issues/181
+* https://github.com/Tendrl/performance-monitoring/issues/188
 
 **tendrl-node-monitoring v1.4.1:**
 * https://github.com/Tendrl/node-monitoring/issues/47
