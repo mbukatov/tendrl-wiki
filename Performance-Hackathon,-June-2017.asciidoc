@@ -1,0 +1,16 @@
+# Tendrl Performance Hackathon, June 2017
+
+This page is intended to serve to gather the various possible performance improvement updates to be made to the various Tendrl components. The concerns would be prioritised before implementation.
+
+## Backend
+
+Job routing needs to be topic based:: Presently all the node agents, regardless of their roles, look at all the jobs. If the queues are separated based on the tags, we'll essentially be able to create a topic-exchange-like job routing structure. The individual node agents would need to monitor jobs only for their own roles (which are the same as the assigned tags). This would also enable jobs for certain tags to be monitored for at a higher frequency than others, as required.
+Extract the logging functionality into a separate process than the node agent:: This would allow separate resource constraints on the logging daemon and the node agent itself can focus on the core tasks. It may be necessary to keep the notifications and alerting functionality within the node agent itself, however.
+Switch the storage of notifications to a separate redis instance:: This would greatly reduce the load on etcd and allow only the core status and operational data to be in etcd. This would also, in turn, reduce the disk i/o from etcd.
+
+## API and UI
+
+Enable caching on the UI at per cluster and per node level:: The caching can be in-memory. Cluster and node level hashing would need to be enabled on the backend. The caching would be limited to only the core state and operational data.
+Enable etags functionality:: Based on the caching implementation on the API, it would be possible to enable etags based updates between the API and UI, where the data is fetched only if updated.
+The GetNodeList and GetClusterList calls should only serve the core status data:: The time series data is already fetched from separate calls to the monitoring backend, but is served in these API calls. Separating the calls would enable the UI to make these calls at a much lower frequency.
+UI makes contextual calls to the API:: The UI should make only the calls relevant to the currently displayed context. Notifications calls need to be made at a frequent interval at all times. Any calls to get the list of objects can be contextualised and made at a lower frequency, only for the information presently being displayed on the UI. Similarly, time series data can be fetched at a frequent interval, only when it is actually being displayed.
