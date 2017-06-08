@@ -209,11 +209,6 @@ The following procedure outlines the procedure to install tendrl server componen
 
    systemctl start tendrl-alerting
 
-Note: 
-
-All nodes need to have tendrl-user added to tendrl group created by node-agent
-
-``useradd tendrl-user -g tendrl``
 
 ## Storage Node Installation
 
