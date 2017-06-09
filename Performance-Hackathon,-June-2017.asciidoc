@@ -1,12 +1,13 @@
 # Tendrl Performance Hackathon, June 2017
 
-This page is intended to serve to gather the various possible performance improvement updates to be made to the various Tendrl components. The concerns would be prioritised before implementation.
+This page is intended to serve to gather the various possible performance improvement updates to be made to the various Tendrl components. The concerns would be prioritized before implementation.
 
 ## Backend
 
 Job routing needs to be topic based:: Presently all the node agents, regardless of their roles, look at all the jobs. If the queues are separated based on the tags, we'll essentially be able to create a topic-exchange-like job routing structure. The individual node agents would need to monitor jobs only for their own roles (which are the same as the assigned tags). This would also enable jobs for certain tags to be monitored for at a higher frequency than others, as required.
 Extract the logging functionality into a separate process than the node agent:: This would allow separate resource constraints on the logging daemon and the node agent itself can focus on the core tasks. It may be necessary to keep the notifications and alerting functionality within the node agent itself, however.
 Switch the storage of notifications to a separate redis instance:: This would greatly reduce the load on etcd and allow only the core status and operational data to be in etcd. This would also, in turn, reduce the disk i/o from etcd.
+Note: the switch to redis (for storing notifications) is experimental.
 General python/etcd performance improvements:: Tendrl backend run multiple python greenlets across it's service to process sds updates, jobs, logging etc, we need to figure out code hot spots (cpu, mem consumption) across Tendrl backend code via trace and perf tools available for python/linux. Tendrl uses etcd as it's central store, over here we need to isolate iterative/large reads, writes to etcd and find ways to reduce/improve it
 
 ## API and UI
