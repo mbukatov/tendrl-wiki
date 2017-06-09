@@ -60,6 +60,12 @@ The following procedure outlines the procedure to install tendrl server componen
 
           :password: ''
 
+   Create the admin user
+
+   `cd /usr/share/tendrl-api`
+
+   `RACK_ENV=production rake etcd:load_admin`
+
 8. Enable and start API service
 
    `systemctl enable tendrl-api`
