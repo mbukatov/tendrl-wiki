@@ -21,10 +21,12 @@
 * https://github.com/Tendrl/commons/issues/582
 * https://github.com/Tendrl/commons/issues/575
 * https://github.com/Tendrl/commons/issues/571
+* https://github.com/Tendrl/commons/issues/587 (performance fix)
 
 **tendrl-node-agent v1.4.1:**
 * https://github.com/Tendrl/node-agent/issues/485
 * https://github.com/Tendrl/node-agent/issues/489
+* https://github.com/Tendrl/commons/issues/586 (performance fix)
 
 **tendrl-gluster-integration v1.4.1**
 * https://github.com/Tendrl/gluster-integration/issues/286
