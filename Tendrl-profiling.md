@@ -16,4 +16,4 @@
 - Output https://gist.github.com/r0h4n/b8905c83789d40b434414957019d247d
 
 
-Note: profiling data can be visualized via https://github.com/ymichael/cprofilev (for *.pstat) and via http://valgrind.org/docs/manual/cl-manual.html (for *.callgrind)
+Note: profiling is available for all tendrl services except the tendrl-api, the profiling output can be visualized via https://github.com/ymichael/cprofilev (for *.pstat) and via http://valgrind.org/docs/manual/cl-manual.html (for *.callgrind)
