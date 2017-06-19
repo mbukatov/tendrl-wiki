@@ -1,1 +1,0 @@
-[Tendrl release v1.4.2 (install doc)](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.4.2-(install-doc))
