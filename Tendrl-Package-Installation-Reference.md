@@ -263,7 +263,7 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
 
    `etcd_connection = <IP of etcd server>`
    
-   `Add a new tag under tags(Only for Gluster Nodes):`
+   `Add a new tag under tags(This is applicable only to gluster.This is required to be set only on one of the nodes):`
 
    `provisioner/gluster`
 
