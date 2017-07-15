@@ -26,20 +26,20 @@
 * The core team would ensure that the decisions made regarding the project and changes to the road-map would align with the project vision.
 
 ## Components/Repos:
-* commons: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/commons}
-* node-agent: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/node-agent}
-* api: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/node-agent}
-* python-tendrlclient: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/python-tendrlclient}
-* ruby-tendrlclient: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/tendrl-ruby}
-* ceph-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/ceph-integration}
-* gluster-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/gluster-integration}
-* python-gdeploy : {Owner: [Darshan Narayana Murthy](https://github.com/nnDarshan), Repo: https://github.com/Tendrl/python-gdeploy}
+* commons: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/commons }
+* node-agent: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/node-agent }
+* api: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/api }
+* python-tendrlclient: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/python-tendrlclient }
+* ruby-tendrlclient: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/tendrl-ruby }
+* ceph-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/ceph-integration }
+* gluster-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/gluster-integration }
+* python-gdeploy : {Owner: [Darshan Narayana Murthy](https://github.com/nnDarshan), Repo: https://github.com/Tendrl/python-gdeploy }
 * SDS metrics/monitoring dashboard and Alerting: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: TBD}
-* dashboard: {Owner: [Ankush Behl](https://github.com/cloudbehl), [Neha Gupta](https://github.com/gnehapk), Repo: https://github.com/Tendrl/dashboard}
-* tendrl.org: {Owner: Tendrl core, [Jeff Applewhite](https://github.com/japplewhite), Repo: https://github.com/Tendrl/tendrl.github.io}
-* tendrl-ansible: {Owner: [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/Tendrl/tendrl-ansible}
-* documentation: {Owner: Tendrl core, [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/tendrl/documentation}
-* specifications: {Owner: Tendrl core, Repo: https://github.com/Tendrl/specifications}
+* dashboard: {Owner: [Ankush Behl](https://github.com/cloudbehl), [Neha Gupta](https://github.com/gnehapk), Repo: https://github.com/Tendrl/dashboard }
+* tendrl.org: {Owner: Tendrl core, [Jeff Applewhite](https://github.com/japplewhite), Repo: https://github.com/Tendrl/tendrl.github.io }
+* tendrl-ansible: {Owner: [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/Tendrl/tendrl-ansible }
+* documentation: {Owner: Tendrl core, [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/tendrl/documentation }
+* specifications: {Owner: Tendrl core, Repo: https://github.com/Tendrl/specifications }
 
 ## Unsupported repos (to be moved out of github.com/Tendrl unless adapted to Tendrl repo best practices)
 * https://github.com/Tendrl/usmqe-tests (Need repo name change as "tendrl-tests")
