@@ -42,7 +42,7 @@
 * specifications: {Owner: Tendrl core, Repo: https://github.com/Tendrl/specifications }
 
 ## Unsupported repos (to be moved out of github.com/Tendrl unless adapted to Tendrl repo best practices)
-* https://github.com/Tendrl/usmqe-tests (Need repo name change as "tendrl-tests")
-* https://github.com/Tendrl/usmqe-centos-ci (Need repo name change as "tendrl-centos-ci")
+* https://github.com/Tendrl/usmqe-tests (Need repo name change as "tendrl-tests" and official owner)
+* https://github.com/Tendrl/usmqe-centos-ci (Need repo name change as "tendrl-centos-ci" and official owner)
 * https://github.com/Tendrl/usmqe-setup (Needs to be merged with https://github.com/Tendrl/tendrl-ansible)
 * https://github.com/Tendrl/ui (current and future content need to be sent as PRs to Tendrl/dashboard and the upcoming metrics/monitoring dashboard)
