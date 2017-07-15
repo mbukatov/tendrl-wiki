@@ -1,6 +1,6 @@
 ## Governance structure:
 * "**Tendrl core**" - The Tendrl core team consists of ([Mrugesh Karnik](https://github.com/brainfunked), [Rohan Kanade](https://github.com/r0h4n), [Nishant Thomas](https://github.com/nthomas-redhat)).
-* "**Reviewers**": reviewers are per component, all PRs on the said component need sign-off from reviewers unless signed-off by "Tendrl core".
+* "**Reviewers**": reviewers are per component, all PRs on the said component need sign-off from reviewers if not signed-off by "Tendrl core".
    * Reviewers:
        * [Jeff Applewhite](https://github.com/japplewhite) (For Components: specifications, dashboard, SDS metrics/monitoring dashboard and Alerting, documentation)
        * [Shubhendu Tripathi](https://github.com/shtripat) (For Components: ceph-integration)
