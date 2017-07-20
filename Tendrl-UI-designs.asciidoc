@@ -1,7 +1,5 @@
 Note: Actual implementation of these UI designs may contain differences as these UI designs are contributed by Tendrl community members.
 
-= Tendrl UI Designs
-
 This serves as a landing page for the Tendrl UI designs that can include wireframes and other design artifacts.  We are using InVision for contributors to provide comments. 
 ....
 For information on how to make comments in Invision, please 
