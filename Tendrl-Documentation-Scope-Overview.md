@@ -19,7 +19,7 @@ This purpose of this wiki page is to clarify:
   * [Tendrl Architectural Guidelines](https://github.com/Tendrl/documentation/blob/master/tendrl-architectural-guidelines.adoc) - dev guidelines (revisiting needed)
   * [Tendrl Core Components Overview](https://github.com/Tendrl/documentation/blob/master/tendrl-core-components-overview.adoc) - description of components, useful for end user, needs update
 * Wiki: https://github.com/Tendrl/documentation/wiki
-  * [list of tendrl talsk](https://github.com/Tendrl/documentation/wiki#talks-about-tendrl)
+  * [list of tendrl talks](https://github.com/Tendrl/documentation/wiki#talks-about-tendrl)
   * [How to file bugs against the Tendrl stack](https://github.com/Tendrl/documentation/wiki/How-to-file-bugs-against-the-Tendrl-stack) - dev and qe details, useful to end users who like to report a bug
   * [How to send alerts from inside Tendrl for devs](https://github.com/Tendrl/documentation/wiki/How-to-send-alerts-from-inside-Tendrl---for-devs) - internal dev details
   * [Information required for debugging issues on the Tendrl stack](https://github.com/Tendrl/documentation/wiki/Information-required-for-debugging-issues-on-the-Tendrl-stack) - qe details, useful for end users reporting bugs
