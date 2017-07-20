@@ -1,0 +1,93 @@
+Note: Actual implementation of these UI designs may contain differences as these UI designs are contributed by Tendrl community members.
+
+= Tendrl UI Designs
+
+This serves as a landing page for the Tendrl UI designs that can include wireframes and other design artifacts.  We are using InVision for contributors to provide comments. 
+....
+For information on how to make comments in Invision, please 
+to: https://support.invisionapp.com/hc/en-us/articles/209192426-How-do-I-comment-on-a-prototype-[How to Comment on a Prototype using Invision].
+....
+
+
+== UI Designs Table of Content
+* https://tendrl.atlassian.net/secure/attachment/10500/Tendrl-%20Gluster-only%20IA.pdf[UX Design Approach and Information Architecture] - Tendrl UI design approach and information architecture, covers Gluster-only IA as well
+** https://redhat.invisionapp.com/share/9XA4GEF4V#/screens[Tendrl Navigation] - Example of the vertical navigation and expansion behavior (of Admin menu item) and hover treatment
+* https://redhat.invisionapp.com/share/6T900V2ZX[First Login by admin User] - Password reset for first-time login by the default admin user after Tendrl installed using https://github.com/Tendrl/tendrl-ansible[tendrl-ansible]
+* https://redhat.invisionapp.com/share/6T900V2ZX#/screens/198042644[First Use Experience] - Initial landing page and creation or import of a cluster, with a link to access Hosts List (for troubleshooting edge case whereby user previously installed Tendrl agents on the Ceph / Gluster cluster)
+* Gluster - Create / Import / Expand trusted storage pool
+** https://redhat.invisionapp.com/share/8F8PQVLHD[Create Gluster Cluster Workflow] - guided experience for creating a Gluster cluster with a demo/data volume at the end of the workflow
+** https://redhat.invisionapp.com/share/R88EUSGJK[Import Gluster Cluster Workflow] - import an existing Gluster cluster
+** https://redhat.invisionapp.com/share/VEB27F9KG[Add Host to Gluster Cluster] - add node to existing Gluster cluster (expand cluster)
+* Ceph - Create / Import / Expand cluster
+** https://redhat.invisionapp.com/share/2K8M4PQYZ[Create Ceph Cluster Workflow] - guided experience for creating a Ceph cluster with a demo/data pool at the end of the workflow
+** https://redhat.invisionapp.com/share/R88EUSGJK[Import Ceph Cluster Workflow] - import an existing Ceph cluster
+** https://redhat.invisionapp.com/share/MFBXMWUG8[Add Node to Ceph Cluster] - add node to existing Ceph cluster (expand cluster)
+* Main/Global Dashboard
+** https://redhat.invisionapp.com/share/589XIRJBW[Ceph Main Dashboard] - default or main dashboard for Ceph
+** https://redhat.invisionapp.com/share/589XIRJBW#/screens/213318368[Gluster Main Dashboard] - default or main dashboard for Gluster
+* https://redhat.invisionapp.com/share/BR8JDCGSQ[List Views] - top-level list views including Clusters, Hosts, Pools, RBDs, and Volumes
+* Object Details
+** Ceph Cluster Object Details
+*** https://redhat.invisionapp.com/share/589XIRJBW#/screens/213318455[Overview tab] - default dashboard or overview for a single Ceph cluster
+*** Hosts tab: Refer to https://redhat.invisionapp.com/share/BR8JDCGSQ#/screens/212034116[Hosts List View] (filtered by the Ceph cluster) - Hosts tab for a single Ceph cluster
+*** Pools tab: Refer to https://redhat.invisionapp.com/share/BR8JDCGSQ#/screens/198417118[Pools List View] (filtered by the Ceph cluster) - Pools tab for a single Ceph cluster
+*** RBDs tab: Refer to https://redhat.invisionapp.com/share/BR8JDCGSQ#/screens/198417119[RBDs List View] (filtered by the Ceph cluster) - RBDs tab for a single Ceph cluster
+*** https://redhat.invisionapp.com/share/PYAPOIC6F#/screens/221898443[OSDs tab] - OSDs tab for a single Ceph cluster
+*** https://redhat.invisionapp.com/share/ZQAOY7FMP#/screens/221680478[Configuration tab] - Configuration tab for a single Ceph cluster
+*** Events tab: Refer to https://redhat.invisionapp.com/share/8N93NO7Q4#/screens/200318244[Events View] (filtered by the Ceph cluster) - Events tab for a single Ceph cluster
+** Gluster Cluster Object Details
+*** https://redhat.invisionapp.com/share/589XIRJBW#/screens/213318639[Overview tab] - default dashboard or overview for a single Gluster cluster
+*** Hosts tab: Refer to https://redhat.invisionapp.com/share/BR8JDCGSQ#/screens/212034116[Hosts List View] (filtered by the Gluster cluster) - Hosts tab for a single Gluster cluster
+*** Volumes tab: Refer to https://redhat.invisionapp.com/share/BR8JDCGSQ#/screens/198417117[Volumes List View] (filtered by the Gluster cluster) - Volumes tab for a single Gluster cluster
+*** https://redhat.invisionapp.com/share/XMAOW3UC5#/screens/221658953[Bricks tab] - Bricks tab for a single Gluster cluster
+*** https://redhat.invisionapp.com/share/ZQAOY7FMP#/screens/221494392[Configuration tab] - Configuration tab for a single Gluster cluster
+*** Events tab: Refer to https://redhat.invisionapp.com/share/8N93NO7Q4#/screens/200318244[Events View] (filtered by the Gluster cluster) - Events tab for a single Gluster cluster
+** Host Object Details
+*** https://redhat.invisionapp.com/share/589XIRJBW#/screens/221881218[Overview tab for Ceph host] - Overview tab for host in a Ceph cluster
+*** Refer to https://redhat.invisionapp.com/share/PYAPOIC6F#/screens/221898443[OSD tab] (filtered based on the host) - OSDs tab for a host in a Ceph cluster
+*** https://redhat.invisionapp.com/share/U9B55B3NE#/screens/227126399[Configuration tab] - Configuration tab for a host in a Ceph cluster
+*** https://redhat.invisionapp.com/share/589XIRJBW#/screens/221882097[Overview tab for Gluster host] - Overview tab for host in a Gluster cluster
+*** https://redhat.invisionapp.com/share/XMAOW3UC5#/screens/221658953[Bricks tab] - Bricks tab for a host in a Gluster cluster
+*** https://redhat.invisionapp.com/share/U9B55B3NE#/screens/227126397[Configuration tab] - Configuration tab for a host in a Gluster cluster
+*** Overview tab for host not in a cluster (unassigned) - no object details provided, only hover from Host List View
+*** Events tab: Refer to https://redhat.invisionapp.com/share/8N93NO7Q4#/screens/200318244[Events View] (filtered by the host) - Events tab for the given host
+** Pool Object Details
+*** https://redhat.invisionapp.com/share/589XIRJBW#/screens/227131981[Overview tab] - Overview tab for a single Ceph pool
+*** RBDs tab: Refer to https://redhat.invisionapp.com/share/BR8JDCGSQ#/screens/198417119[RBDs List View] (filtered by the Ceph pool) - RBDs tab for a single Ceph pool
+*** OSD tab: Refer to https://redhat.invisionapp.com/share/PYAPOIC6F#/screens/221898443[OSD tab] (filtered based on the pool) - OSDs tab for a single Ceph pool
+*** Events tab: Refer to https://redhat.invisionapp.com/share/8N93NO7Q4#/screens/200318244[Events View] (filtered by the pool) - Events tab for the given pool
+** Volume Object Details
+*** https://redhat.invisionapp.com/share/589XIRJBW#/screens/227133344[Overview tab] - Overview tab for a single Gluster volume
+*** https://redhat.invisionapp.com/share/XMAOW3UC5#/screens/221662357[Bricks tab] - Bricks tab for a single Gluster volume
+*** https://redhat.invisionapp.com/share/AB94BNET6#/screens/221686840[Rebalance tab] - Rebalance tab for a single Gluster volume
+*** https://redhat.invisionapp.com/share/ZJB9ZLWB4#/screens/228983457[Tuning tab] - Tuning tab for a single Gluster volume
+*** https://redhat.invisionapp.com/share/ZJB9ZLWB4#/screens/228983459[Permissions tab] - Permissions tab for a single Gluster volume
+*** Events tab: Refer to https://redhat.invisionapp.com/share/8N93NO7Q4#/screens/200318244[Events View] (filtered by the volume) - Events tab for the given volume
+* CRUD Ceph Pool
+** https://redhat.invisionapp.com/share/2T9LPMEEB[Create Pool] - guided experience for creating a pool
+** https://redhat.invisionapp.com/share/THAEA6CEA[Edit Pool] - dialog for editing a pool (excludes increasing PG)
+** https://redhat.invisionapp.com/share/THAEA6CEA#/screens/227875971[Rename Pool] - dialog for renaming the pool
+** https://redhat.invisionapp.com/share/THAEA6CEA#/screens/218370287[Grow PG] - dialog for increasing PG for a pool
+** https://redhat.invisionapp.com/share/THAEA6CEA#/screens/219673484[Delete Pool] - guided experience for deleting a pool
+* CRUD Ceph RBD
+** https://redhat.invisionapp.com/share/EHAC6S0N4[Create RBD] - guided experience for creating a RBD
+** https://redhat.invisionapp.com/share/Z9AE9W6H4[Resize RBD] - dialog for resizing a RBD
+** https://redhat.invisionapp.com/share/Z9AE9W6H4#/screens/219673762[Delete RBD] - guided experience for deleting a RBD
+* CRUD Gluster Volume and Bricks
+** https://redhat.invisionapp.com/share/39BAPJFZX[Create Bricks] - guided experience for creating bricks
+** https://redhat.invisionapp.com/share/Q78YMAVDJ[Create Volume] - guided experience for creating a volume
+** https://redhat.invisionapp.com/share/AKC9OVNY8[Add Bricks] - guided experience for adding bricks to a volume
+** https://redhat.invisionapp.com/share/729GRP1W9[Delete Volume] - guided experience for deleting a volume
+** https://redhat.invisionapp.com/share/AKC9OVNY8#/screens/240859145[Remove Bricks] - guided experience for removing bricks from a volume
+** https://redhat.invisionapp.com/share/AB94BNET6[Rebalance Volume] - rebalance volume
+** https://redhat.invisionapp.com/share/TEAOYRF4V#/screens/221685295[Start / Stop Volume] - start and stop volume
+* Admin
+** https://redhat.invisionapp.com/share/8N93NO7Q4[Events and Tasks] - Views for examining events, tasks, notifications/alerts, and SMTP Settings
+** https://redhat.invisionapp.com/share/KNB25OEQT[Users] - User administration and LDAP/AD configuration 
+* Global Elements / Utilities
+** https://redhat.invisionapp.com/share/QEBA95AHC[Masthead Global Elements] - Global Elements / Utilities area in Masthead (top right of UI)
+** https://redhat.invisionapp.com/share/CSB9I3N6D#/screens/228578749[About Product] - "About" dialog that provides summary information about relevant Tendrl components and respective release or build information. 
+
+
+Recordings of the UX design reviews may be found at https://tendrl.atlassian.net/wiki/display/TEN/UX+Designs+and+Design+Reviews[UX Designs and Design Reviews].
+
