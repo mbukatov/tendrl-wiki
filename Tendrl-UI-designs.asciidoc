@@ -9,7 +9,9 @@ to: https://support.invisionapp.com/hc/en-us/articles/209192426-How-do-I-comment
 
 == UI Designs Table of Content
 * https://tendrl.atlassian.net/secure/attachment/10500/Tendrl-%20Gluster-only%20IA.pdf[UX Design Approach and Information Architecture] - Tendrl UI design approach and information architecture, covers Gluster-only IA as well
-** https://redhat.invisionapp.com/share/9XA4GEF4V#/screens[Tendrl Navigation] - Example of the vertical navigation and expansion behavior (of Admin menu item) and hover treatment
+** https://redhat.invisionapp.com/share/9XA4GEF4V#/screens[Tendrl Navigation for Managing Multiple Clusters] - Example of the vertical navigation and expansion behavior (of Admin menu item) and hover treatment
+** https://redhat.invisionapp.com/share/2RCOE72PE[Concept A: Single Cluster / Element Manager Concept for Multi-Level Drill Down (leveraging existing Multiple-Cluster Management designs and implementations)]
+** https://redhat.invisionapp.com/share/8QCOEVEY9[Concept B: Single Cluster / Element Manager Concept with Context Switcher Navigation (Optimized UX)]
 * https://redhat.invisionapp.com/share/6T900V2ZX[First Login by admin User] - Password reset for first-time login by the default admin user after Tendrl installed using https://github.com/Tendrl/tendrl-ansible[tendrl-ansible]
 * https://redhat.invisionapp.com/share/6T900V2ZX#/screens/198042644[First Use Experience] - Initial landing page and creation or import of a cluster, with a link to access Hosts List (for troubleshooting edge case whereby user previously installed Tendrl agents on the Ceph / Gluster cluster)
 * Gluster - Create / Import / Expand trusted storage pool
