@@ -1,4 +1,4 @@
-#List of metrics and their respective attributes currently made available via collectd plugins:
+# List of metrics and their respective attributes currently made available via collectd plugins:
 
 ## Node Level
 
