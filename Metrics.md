@@ -106,3 +106,38 @@ Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.network_thro
 
 Note: This rx and tx are maintained as continuous counters and hence the plugin takes interval diff for a period of 1 second.
 
+
+## Gluster Cluster
+
+### inode_utilization
+
+* gauge-total
+* gauge-used
+* percent-percent_bytes
+
+Inode utilization at the level of bricks fetched using os.statvfs on brick path
+Graphite table name:
+
+* tendrl.clusters.{cluster-id}.volumes.{volume-name}.nodes.{node-name}.bricks.{brick-path}.inode_utilization.{attr-
+type}
+* tendrl.nodes.{node-name}.bricks.{brick-path}.inode_utilization.{attr-type}
+
+### iops
+
+* gauge-read
+* gauge-write
+
+Brick level read and write operations fetched using gluster volume profile info
+Graphite table name:
+* tendrl.clusters.{cluster-id}.volumes.{volume-name}.nodes.{node-name}.bricks.{brick-path}.iops.{attr-type}
+
+### utilization
+
+* gauge-total
+* gauge-used
+* percent-percent_bytes
+
+Brick utilization fetched using os.statvfs on brick path
+Graphite table name: 
+* tendrl.clusters.{cluster-id}.volumes.{volume-name}.nodes.{node-name}.bricks.{brick-path}.utilization.{attr-type}
+* tendrl.nodes.{node-name}.bricks.{brick-path}.utilization.{attr-type}
