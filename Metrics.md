@@ -57,19 +57,29 @@ Note:
 Source of descriptions: https://github.com/signalfx/integrations/blob/master/collectd-df/docs/
 
 ### disk
+
 * disk_io_time
+
   ** io_time
   ** weighted_io_time
+
 * disk_merged
+
   ** read : The number of disk reads that have been merged into single physical disk access operations. In other words, this metric measures the number of instances in which one physical disk access served multiple disk reads.
   ** write: The number of disk writes that were merged into single physical disk access operations. In other words, this metric measures the number of instances in which one physical disk access served multiple write operations.
+
 * disk_octets
+
   ** read : The number of bytes read from a disk.
   ** write: The number of bytes written to a disk.
+
 * disk_ops
+
   ** read : The number of disk read operations.
   ** write : The number of disk write operations.
+
 * disk_time
+
   ** read : The average amount of time it took to do a read operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds. For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
   ** write : The average amount of time it took to do a write operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds. For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
 
@@ -78,6 +88,7 @@ Note:
 Source of descriptions: https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/
 
 ### swap
+
 * percent-cached: 
 * percent-free
 * percent-used
@@ -90,6 +101,7 @@ Source of descriptions: https://github.com/signalfx/integrations/blob/master/col
 Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.swap.{attr-type}
 
 ### ping
+
 * ping-{monitoring-integration fqdn} : Ping latency(round-trip time) from current node to monitoring-integration node
 * ping_droprate-{monitoring-integration fqdn}: Ping packet drop rate from current node to monitoring-integration node
 * ping_stddev-{monitoring-integration fqdn}: Standard deviation of Ping latency.
