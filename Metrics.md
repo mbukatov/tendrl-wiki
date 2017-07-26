@@ -13,7 +13,7 @@
 * percent-user - CPU used by user applications
 * percent-wait - CPU waiting for disk IO operations to complete
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.cpu.<attr-type>
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.cpu.{attr-type}
 
 Note:
 Source for above descriptions is : http://docs.rightscale.com/faq/How_do_the_CPU_Metrics_work_and_what_is_CPU_Steal.html
@@ -33,7 +33,7 @@ Source for above descriptions is : http://docs.rightscale.com/faq/How_do_the_CPU
 * percent-slab_unrecl: Percentage of unreclaimable memory used for slab kernel allocations
 * percent-used: Percentage of memory used
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.memory.<attr-type>
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.memory.{attr-type}
 Note:
 Source of descriptions: https://github.com/signalfx/integrations/tree/master/collectd-memory/docs
 
@@ -52,7 +52,7 @@ Source of descriptions: https://github.com/signalfx/integrations/tree/master/col
 * percent_inodes-reserved: This metric measures inodes reserved for the super-user as a percentage of total inodes in the file system. Inodes are structures used by file systems to store information about files (other than its content).
 * percent_inodes-used: This metric measures used inodes as a percentage of total inodes in the file system. Inodes are structures used by file systems to store information about files (other than its content).
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.df-<mount-point>.<attr-type>
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.df-{mount-point}.{attr-type}
 Note:
 Source of descriptions: https://github.com/signalfx/integrations/blob/master/collectd-df/docs/
 
@@ -73,7 +73,7 @@ Source of descriptions: https://github.com/signalfx/integrations/blob/master/col
   ** read : The average amount of time it took to do a read operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds. For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
   ** write : The average amount of time it took to do a write operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds. For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.disk-<disk-name>.<attr-type1>.<attr-type2>
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.disk-{disk-name}.{attr-type1}.{attr-type2}
 Note:
 Source of descriptions: https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/
 
@@ -87,20 +87,20 @@ Source of descriptions: https://github.com/signalfx/integrations/blob/master/col
 * swap_io-out
 * swap-used
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.swap.<attr-type>
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.swap.{attr-type}
 
 ### ping
-* ping-<monitoring-integration fqdn> : Ping latency(round-trip time) from current node to monitoring-integration node
-* ping_droprate-<monitoring-integration fqdn>: Ping packet drop rate from current node to monitoring-integration node
-* ping_stddev-<monitoring-integration fqdn>: Standard deviation of Ping latency.
+* ping-{monitoring-integration fqdn} : Ping latency(round-trip time) from current node to monitoring-integration node
+* ping_droprate-{monitoring-integration fqdn}: Ping packet drop rate from current node to monitoring-integration node
+* ping_stddev-{monitoring-integration fqdn}: Standard deviation of Ping latency.
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.ping.<attr-type>
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.ping.{attr-type}
 
 ### network_throughput-cluster_network
 
 This is calculated as summation of rx(incoming/received packets) an tx(outgoing/transmitted packets) corresponding to the network interface used/marked during cluster creation.
 
-Graphite table name: tendrl.clusters.<cluster-id>.nodes.<node-name>.network_throughput-cluster_network.gauge-used
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.network_throughput-cluster_network.gauge-used
 
 Note: This rx and tx are maintained as continuous counters and hence the plugin takes interval diff for a period of 1 second.
 
