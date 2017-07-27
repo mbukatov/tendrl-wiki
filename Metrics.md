@@ -143,9 +143,21 @@ Graphite table name:
 * tendrl.nodes.{node-name}.bricks.{brick-path}.utilization.{attr-type}
 
 ##  Screenshots
-
+> Note: Few panels in the screenshots are using the mock data.
 ### Gluster at a Glance
 ![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)
+#### Mock Data in Gluster at a Glance Screenshot
+  * Cluster Status
+  * Quorum Status
+  * Hosts
+    * Hosts Up
+    * Hosts Down
+  * Volumes
+    * Volumes Up
+    * Volumes Down
+  * Bricks
+    * Bricks Up
+    * Bricks Down
 
 ### Gluster Hosts
 ![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-Hosts.png)
