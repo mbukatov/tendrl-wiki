@@ -40,8 +40,3 @@
 * tendrl-ansible: {Owner: [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/Tendrl/tendrl-ansible }
 * documentation: {Owner: Tendrl core, [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/tendrl/documentation }
 * specifications: {Owner: Tendrl core, Repo: https://github.com/Tendrl/specifications }
-
-## Unsupported repos (to be moved out of github.com/Tendrl unless adapted to Tendrl repo best practices)
-* https://github.com/Tendrl/usmqe-tests (Need repo name change as "tendrl-tests" and official owner)
-* https://github.com/Tendrl/usmqe-centos-ci (Need repo name change as "tendrl-centos-ci" and official owner)
-* https://github.com/Tendrl/usmqe-setup (Needs to be merged with https://github.com/Tendrl/tendrl-ansible)
