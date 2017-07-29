@@ -142,6 +142,73 @@ Graphite table name:
 * tendrl.clusters.{cluster-id}.volumes.{volume-name}.nodes.{node-name}.bricks.{brick-path}.utilization.{attr-type}
 * tendrl.nodes.{node-name}.bricks.{brick-path}.utilization.{attr-type}
 
+### No. Of connections(clients)
+
+No. of connections to the gluster volume fetched using: gluster volume status all clients --xml
+Note: This also includes brick connections in the counter.
+Graphite table name:
+* tendrl.clusters.{cluster-id}.volumes.{volume-name}.connections_count
+
+### Volume Status
+
+The source for this information is gluster get-state glusterd odir /var/run file ...
+The volume status is encoded as follows:
+* 'Started': 0
+* 'Degraded': 1
+* 'Stopped': 2
+Note: Count of degraded volumes is currently not made available yet.
+
+Graphite table name:
+* tendrl.clusters.{cluster_id}.volumes.{volume_name}.status
+
+### Node(Peer) Status wise counter at cluster level
+
+The source for this information is gluster get-state glusterd odir /var/run file ...
+The following counters are made available:
+* Down: Nodes that are not marked ['Peer', 'in', 'Cluster'] or peer['connected'] == 'Connected'
+* Total
+
+Graphite table name:
+* tendrl.clusters.{cluster_id}.nodes_count.down
+* tendrl.clusters.{cluster_id}.nodes_count.total
+
+### Volume status wise counts
+
+The raw source for this information is gluster get-state glusterd odir /var/run file ...
+The following status-wise counters are made avaialable:
+
+* total
+* down
+
+Note: Degraded volume counter needs to be added
+
+Graphite table name:
+* tendrl.clusters.{cluster-id}.volume_count.total
+* tendrl.clusters.{cluster-id}.volume_count.down
+
+* Brick count
+
+The raw source for this information is gluster get-state glusterd odir /var/run file ...
+
+Graphite table name:
+* tendrl.clusters.<cluster_id>.brick_count.total
+
+### Volume level
+
+#### Bricks count
+
+The source for this information is gluster get-state glusterd odir /var/run file ...
+
+Graphite table name:
+* tendrl.clusters.{cluster-id}.volumes.{volume-name}.bricks_count
+
+#### Status
+
+The source for this information is gluster get-state glusterd odir /var/run file ...
+
+Graphite table name:
+* clusters.{cluster_id}.volumes.{volume_name}.status
+
 ##  Screenshots
 > Note: Few panels in the screenshots are using the mock data.
 ### Gluster at a Glance
