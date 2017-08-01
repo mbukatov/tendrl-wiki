@@ -212,7 +212,7 @@ Graphite table name:
 ##  Screenshots
 > Note: Few panels in the screenshots are using the mock data.
 ### Gluster at a Glance
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)
+![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/tendrl/monitoring_integration/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)
 #### Mock Data in Gluster at a Glance Screenshot
   * Cluster Status
   * Quorum Status
@@ -227,10 +227,10 @@ Graphite table name:
     * Bricks Down
 
 ### Gluster Hosts
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-Hosts.png)
+![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/tendrl/monitoring_integration/grafana/screenshots/Tendrl-Gluster-Hosts.png)
 
 ### Gluster Volumes
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-Volumes.png)
+![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/tendrl/monitoring_integration/grafana/screenshots/Tendrl-Gluster-Volumes.png)
 
 ### Gluster Bricks
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/grafana/screenshots/Tendrl-Gluster-Bricks.png)
+![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/tendrl/monitoring_integration/grafana/screenshots/Tendrl-Gluster-Bricks.png)
