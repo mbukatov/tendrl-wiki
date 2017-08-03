@@ -50,6 +50,7 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     etcd_connection = <IP of etcd server>
     graphite_host = <IP of Graphite Server>
+    graphite_port = <Port of Graphite Server>
     ```
 
 8. Enable and start Node Agent
@@ -130,7 +131,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
 17. Configure monitoring-integration
 
-    Open `/etc/tendrl/performance-monitoring/performance-monitoring.conf.yaml`
+    Open `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`
     and update:
    
     ```
@@ -181,6 +182,7 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
    ```
    etcd_connection = <IP of etcd server>
    graphite_host = <IP of Graphite Server>
+   graphite_port = <Port of Graphite Server>
    ```
 
 5. Enable and start Node Agent
