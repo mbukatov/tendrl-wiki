@@ -12,6 +12,7 @@ The following procedure outlines the procedure to install tendrl server componen
    cp tendrl-*.repo /etc/yum.repos.d
    yum install epel-release
    ```
+   Add Grafana repo as per the instructions at  http://docs.grafana.org/installation/rpm/#install-via-yum-repository
    
 3. Install Etcd
 
@@ -100,7 +101,7 @@ The following procedure outlines the procedure to install tendrl server componen
 12. Install tendrl ui
 
     ```
-    yum install tendrl-ui`
+    yum install tendrl-ui
     ```
 
 13. Install Performance Monitoring
