@@ -104,7 +104,7 @@ The following procedure outlines the procedure to install tendrl server componen
     yum install tendrl-ui
     ```
 
-13. Install Performance Monitoring
+13. Install Monitoring Integration
 
     ```
     yum install tendrl-monitoring-integration
@@ -124,13 +124,21 @@ The following procedure outlines the procedure to install tendrl server componen
     systemctl start carbon-cache
     ```
 
-16. Restart httpd
+16. Enable and start grafana service
+
+    ```
+    systemctl daemon-reload
+    systemctl enable grafana-server.service
+    systemctl start grafana-server
+    ```
+
+17. Restart httpd
 
     ```
     systemctl restart httpd
     ```
 
-17. Configure monitoring-integration
+18. Configure monitoring-integration
 
     Open `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`
     and update:
@@ -139,7 +147,13 @@ The following procedure outlines the procedure to install tendrl server componen
     datasource_host = <IP of graphite server>
     ```
 
-18. Open the following URL in the browser
+19. Run monitoring-integration
+
+    ```
+    tendrl-monitoring-integration
+    ```
+
+20. Open the following URL in the browser
 
     ```
     http://<IP of the server>
