@@ -138,14 +138,7 @@ The following procedure outlines the procedure to install tendrl server componen
     datasource_host = <IP of graphite server>
     ```
 
-18. Enable and start performance monitoring service
-
-    ```
-    systemctl enable tendrl-monitoring-integration
-    systemctl start tendrl-monitoring-integration
-    ```   
-
-19. Open the following URL in the browser
+18. Open the following URL in the browser
 
     ```
     http://<IP of the server>
