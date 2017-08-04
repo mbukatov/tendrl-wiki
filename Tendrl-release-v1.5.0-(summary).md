@@ -6,19 +6,19 @@
 **List of issues fixed per component:**
 
 **tendrl-commons v1.5.0:**
-TODO
+* TODO
 
 **tendrl-node-agent v1.5.0:**
-TODO
+* TODO
 
 **tendrl-gluster-integration v1.5.0**
-TODO
+* TODO
 
 **tendrl-api v1.5.0:**
-* https://github.com/Tendrl/api/issues/206
+* TODO
 
 **tendrl-ui v1.5.0  (earlier named tendrl-dashboard):**
-TODO
+* TODO
 
 **tendrl-monitoring-integration v1.0.0:**
-TODO
+* TODO
