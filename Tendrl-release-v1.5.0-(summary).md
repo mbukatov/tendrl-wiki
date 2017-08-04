@@ -1,7 +1,7 @@
 **This release includes**
 
 * tendrl-api for Import Gluster trusted storage pool
-* Grafana Dashboard for Tendrl managed clusters with node and cluster metrics from tendrl-release 1.4.2
+* Grafana Dashboard for Tendrl managed clusters with node and cluster metrics from tendrl-release 1.4.2  (more details: https://github.com/Tendrl/documentation/wiki/Metrics)
 
 **List of issues fixed per component:**
 
