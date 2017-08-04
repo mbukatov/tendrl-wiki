@@ -174,6 +174,9 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
    cp tendrl-*.repo /etc/yum.repos.d
    yum install epel-release
    ```
+   Configure the gdeploy repo
+   `https://copr.fedorainfracloud.org/coprs/sac/gdeploy/repo/epel-7/sac-gdeploy-epel-7.repo`
+   required only for gluster nodes.
 
 3. Install Node Agent
 
@@ -191,6 +194,12 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
    etcd_connection = <IP of etcd server>
    graphite_host = <IP of Graphite Server>
    graphite_port = <Port of Graphite Server>
+   ```
+   Add a new tag under tags (This is applicable only to gluster and is
+   required to be set only on one of the nodes):
+
+   ```
+   provisioner/gluster
    ```
 
 5. Enable and start Node Agent
