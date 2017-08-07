@@ -17,16 +17,25 @@
 * https://github.com/Tendrl/commons/issues/645
 
 **tendrl-node-agent v1.5.0:**
-* TODO
-
-**tendrl-gluster-integration v1.5.0**
-* TODO
-
-**tendrl-api v1.5.0:**
-* TODO
+* https://github.com/Tendrl/node-agent/issues/568
+* https://github.com/Tendrl/node-agent/issues/566
+* https://github.com/Tendrl/node-agent/issues/567
+* https://github.com/Tendrl/node-agent/issues/561
+* https://github.com/Tendrl/node-agent/issues/549
+* https://github.com/Tendrl/node-agent/issues/540
+* https://github.com/Tendrl/node-agent/issues/571
+* https://github.com/Tendrl/node-agent/issues/559
+* https://github.com/Tendrl/node-agent/issues/532
+* https://github.com/Tendrl/node-agent/issues/547
+* https://github.com/Tendrl/node-agent/issues/546
+* https://github.com/Tendrl/node-agent/issues/540
 
 **tendrl-ui v1.5.0  (earlier named tendrl-dashboard):**
-* TODO
+* https://github.com/Tendrl/ui/issues/492
+* https://github.com/Tendrl/ui/issues/493
+* https://github.com/Tendrl/ui/issues/486
+* https://github.com/Tendrl/ui/issues/487
 
 **tendrl-monitoring-integration v1.0.0:**
-* TODO
+* https://github.com/Tendrl/monitoring-integration/issues/18
+* https://github.com/Tendrl/monitoring-integration/pull/1
