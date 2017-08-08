@@ -1,3 +1,21 @@
+## SELinux Configuration
+
+Tendrl does not currently support running on SELinux enabled systems. In case
+there are problems running tendrl on such systems, please set SELinux to
+'Permissive' mode.
+
+## Firewall Configuration
+
+Tendrl does not currently support running on firewall enabled system as the
+firewall rules are under development. Hence it is recommended to disable the
+firewalld on server/storage nodes
+ 
+```
+service firewalld stop
+systemctl disable firewalld
+iptables --flush
+```
+
 ## Server Installation
 
 The following procedure outlines the procedure to install tendrl server components
@@ -208,18 +226,3 @@ Note: If you are configuring the v 1.2.2 release, please refer to the sequence o
    systemctl enable tendrl-node-agent
    systemctl start tendrl-node-agent
    ```
-
-## SELinux Configuration
-
-   Tendrl does not currently support running on SELinux enabled systems. In case there are problems
-   running tendrl on such systems, please set SELinux to 'Permissive' mode.
-
-## Firewall Configuration
-
-Tendrl does not currently support running on firewall enabled system as the firewall rules are under development. Hence it is recommended to disable the firewalld on server/storage nodes
- 
-```
-service firewalld stop
-systemctl disable firewalld
-iptables --flush
-```
