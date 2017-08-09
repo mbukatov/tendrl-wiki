@@ -67,9 +67,9 @@ The following procedure outlines the procedure to install tendrl server componen
     Open `/etc/tendrl/node-agent/node-agent.conf.yaml` and update:
 
     ```
-    etcd_connection = <IP of etcd server>
-    graphite_host = <IP of Graphite Server>
-    graphite_port = <Port of Graphite Server>
+    etcd_connection: <IP of etcd server>
+    graphite_host: <IP of Graphite Server>
+    graphite_port: <Port of Graphite Server>
     ```
 
 8. Enable and start Node Agent
