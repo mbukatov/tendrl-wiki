@@ -145,7 +145,6 @@ The following procedure outlines the procedure to install tendrl server componen
 16. Enable and start grafana service
 
     ```
-    systemctl daemon-reload
     systemctl enable grafana-server.service
     systemctl start grafana-server
     ```
