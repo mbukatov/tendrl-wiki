@@ -162,7 +162,7 @@ The following procedure outlines the procedure to install tendrl server componen
     and update:
    
     ```
-    datasource_host = <IP of graphite server>
+    datasource_host: <IP of graphite server>
     ```
 
 19. Run monitoring-integration
