@@ -71,6 +71,12 @@ The following procedure outlines the procedure to install tendrl server componen
     graphite_host: <IP of Graphite Server>
     graphite_port: <Port of Graphite Server>
     ```
+    TODO: clarification needed:
+
+    * is ip address of graphite public or local?
+    * is ip address of graphite expected to be the same as for etcd?
+    * since we don't list changes of graphite port in this guide, shouldn't we
+      list appropriate default value here?
 
 8. Enable and start Node Agent
 
@@ -154,6 +160,13 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     systemctl restart httpd
     ```
+
+    TODO:
+     * why is this needed *at this point*, given the fact that httpd hasn't
+       been yet started?
+     * I would rather drop this step here and add a new one to the end (before
+       opening a browser) with instructions to start and enable httpd - would
+       it make sense?
 
 18. Configure monitoring-integration
 
