@@ -73,10 +73,11 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     TODO: clarification needed:
 
-    * is ip address of graphite public or local?
-    * is ip address of graphite expected to be the same as for etcd?
+    * is ip address of graphite public or local? public
+    * is ip address of graphite expected to be the same as for etcd? yes
     * since we don't list changes of graphite port in this guide, shouldn't we
-      list appropriate default value here?
+      list appropriate default value here? it seems that setting port here is
+      not needed
 
 8. Enable and start Node Agent
 
