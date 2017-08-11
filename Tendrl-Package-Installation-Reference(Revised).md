@@ -78,8 +78,8 @@ The following procedure outlines the procedure to install tendrl server componen
     Note that:
 
     * we configured *ip address of etcd server* just few steps ago
-	* a safe default value for *ip address of graphite* is the same one we
-	  use for etcd here (this guide places both services on tendrl server
+    * a safe default value for *ip address of graphite* is the same one we
+      use for etcd here (this guide places both services on tendrl server
       machine)
     * graphite stack is installed later as a dependency of
       `tendrl-monitoring-integration` rpm package
@@ -87,8 +87,8 @@ The following procedure outlines the procedure to install tendrl server componen
 
     Additional details (useful when you are familiar with graphite stack):
 
-	* this guide doesn't include steps to reconfigure any component for
-	  graphite stack so that we can assume that default configuration is used
+    * this guide doesn't include steps to reconfigure any component for
+      graphite stack so that we can assume that default configuration is used
     * `graphite_host` refers to `carbon-cache` service, which is configured
       in `/etc/carbon/carbon.conf` config file
 
