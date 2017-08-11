@@ -182,20 +182,7 @@ The following procedure outlines the procedure to install tendrl server componen
      sudo /bin/systemctl start grafana-server.service 
     ```
 
-17. Restart httpd
-
-    ```
-    systemctl restart httpd
-    ```
-
-    TODO:
-     * why is this needed *at this point*, given the fact that httpd hasn't
-       been yet started?
-     * I would rather drop this step here and add a new one to the end (before
-       opening a browser) with instructions to start and enable httpd - would
-       it make sense?
-
-18. Configure monitoring-integration
+17. Configure monitoring-integration
 
     Open `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`
     and update:
@@ -204,10 +191,17 @@ The following procedure outlines the procedure to install tendrl server componen
     datasource_host: <IP of graphite server>
     ```
 
-19. Run monitoring-integration
+18. Run monitoring-integration
 
     ```
     tendrl-monitoring-integration
+    ```
+
+19. Enable and start httpd
+
+    ```
+    systemctl enable httpd
+    systemctl start httpd
     ```
 
 20. Open the following URL in the browser
