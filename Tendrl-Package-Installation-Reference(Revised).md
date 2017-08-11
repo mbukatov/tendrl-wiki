@@ -165,8 +165,21 @@ The following procedure outlines the procedure to install tendrl server componen
 16. Enable and start grafana service
 
     ```
+    systemctl daemon-reload
     systemctl enable grafana-server.service
     systemctl start grafana-server
+    ```
+
+    Note that the 1st step here (daemon reload) is actually needed as is a
+    workaround for upstream grafana rpm package we are using right now:
+
+    ```
+          Installing : grafana-4.4.3-1.x86_64
+    ### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd
+     sudo /bin/systemctl daemon-reload
+     sudo /bin/systemctl enable grafana-server.service
+    ### You can start grafana-server by executing
+     sudo /bin/systemctl start grafana-server.service 
     ```
 
 17. Restart httpd
