@@ -47,6 +47,10 @@ The following procedure outlines the procedure to install tendrl server componen
    * `ETCD_LISTEN_CLIENT_URLS="http://<IP of etcd server>:2379"`
    * `ETCD_ADVERTISE_CLIENT_URLS="http://<IP of etcd server>:2379"`
 
+   As a value for *etcd server ip address*, use some *public ip address of the
+   tendrl server machine* (which is the server you are installing etcd on right
+   now).
+
 5. Enable and start the etcd service
 
    ```
@@ -69,15 +73,24 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     etcd_connection: <IP of etcd server>
     graphite_host: <IP of Graphite Server>
-    graphite_port: <Port of Graphite Server>
     ```
-    TODO: clarification needed:
 
-    * is ip address of graphite public or local? public
-    * is ip address of graphite expected to be the same as for etcd? yes
-    * since we don't list changes of graphite port in this guide, shouldn't we
-      list appropriate default value here? it seems that setting port here is
-      not needed
+    Note that:
+
+    * we configured *ip address of etcd server* just few steps ago
+	* a safe default value for *ip address of graphite* is the same one we
+	  use for etcd here (this guide places both services on tendrl server
+      machine)
+    * graphite stack is installed later as a dependency of
+      `tendrl-monitoring-integration` rpm package
+    * you should not reconfigure `graphite_port` in this config file
+
+    Additional details (useful when you are familiar with graphite stack):
+
+	* this guide doesn't include steps to reconfigure any component for
+	  graphite stack so that we can assume that default configuration is used
+    * `graphite_host` refers to `carbon-cache` service, which is configured
+      in `/etc/carbon/carbon.conf` config file
 
 8. Enable and start Node Agent
 
@@ -222,7 +235,6 @@ The following procedure outlines the procedure to install tendrl server componen
    ```
    etcd_connection = <IP of etcd server>
    graphite_host = <IP of Graphite Server>
-   graphite_port = <Port of Graphite Server>
    ```
    Add a new tag under tags (This is applicable only to gluster and is
    required to be set only on one of the nodes):
