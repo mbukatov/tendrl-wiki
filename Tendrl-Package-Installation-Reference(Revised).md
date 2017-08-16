@@ -15,6 +15,10 @@ service firewalld stop
 systemctl disable firewalld
 iptables --flush
 ```
+## NTP
+
+Make sure you keep time synchronized on all storage machines and Tendrl server.
+When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
 
 ## Server Installation
 
