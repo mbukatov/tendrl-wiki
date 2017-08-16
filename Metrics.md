@@ -1,3 +1,7 @@
+# List of metrics and its availability in different components is listed in the document[1].
+
+> [1]. https://docs.google.com/document/d/1oX10aH-jMqTqkZkip4eNAevwT8GgcG6_XxAgQdVnmNI/edit
+
 # List of metrics and their respective attributes currently made available via collectd plugins:
 
 ## Node Level
