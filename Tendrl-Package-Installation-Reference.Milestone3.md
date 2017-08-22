@@ -1,3 +1,5 @@
+This wikipage contains Installation Guide for [Tendrl Milestone #3 (2nd milestone)](https://github.com/Tendrl/specifications/milestone/3). Right now, it's work in progress and not all changes are included here.
+
 ## SELinux Configuration
 
 Tendrl does not currently support running on SELinux enabled systems. In case
