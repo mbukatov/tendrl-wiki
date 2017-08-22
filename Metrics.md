@@ -216,11 +216,12 @@ Graphite table name:
 ##  Screenshots
 ### Gluster at a Glance
 ![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-At-A-Glance.png)
+
 ### Gluster Hosts
 ![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Hosts.png)
 
-### Gluster Volumes
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-Volumes.png)
-
 ### Gluster Bricks
 ![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Bricks.png)
+
+### Gluster Volumes
+![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-Volumes.png)
