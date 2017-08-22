@@ -214,27 +214,13 @@ Graphite table name:
 * clusters.{cluster_id}.volumes.{volume_name}.status
 
 ##  Screenshots
-> Note: Few panels in the screenshots are using the mock data.
 ### Gluster at a Glance
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)
-#### Mock Data in Gluster at a Glance Screenshot
-  * Cluster Status
-  * Quorum Status
-  * Hosts
-    * Hosts Up
-    * Hosts Down
-  * Volumes
-    * Volumes Up
-    * Volumes Down
-  * Bricks
-    * Bricks Up
-    * Bricks Down
-
+![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-At-A-Glance.png)
 ### Gluster Hosts
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-Hosts.png)
+![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Hosts.png)
 
 ### Gluster Volumes
 ![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-Volumes.png)
 
 ### Gluster Bricks
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-Bricks.png)
+![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Bricks.png)
