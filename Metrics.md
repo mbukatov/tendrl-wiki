@@ -222,4 +222,5 @@ Graphite table name:
 ![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Bricks.png)
 
 ### Gluster Volumes
-![](https://github.com/rishubhjain/monitoring-integration/blob/feature/create_new_dashboard/etc/grafana/screenshots/Tendrl-Gluster-Volumes.png)
+![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Volume.png)
+![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Volume1.png)
