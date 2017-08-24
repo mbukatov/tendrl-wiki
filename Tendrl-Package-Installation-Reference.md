@@ -193,12 +193,14 @@ The following procedure outlines the procedure to install tendrl server componen
    
     ```
     datasource_host: <IP of graphite server>
+    etcd_connection: <IP of etcd server>
     ```
 
-18. Run monitoring-integration
+18. Enable and start monitoring-integration
 
     ```
-    tendrl-monitoring-integration
+    systemctl enable tendrl-monitoring-integration
+    systemctl start tendrl-monitoring-integration
     ```
 
 19. Enable and start httpd
@@ -227,9 +229,6 @@ The following procedure outlines the procedure to install tendrl server componen
    cp tendrl-*.repo /etc/yum.repos.d
    yum install epel-release
    ```
-   Configure the gdeploy repo
-   `https://copr.fedorainfracloud.org/coprs/sac/gdeploy/repo/epel-7/sac-gdeploy-epel-7.repo`
-   required only for gluster nodes.
 
 3. Install Node Agent
 
@@ -246,12 +245,6 @@ The following procedure outlines the procedure to install tendrl server componen
    ```
    etcd_connection = <IP of etcd server>
    graphite_host = <IP of Graphite Server>
-   ```
-   Add a new tag under tags (This is applicable only to gluster and is
-   required to be set only on one of the nodes):
-
-   ```
-   provisioner/gluster
    ```
 
 5. Enable and start Node Agent
