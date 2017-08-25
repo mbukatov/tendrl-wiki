@@ -1,3 +1,15 @@
+This wiki page describes installation of Tendrl, Software Defined Storage Controller.
+
+From Tendrl's point of view, there are these server roles:
+
+* **Tendrl Server**: single machine which runs Tendrl itself (eg. Tendrl web ui and api runs there)
+* **Storage Node** aka **Storage Server**: machine on which GlusterFS or Ceph storage server is installed. There are multiple such machines, together forming a storage cluster.
+
+Each role has a dedicated section with Tendrl installation steps specific for the role, but first few sections with
+configuration common for all roles are provided.
+
+When you already have a storage cluster installed (eg. GlusterFS Trusted Storage Pool hosting multiple Gluster volumes), you need one additional machine for Tendrl Server.
+
 ## SELinux Configuration
 
 Tendrl does not currently support running on SELinux enabled systems. In case
@@ -20,7 +32,7 @@ iptables --flush
 Make sure you keep time synchronized on all storage machines and Tendrl server.
 When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
 
-## Server Installation
+## Tendrl Server Installation
 
 The following procedure outlines the procedure to install tendrl server components
 
