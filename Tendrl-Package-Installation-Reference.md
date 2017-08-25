@@ -135,6 +135,10 @@ The following procedure outlines the procedure to install tendrl server componen
         :password: ''
     ```
 
+    Note that empty string, which is a default value of password here, means
+    that etcd auth is not enabled. Having etcd with auth enabled is not yet
+    supported by all Tendrl components.
+
     Then create the admin user:
 
     ```
