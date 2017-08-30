@@ -10,6 +10,8 @@ to: https://support.invisionapp.com/hc/en-us/articles/209192426-How-do-I-comment
 == UI Designs for Gluster-Only Monitoring Release
 * https://github.com/Tendrl/documentation/wiki/Tendrl-UI-Designs-for-Gluster-Only-Monitoring-Release[List of UI Design Artifacts for Gluster-Only Monitoring]
 
+
+
 == UI Designs Table of Content
 * https://tendrl.atlassian.net/secure/attachment/10500/Tendrl-%20Gluster-only%20IA.pdf[UX Design Approach and Information Architecture] - Tendrl UI design approach and information architecture, covers Gluster-only IA as well
 ** https://redhat.invisionapp.com/share/9XA4GEF4V#/screens[Tendrl Navigation for Managing Multiple Clusters] - Example of the vertical navigation and expansion behavior (of Admin menu item) and hover treatment
