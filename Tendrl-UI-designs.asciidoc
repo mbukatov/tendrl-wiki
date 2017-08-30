@@ -8,7 +8,7 @@ to: https://support.invisionapp.com/hc/en-us/articles/209192426-How-do-I-comment
 
 
 == UI Designs for Gluster-Only Monitoring Release
-* [List of UI design artifacts for the Gluster-Only Monitoring](https://github.com/Tendrl/documentation/wiki/Tendrl-UI-Designs-for-Gluster-Only-Monitoring-Release)
+* https://github.com/Tendrl/documentation/wiki/Tendrl-UI-Designs-for-Gluster-Only-Monitoring-Release[List of UI Design Artifacts for Gluster-Only Monitoring]
 
 == UI Designs Table of Content
 * https://tendrl.atlassian.net/secure/attachment/10500/Tendrl-%20Gluster-only%20IA.pdf[UX Design Approach and Information Architecture] - Tendrl UI design approach and information architecture, covers Gluster-only IA as well
