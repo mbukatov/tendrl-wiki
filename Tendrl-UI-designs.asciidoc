@@ -1,11 +1,14 @@
 Note: Actual implementation of these UI designs may contain differences as these UI designs are contributed by Tendrl community members.
 
-This serves as a landing page for the Tendrl UI designs that can include wireframes and other design artifacts.  We are using InVision for contributors to provide comments. 
+This serves as a landing page for the Tendrl UI designs that can include wireframes and other design artifacts that cover managing both Ceph and Gluster clusters.  We are using InVision for contributors to provide comments. 
 ....
 For information on how to make comments in Invision, please 
 to: https://support.invisionapp.com/hc/en-us/articles/209192426-How-do-I-comment-on-a-prototype-[How to Comment on a Prototype using Invision].
 ....
 
+
+== UI Designs for Gluster-Only Monitoring Release
+* [List of UI design artifacts for the Gluster-Only Monitoring](https://github.com/Tendrl/documentation/wiki/Tendrl-UI-Designs-for-Gluster-Only-Monitoring-Release)
 
 == UI Designs Table of Content
 * https://tendrl.atlassian.net/secure/attachment/10500/Tendrl-%20Gluster-only%20IA.pdf[UX Design Approach and Information Architecture] - Tendrl UI design approach and information architecture, covers Gluster-only IA as well
