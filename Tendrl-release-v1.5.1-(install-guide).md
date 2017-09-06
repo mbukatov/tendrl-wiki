@@ -4,6 +4,11 @@ Tendrl does not currently support running on SELinux enabled systems. In case
 there are problems running tendrl on such systems, please set SELinux to
 'Permissive' mode.
 
+```
+Change /etc/selinux/config, so that SELINUX=permissive
+reboot 
+```
+
 ## Firewall Configuration
 
 Tendrl does not currently support running on firewall enabled system as the
