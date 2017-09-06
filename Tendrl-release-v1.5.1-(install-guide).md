@@ -15,13 +15,28 @@ service firewalld stop
 systemctl disable firewalld
 iptables --flush
 ```
+
 ## NTP
 
 Make sure you keep time synchronized on all storage machines and Tendrl server.
 When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
 
-## Server Installation (Ansible)
-To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible
+```
+yum install ntpdate
+ntpdate <ntp_host>
+```
+
+## Ansible
+
+Make sure Ansible is installed on Tendrl server and all storage nodes, and that the Tendrl server can ssh to each of the storage nodes.
+
+```
+yum install epel-release
+yum install ansible
+```
+
+## Server Installation (Tendrl-Ansible)
+To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
 1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.1
 
