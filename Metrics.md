@@ -111,9 +111,15 @@ Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.ping.{attr-t
     - packets contain bad VLAN tags
     - unknown protocols being used
     - using IPv6 packets when the system is not configured to support IPv6
-* if_errors: The number of errors that occurred while transmitting packets due to carrier errors (duplex mismatch, faulty cable), fifo errors, heartbeat errors, and window errors, CRC errors too short frames, or too long frames.
-* if_octets: The number of bytes sent or received by the interface.
-* if_packets: The number of successfully transmitted packets.
+* if_errors: The number of errors per second that occurred while transmitting / receiving packets due to any of the following:
+    - errors (duplex mismatch, faulty cable)
+    - fifo errors
+    - heartbeat errors
+    - window errors
+    - CRC errors too short frames
+    - too long frames
+* if_octets: The number of octets (bytes) per second sent or received by the interface.
+* if_packets: The number of successfully transmitted or received packets per second.
 
 Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.interface-{interface-name}
 
