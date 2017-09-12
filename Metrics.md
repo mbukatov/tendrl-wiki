@@ -102,10 +102,7 @@ Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.ping.{attr-t
 
 ### network
 
-* if_dropped: The number of dropped packets
-* if_errors: The number of errors that occurred while transmitting packets due to carrier errors (duplex mismatch, faulty cable), fifo errors, heartbeat errors, and window errors, CRC errors too short frames, or too long frames.
-* if_octets
-* if_packets: The number of successfully transmitted packets.  Reasons for dropped packets include:
+* if_dropped: The number of dropped packets.  Reasons for dropped packets include:
     - NIC ring buffers getting full and unable to cope-up with incoming bursts of traffic
     - CPU receiving NIC interrupts is very busy and unable to process
     - some cable/hardware/duplex issues
@@ -114,6 +111,9 @@ Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.ping.{attr-t
     - packets contain bad VLAN tags
     - unknown protocols being used
     - using IPv6 packets when the system is not configured to support IPv6
+* if_errors: The number of errors that occurred while transmitting packets due to carrier errors (duplex mismatch, faulty cable), fifo errors, heartbeat errors, and window errors, CRC errors too short frames, or too long frames.
+* if_octets
+* if_packets: The number of successfully transmitted packets.
 
 Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.interface-{interface-name}
 
