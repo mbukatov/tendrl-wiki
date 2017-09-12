@@ -84,11 +84,11 @@ Source of descriptions: https://github.com/signalfx/integrations/blob/master/col
 * percent-cached: 
 * percent-free
 * percent-used
-* swap-cached
-* swap-free
-* swap_io-in
-* swap_io-out
-* swap-used
+* swap-cached: The amount of cached memory in bytes which is in the swap.
+* swap-free: The amount of free memory in bytes which is in the swap.
+* swap_io-in: The number of swap pages written per second.
+* swap_io-out: The number of swap pages read per second.
+* swap-used: The amount of used memory in bytes which is in the swap.
 
 Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.swap.{attr-type}
 
