@@ -112,7 +112,7 @@ Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.ping.{attr-t
     - unknown protocols being used
     - using IPv6 packets when the system is not configured to support IPv6
 * if_errors: The number of errors that occurred while transmitting packets due to carrier errors (duplex mismatch, faulty cable), fifo errors, heartbeat errors, and window errors, CRC errors too short frames, or too long frames.
-* if_octets
+* if_octets: The number of bytes sent or received by the interface.
 * if_packets: The number of successfully transmitted packets.
 
 Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.interface-{interface-name}
