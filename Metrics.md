@@ -72,8 +72,8 @@ Source of descriptions: https://github.com/signalfx/integrations/blob/master/col
   * read: The number of disk read operations.
   * write: The number of disk write operations.
 * disk_time
-  * read: The average amount of time it took to do a read operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds. For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
-  * write: The average amount of time it took to do a write operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds. For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
+  * read: The average amount of time it took to do a read operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds (ms). For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
+  * write: The average amount of time it took to do a write operation. For Darwin / Mac OS X, the unit is microseconds. For Linux and AIX, the unit is milliseconds (ms). For Solaris, the unit is nanoseconds. This metric is not reported on FreeBSD.
 
 Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.disk-{disk-name}.{attr-type1}.{attr-type2}
 Note:
