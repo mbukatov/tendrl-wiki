@@ -79,6 +79,15 @@ Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.disk-{disk-n
 Note:
 Source of descriptions: https://github.com/signalfx/integrations/blob/master/collectd-disk/docs/
 
+### network
+
+* if_dropped
+* if_errors: the number of errors that occurred while transmitting packets due to carrier errors (duplex mismatch, faulty cable), fifo errors, heartbeat errors, and window errors, CRC errors too short frames, or too long frames.
+* if_octets
+* if_packets: the number of successfully transmitted packets.
+
+Graphite table name: tendrl.clusters.{cluster-id}.nodes.{node-name}.interface-{interface-name}
+
 ### swap
 
 * percent-cached: 
