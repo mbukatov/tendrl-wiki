@@ -60,8 +60,8 @@ Source of descriptions: https://github.com/signalfx/integrations/blob/master/col
 
 ### disk
 * disk_io_time
-  * io_time
-  * weighted_io_time
+  * io_time: The disk I/O time in milliseconds (ms).
+  * weighted_io_time: The aggregate time in milliseconds (ms) spent on I/O operations that are either in progress or have completed.
 * disk_merged
   * read: The number of disk reads that have been merged into single physical disk access operations. In other words, this metric measures the number of instances in which one physical disk access served multiple disk reads.
   * write: The number of disk writes that were merged into single physical disk access operations. In other words, this metric measures the number of instances in which one physical disk access served multiple write operations.
