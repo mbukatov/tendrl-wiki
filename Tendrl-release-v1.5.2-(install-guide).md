@@ -150,8 +150,8 @@ The following procedure outlines the procedure to install tendrl server componen
         :base_key: ''
         :host: '<IP of etcd server>'
         :port: 2379
-        :user_name: ''
-        :password: ''
+        :user_name: 'root'
+        :password: 'replace_your_etcd_password_here'
     ```
 
     Then create the admin user:
@@ -225,6 +225,8 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     datasource_host: <IP of graphite server>
     etcd_connection: <IP of etcd server>
+    etcd_username: root
+    etcd_password: replace_your_password_here
     ```
 
 18. Enable and start monitoring-integration
