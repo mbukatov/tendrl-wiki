@@ -86,9 +86,9 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable etcd
    systemctl start etcd
    ```
-   * To enable authentication on etcd, Enable the `root` user in etcd via `etcdctl user add root:your_password_here`
+   * Enable the `root` user in etcd via `etcdctl user add root:replace_your_password_here`
    * Enable authentication by cmd `etcdctl auth enable`
-   * Disable `guest` role/user in etcd `etcdctl --username root:your_password_here role remove guest`
+   * Disable `guest` role/user in etcd `etcdctl --username root:replace_your_password_here role remove guest`
    * Add the etcd_username and etcd_password to all Tendrl service config file
 
 6. Install Node Agent
@@ -106,6 +106,8 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     etcd_connection: <IP of etcd server>
     graphite_host: <IP of Graphite Server>
+    etcd_username: root
+    etcd_password: replace_your_password_here
     ```
 
     Note that:
