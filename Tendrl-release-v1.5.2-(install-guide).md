@@ -43,7 +43,7 @@ yum install ansible
 ## Server Installation (Tendrl-Ansible)
 To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
-1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.1
+1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.2
 
 ## Server Installation (Manual)
 
@@ -86,6 +86,10 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable etcd
    systemctl start etcd
    ```
+   * To enable authentication on etcd, Enable the `root` user in etcd via `etcdctl user add root:your_password_here`
+   * Enable authentication by cmd `etcdctl auth enable`
+   * Disable `guest` role/user in etcd `etcdctl --username root:your_password_here role remove guest`
+   * Add the etcd_username and etcd_password to all Tendrl service config file
 
 6. Install Node Agent
 
