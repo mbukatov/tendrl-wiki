@@ -234,6 +234,8 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     datasource_host: <IP of graphite server>
     etcd_connection: <IP of etcd server>
+    etcd_username: root
+    etcd_password: replace_your_password_here
     ```
 
 19. Enable and start monitoring-integration
