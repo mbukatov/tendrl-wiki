@@ -197,7 +197,16 @@ The following procedure outlines the procedure to install tendrl server componen
     systemctl start carbon-cache
     ```
 
-16. Enable and start grafana service
+16. Configure grafana service
+
+    Open `/etc/sysconfig/grafana-server` and update:
+
+    ```
+    config_dir: /etc/tendrl/monitoring-integration/grafana/
+    config_file: /etc/tendrl/monitoring-integration/grafana/grafana.ini
+    ```
+
+17. Enable and start grafana service
 
     ```
     systemctl daemon-reload
@@ -217,7 +226,7 @@ The following procedure outlines the procedure to install tendrl server componen
      sudo /bin/systemctl start grafana-server.service 
     ```
 
-17. Configure monitoring-integration
+18. Configure monitoring-integration
 
     Open `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`
     and update:
@@ -225,25 +234,77 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     datasource_host: <IP of graphite server>
     etcd_connection: <IP of etcd server>
-    etcd_username: root
-    etcd_password: replace_your_password_here
     ```
 
-18. Enable and start monitoring-integration
+19. Enable and start monitoring-integration
 
     ```
     systemctl enable tendrl-monitoring-integration
     systemctl start tendrl-monitoring-integration
     ```
 
-19. Enable and start httpd
+20. Enable and start httpd
 
     ```
     systemctl enable httpd
     systemctl start httpd
+
     ```
 
-20. Open the following URL in the browser
+21. Install Monitoring Integration
+
+    ```
+    yum install tendrl-notifier
+    ```
+
+22. Configure notifier
+
+    Open `/etc/tendrl/notifier/notifier.conf.yaml`
+    and update:
+   
+    ```
+    etcd_connection: <IP of etcd server>
+    ```
+
+23. Configure email source::
+
+    ```
+
+    Open /etc/tendrl/notifier/email.conf.yaml
+   
+    update -->
+
+    email_id = <The sender email id>
+
+    email_smtp_server = <The smtp server>
+
+    email_smtp_port = <The smtp port>
+
+
+    Note: If SMTP server supports only authenticated email, 
+    follow the template as in: /etc/tendrl/notifier/email_auth.conf.yaml.sample
+          And accordingly enable the following:
+
+        auth = <ssl/tls>
+
+        email_pass = <password corresponding to email_id for authenticating to smtp server>
+    ```
+
+24. Enable and start notifier service::
+
+    ```
+    systemctl enable tendrl-notifier
+    systemctl start tendrl-notifier
+
+    Note: 
+
+    All nodes need to have tendrl-user added to tendrl group created by node-agent
+
+    useradd tendrl-user -g tendrl
+
+    ```
+   
+25. Open the following URL in the browser
 
     ```
     http://<IP of the server>
