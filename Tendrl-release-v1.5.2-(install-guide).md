@@ -45,6 +45,8 @@ To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
 1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.2
 
+Note: tendrl-ansible is not yet ready for v1.5.2
+
 ## Server Installation (Manual)
 
 The following procedure outlines the procedure to install tendrl server components manually
