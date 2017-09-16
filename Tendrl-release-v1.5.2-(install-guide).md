@@ -1,7 +1,19 @@
 ## SELinux Configuration
 
-Tendrl does not currently support running on SELinux enabled systems. In case
-there are problems running tendrl on such systems, please set SELinux to
+Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
+
+**Server**
+* yum install carbon-selinux-1.5.2-1.el7.centos.noarch.rpm
+* yum install tendrl-grafana-selinux-1.5.2-1.el7.centos.noarch.rpm
+* yum install tendrl-server-selinux-1.5.2-1.el7.centos.noarch.rpm
+
+**Storage Nodes**
+*  yum install tendrl-collectd-selinux-1.5.2-1.el7.centos.noarch.rpm
+*  yum install tendrl-node-selinux-1.5.2-1.el7.centos.noarch.rpm
+
+**Enabling selinux is optional and not tested completely (WARNING)**
+
+In case there are problems running tendrl on such systems, please set SELinux to
 'Permissive' mode.
 
 ```
