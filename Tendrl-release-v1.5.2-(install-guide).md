@@ -45,7 +45,7 @@ To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
 1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.2
 
-Note: tendrl-ansible is not yet ready for v1.5.2
+**Note: tendrl-ansible is not yet ready for v1.5.2, will be completed soon.**
 
 ## Server Installation (Manual)
 
@@ -88,6 +88,7 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable etcd
    systemctl start etcd
    ```
+   * **Enabling etcd user/password auth is optional, release testing shows increased CPU usage of Etcd processes when auth is enabled  (WARNING)**
    * Enable the `root` user in etcd via `etcdctl user add root:replace_your_password_here`
    * Enable authentication by cmd `etcdctl auth enable`
    * Disable `guest` role/user in etcd `etcdctl --username root:replace_your_password_here role remove guest`
