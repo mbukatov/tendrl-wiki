@@ -258,7 +258,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
     ```
 
-21. Install Monitoring Integration
+21. Install Notifier
 
     ```
     yum install tendrl-notifier
@@ -271,6 +271,9 @@ The following procedure outlines the procedure to install tendrl server componen
    
     ```
     etcd_connection: <IP of etcd server>
+    # If Etcd auth is required and enabled, define below options
+    etcd_username: root
+    etcd_password: replace_your_password_here
     ```
 
 23. Configure email source::
@@ -302,12 +305,6 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     systemctl enable tendrl-notifier
     systemctl start tendrl-notifier
-
-    Note: 
-
-    All nodes need to have tendrl-user added to tendrl group created by node-agent
-
-    useradd tendrl-user -g tendrl
 
     ```
    
