@@ -109,6 +109,7 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     etcd_connection: <IP of etcd server>
     graphite_host: <IP of Graphite Server>
+    # If Etcd auth is required and enabled, define below options
     etcd_username: root
     etcd_password: replace_your_password_here
     ```
@@ -237,6 +238,7 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     datasource_host: <IP of graphite server>
     etcd_connection: <IP of etcd server>
+    # If Etcd auth is required and enabled, define below options
     etcd_username: root
     etcd_password: replace_your_password_here
     ```
