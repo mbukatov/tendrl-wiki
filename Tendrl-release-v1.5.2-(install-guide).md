@@ -351,3 +351,7 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable tendrl-node-agent
    systemctl start tendrl-node-agent
    ```
+
+## Enabling Https
+
+Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
