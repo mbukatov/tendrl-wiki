@@ -40,6 +40,12 @@ yum install epel-release
 yum install ansible
 ```
 
+## Https Configuration
+
+Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
+
+
+
 ## Server Installation (Tendrl-Ansible)
 To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
@@ -351,7 +357,3 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable tendrl-node-agent
    systemctl start tendrl-node-agent
    ```
-
-## Enabling Https
-
-Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
