@@ -1,3 +1,8 @@
+TODO:
+* [ ] QE review of this document
+* [ ] alignment with tendrl-ansible
+* [ ] polish markup
+
 ## SELinux Configuration
 
 Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
