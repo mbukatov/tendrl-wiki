@@ -16,6 +16,11 @@ Tendrl support running on SELinux enabled systems. Procedure to install the poli
 *  yum install tendrl-collectd-selinux-1.5.2-1.el7.centos.noarch.rpm
 *  yum install tendrl-node-selinux-1.5.2-1.el7.centos.noarch.rpm
 
+TODO: questions:
+
+* [ ] why do we list full package versions like that? This should not be necessary.
+* [ ] Can I drop `el7.centos.noarch.rpm` suffix, yum should install packages by name, not full filename of rpm file
+
 **Enabling selinux is optional and not tested completely (WARNING)**
 
 In case there are problems running tendrl on such systems, please set SELinux to
