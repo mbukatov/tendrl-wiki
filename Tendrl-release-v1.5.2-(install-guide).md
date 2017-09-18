@@ -8,13 +8,13 @@ TODO:
 Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
 
 **Server**
-* yum install carbon-selinux-1.5.2-1.el7.centos.noarch.rpm
-* yum install tendrl-grafana-selinux-1.5.2-1.el7.centos.noarch.rpm
-* yum install tendrl-server-selinux-1.5.2-1.el7.centos.noarch.rpm
+* yum install carbon-selinux
+* yum install tendrl-grafana-selinux
+* yum install tendrl-server-selinux
 
 **Storage Nodes**
-*  yum install tendrl-collectd-selinux-1.5.2-1.el7.centos.noarch.rpm
-*  yum install tendrl-node-selinux-1.5.2-1.el7.centos.noarch.rpm
+*  yum install tendrl-collectd-selinux
+*  yum install tendrl-node-selinux
 
 TODO: questions:
 
