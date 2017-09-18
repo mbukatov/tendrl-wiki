@@ -234,8 +234,8 @@ The following procedure outlines the procedure to install tendrl server componen
     Open `/etc/sysconfig/grafana-server` and update:
 
     ```
-    config_dir: /etc/tendrl/monitoring-integration/grafana/
-    config_file: /etc/tendrl/monitoring-integration/grafana/grafana.ini
+    CONF_DIR: /etc/tendrl/monitoring-integration/grafana/
+    CONF_FILE: /etc/tendrl/monitoring-integration/grafana/grafana.ini
     ```
 
 17. Enable and start grafana service
