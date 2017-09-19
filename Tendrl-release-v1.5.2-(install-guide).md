@@ -27,7 +27,7 @@ In case there are problems running tendrl on such systems, please set SELinux to
 'Permissive' mode.
 
 ```
-Change /etc/selinux/config, so that SELINUX=permissive
+Modify /etc/selinux/config, so that SELINUX=permissive
 reboot 
 ```
 
@@ -177,6 +177,17 @@ The following procedure outlines the procedure to install tendrl server componen
     Edit configuration file `/etc/tendrl/etcd.yml` for connecting to the etcd
     server and update `:production:` section:
 
+    If etcd auth is not enabled, define the following:
+    ```
+    :production:
+        :base_key: ''
+        :host: '<IP of etcd server>'
+        :port: 2379
+        :user_name: ''
+        :password: ''
+    ```
+
+    If etcd auth is enabled, define the following:
     ```
     :production:
         :base_key: ''
@@ -260,8 +271,7 @@ The following procedure outlines the procedure to install tendrl server componen
 
 18. Configure monitoring-integration
 
-    Open `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`
-    and update:
+    Modify `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`:
    
     ```
     datasource_host: <IP of graphite server>
