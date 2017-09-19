@@ -1,5 +1,5 @@
 ## Supported SDS
-* Tendrl supports **Gluster>=3.12.0**
+* Tendrl requires **Gluster>=3.12.0**
 
 ## SELinux Configuration
 
