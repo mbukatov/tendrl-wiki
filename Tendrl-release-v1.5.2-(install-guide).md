@@ -1,5 +1,5 @@
 ## Supported SDS
-* You can use Gluster>=3.12.0 with Tendrl
+* Tendrl supports **Gluster>=3.12.0**
 
 ## SELinux Configuration
 
