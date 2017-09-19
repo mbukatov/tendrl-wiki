@@ -1,8 +1,3 @@
-TODO:
-* [ ] QE review of this document
-* [ ] alignment with tendrl-ansible
-* [ ] polish markup
-
 ## SELinux Configuration
 
 Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
@@ -15,11 +10,6 @@ Tendrl support running on SELinux enabled systems. Procedure to install the poli
 **Storage Nodes**
 *  yum install tendrl-collectd-selinux
 *  yum install tendrl-node-selinux
-
-TODO: questions:
-
-* [ ] why do we list full package versions like that? This should not be necessary.
-* [ ] Can I drop `el7.centos.noarch.rpm` suffix, yum should install packages by name, not full filename of rpm file
 
 **Enabling selinux is optional and not tested completely (WARNING)**
 
