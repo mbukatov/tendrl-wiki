@@ -34,7 +34,7 @@
 * ceph-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/ceph-integration }
 * gluster-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/gluster-integration }
 * python-gdeploy : {Owner: [Darshan Narayana Murthy](https://github.com/nnDarshan), Repo: https://github.com/Tendrl/python-gdeploy }
-* SDS metrics/monitoring dashboard and Alerting: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: TBD}
+* monitoring-integration (SDS metrics/monitoring dashboard and Alerting): {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/monitoring-integration}
 * dashboard: {Owner: [Ankush Behl](https://github.com/cloudbehl), [Neha Gupta](https://github.com/gnehapk), Repo: https://github.com/Tendrl/dashboard }
 * tendrl.org: {Owner: Tendrl core, [Jeff Applewhite](https://github.com/japplewhite), Repo: https://github.com/Tendrl/tendrl.github.io }
 * tendrl-ansible: {Owner: [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/Tendrl/tendrl-ansible }
