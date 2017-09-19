@@ -24,7 +24,7 @@ TODO: questions:
 **Enabling selinux is optional and not tested completely (WARNING)**
 
 In case there are problems running tendrl on such systems, please set SELinux to
-'Permissive' mode.
+'permissive' mode:
 
 ```
 Modify /etc/selinux/config, so that SELINUX=permissive
