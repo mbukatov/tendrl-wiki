@@ -1,3 +1,6 @@
+## Supported SDS
+* You can use Gluster>=3.12.0 with Tendrl
+
 ## SELinux Configuration
 
 Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
