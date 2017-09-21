@@ -29,7 +29,6 @@
 **Tendrl/gluster-integration**
 * [Enable/Disable profiling doesn't work consistently](https://github.com/Tendrl/gluster-integration/issues/405)
 * [No alerts/notifications generated when volume and brick are almost full (and possible data discrepancy](https://github.com/Tendrl/gluster-integration/issues/412)
-* [While volume create event there is no update dashborad happening for bricks](https://github.com/Tendrl/gluster-integration/issues/416)
 * [Volume profiling flag is not set as instructed always](https://github.com/Tendrl/gluster-integration/issues/418)
 * [ postinstall and postuninstall scripts should not contain `restorecon -Rv /`](https://github.com/Tendrl/gluster-integration/issues/424)
 
