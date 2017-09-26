@@ -1,3 +1,5 @@
+## 21 Sep 2017
+
 **Tendrl/api**
 
 * [Configuration file /etc/tendrl/etcd.yml with etcd root password is readable for every account](https://github.com/Tendrl/api/issues/293)
@@ -14,7 +16,7 @@
 * [Inconsistent behavior in how we see object details](https://github.com/Tendrl/ui/issues/627)
 * [UI Issues with Notification Drawer](https://github.com/Tendrl/ui/issues/629)  -- **Fixed, Need Verification**
 * [Task Details: Scroll Events so most recent are always in view](https://github.com/Tendrl/ui/issues/630)  -- **Fixed, Need Verification**
-* [Align Save and Cancel buttons with left edge of input fields on all forms](https://github.com/Tendrl/ui/issues/631)  -- **Fixed, Need Verification**
+* [Align Save and C**Tendrl/ui**ancel buttons with left edge of input fields on all forms](https://github.com/Tendrl/ui/issues/631)  -- **Fixed, Need Verification**
 
 **Tendrl/commons**
 * None
@@ -46,3 +48,25 @@
 * ~~[Default configuration of smtp server contains real domain names with MX entries and one unregistered (so far)](https://github.com/Tendrl/notifier/issues/115)~~
 
 **Tendrl/tendrl-ansible**
+
+## 26 Sep 2017
+
+**Tendrl/api**
+* [Internal Server Error when user does not exist ](https://github.com/Tendrl/api/issues/300)
+* [Required: Internal profiling for tendrl-api](https://github.com/Tendrl/api/issues/301)
+* [Sample SSL configuration redirects to ip address](https://github.com/Tendrl/api/issues/302)
+
+**Tendrl/ui**
+* [Spell Checker on the UI repo](https://github.com/Tendrl/ui/issues/636)
+* [Fix responsiveness fro brick details page](https://github.com/Tendrl/ui/issues/637)
+* [Filter controls don’t seem to match PatternFly Filter control](https://github.com/Tendrl/ui/issues/638)
+
+**Tendrl/gluster-integration**
+* [Performance testing gluster-integration to optimise sync cycles](https://github.com/Tendrl/gluster-integration/issues/429)
+* [Update minimum required gluster version to 3.12.2](https://github.com/Tendrl/gluster-integration/issues/432)
+* [On deleting a resource there is a need to update graphite data](https://github.com/Tendrl/gluster-integration/issues/435)
+
+**Tendrl/monitoring-integration**
+* [Grafana Dashboards are not using SSL when SSL is configured for Tendrl](https://github.com/Tendrl/monitoring-integration/issues/144)
+* [Need to add this repository in coverall and codacy 3rd party tools to calculate code quality](https://github.com/Tendrl/monitoring-integration/issues/143)
+* [Add code quality check plugins for pull request](https://github.com/Tendrl/monitoring-integration/issues/141)
