@@ -1,3 +1,6 @@
+## Tendrl (Monitoring Server) System Requirements
+The server hosting tendrl-api/central_store should have minimum 12 GB of memory and 4 VCPUs (or equivalent)(due to alerts, logs being stored on this node)
+
 ## Supported SDS
 * Tendrl requires **Gluster>=3.12.0**
 
@@ -44,6 +47,14 @@ When you install Tendrl on machines with already existing storage cluster, an nt
 ```
 yum install ntpdate
 ntpdate <ntp_host>
+```
+
+## Python DNS 
+
+Make sure Python DNS is installed on Tendrl server.
+
+```
+yum install python-dns 
 ```
 
 ## Ansible
