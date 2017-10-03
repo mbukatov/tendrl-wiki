@@ -1,7 +1,6 @@
 **Tendrl/ui**
 
 * https://github.com/Tendrl/ui/issues/644
-* https://github.com/Tendrl/ui/issues/645
 * https://github.com/Tendrl/ui/issues/649
 * https://github.com/Tendrl/ui/issues/650
 
