@@ -7,6 +7,7 @@
 * [Cluster Version - column label and displayed value inconsistency in different views](https://github.com/Tendrl/ui/issues/652)
 * [Change / shorten button labels in the various views in Tendrl UI](https://github.com/Tendrl/ui/issues/651)
 * [Task details button is truncated in Chrome, but not Firefox](https://github.com/Tendrl/ui/issues/645)
+* [Cluster List: Move “Ready to import” column after Volume Profile column](https://github.com/Tendrl/ui/issues/653)
 * [Filter controls don’t seem to match PatternFly Filter control](https://github.com/Tendrl/ui/issues/638)
 
 
