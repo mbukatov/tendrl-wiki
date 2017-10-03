@@ -11,7 +11,7 @@
 * [Task details button is truncated in Chrome, but not Firefox](https://github.com/Tendrl/ui/issues/645)
 * [Change "NA" to "None" or 0](https://github.com/Tendrl/ui/issues/658)
 * [Cluster List: Move “Ready to import” column after Volume Profile column](https://github.com/Tendrl/ui/issues/653)
-* [Cluster ID in Host List does not match the Cluster ID in the Cluster List or context switcher and text formatting inconsistent](https://github.com/Tendrl/ui/issues/622)
+* [Cluster ID in Host List does not match the Cluster ID in the Cluster List or context switcher and text formatting inconsistent](https://github.com/Tendrl/ui/issues/622) -- Cluster ID now matches, but text formatting inconsistent within Tendrl UI and with Dashboards
 * [Clusters List: Remove kebab menu and move "Disable Profiling" to appear with other buttons](https://github.com/Tendrl/ui/issues/659)
 * [Filter controls don’t seem to match PatternFly Filter control](https://github.com/Tendrl/ui/issues/638)
 * [Action buttons too far apart or too close](https://github.com/Tendrl/ui/issues/655)
