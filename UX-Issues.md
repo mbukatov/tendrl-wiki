@@ -5,7 +5,7 @@
 * [Import cluster: checkbox text typos, checkbox text, infotip and checkbox not aligned](https://github.com/Tendrl/ui/issues/647)
 * ["Launch Dashboard" words outside of button widget](https://github.com/Tendrl/ui/issues/646)
 * [Cluster Version - column label and displayed value inconsistency in different views](https://github.com/Tendrl/ui/issues/652)
-* [Cluster List: Volume Profile -> Volume Profiling label change](Cluster List: Volume Profile -> Volume Profiling label change)
+* [Cluster List: Volume Profile -> Volume Profiling label change](https://github.com/Tendrl/ui/issues/654)
 * [Change / shorten button labels in the various views in Tendrl UI](https://github.com/Tendrl/ui/issues/651)
 * [Task details button is truncated in Chrome, but not Firefox](https://github.com/Tendrl/ui/issues/645)
 * [Cluster List: Move “Ready to import” column after Volume Profile column](https://github.com/Tendrl/ui/issues/653)
