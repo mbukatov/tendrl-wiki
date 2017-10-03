@@ -70,3 +70,29 @@
 * [Grafana Dashboards are not using SSL when SSL is configured for Tendrl](https://github.com/Tendrl/monitoring-integration/issues/144)
 * [Need to add this repository in coverall and codacy 3rd party tools to calculate code quality](https://github.com/Tendrl/monitoring-integration/issues/143)
 * [Add code quality check plugins for pull request](https://github.com/Tendrl/monitoring-integration/issues/141)
+
+## 03 Oct 2017
+
+**Tendrl/ui**
+*  [Import cluster: checkbox text typos, checkbox text, infotip and checkbox not aligned](https://github.com/Tendrl/ui/issues/647)
+* ["Launch Dashboard" words outside of button widget](https://github.com/Tendrl/ui/issues/646)
+* [Task details button is truncated in Chrome, but not Firefox](https://github.com/Tendrl/ui/issues/645)
+
+**Tendrl/commons**
+* [Building tendrl-commons package from master branch is broken](https://github.com/Tendrl/commons/issues/744)
+* [Alerts are pushed in etcd when all clearing alerts are removed and directory becomes empty](https://github.com/Tendrl/commons/issues/742)
+
+**Tendrl/commons**
+* [Building tendrl-node-agent package from master branch is broken](https://github.com/Tendrl/node-agent/issues/634)
+* [Etcd client changes in Tendrl collectd plugins ](https://github.com/Tendrl/node-agent/issues/633)
+
+**Tendrl/gluster-integration**
+* [Set deleted flag while deletion of entities peer/volume/brick](https://github.com/Tendrl/gluster-integration/issues/439)
+* [Invoke update graphite flow of monitoring-integration while deletion of peer/vol/brick](https://github.com/Tendrl/gluster-integration/issues/437)
+* [dependency on provisioner node](https://github.com/Tendrl/gluster-integration/issues/436)
+
+**Tendrl/monitoring-integration**
+* [Alert dashboard not found ](https://github.com/Tendrl/monitoring-integration/issues/158)
+* [Grafana: Status panels sometimes missing data or say Invalid number](https://github.com/Tendrl/monitoring-integration/issues/157)
+* [Main dashboard says volume down, but volume dashbaord says all is well](https://github.com/Tendrl/monitoring-integration/issues/155)
+* [On a default install, grafana start fails](https://github.com/Tendrl/monitoring-integration/issues/153)
