@@ -4,6 +4,7 @@
 * [Clusters List differs from design](https://github.com/Tendrl/ui/issues/650)
 * [Import cluster: checkbox text typos, checkbox text, infotip and checkbox not aligned](https://github.com/Tendrl/ui/issues/647)
 * ["Launch Dashboard" words outside of button widget](https://github.com/Tendrl/ui/issues/646)
+* [Task details button is truncated in Chrome, but not Firefox](https://github.com/Tendrl/ui/issues/645)
 
 
 **Tendrl/monitoring-integration**
