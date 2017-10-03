@@ -2,6 +2,7 @@
 
 * [[UX] Confusing navigation in the UI produces unexpected results](https://github.com/Tendrl/ui/issues/644)
 * [Clusters List differs from design](https://github.com/Tendrl/ui/issues/650)
+* [Import cluster: checkbox text typos, checkbox text, infotip and checkbox not aligned](https://github.com/Tendrl/ui/issues/647)
 
 
 **Tendrl/monitoring-integration**
