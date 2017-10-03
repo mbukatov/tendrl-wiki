@@ -11,7 +11,7 @@
 * [Task details button is truncated in Chrome, but not Firefox](https://github.com/Tendrl/ui/issues/645)
 * [Cluster List: Move “Ready to import” column after Volume Profile column](https://github.com/Tendrl/ui/issues/653)
 * [Filter controls don’t seem to match PatternFly Filter control](https://github.com/Tendrl/ui/issues/638)
-* [Import Cluster: buttons too far apart](https://github.com/Tendrl/ui/issues/655)
+* [Action buttons too far apart or too close](https://github.com/Tendrl/ui/issues/655)
 * [Cluster name is incredibly long and not user-friendly](https://github.com/Tendrl/ui/issues/656)
 
 **Tendrl/monitoring-integration**
