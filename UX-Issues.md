@@ -12,6 +12,7 @@
 * [Change "NA" to "None" or 0](https://github.com/Tendrl/ui/issues/658)
 * [Cluster List: Move “Ready to import” column after Volume Profile column](https://github.com/Tendrl/ui/issues/653)
 * [Cluster ID in Host List does not match the Cluster ID in the Cluster List or context switcher and text formatting inconsistent](https://github.com/Tendrl/ui/issues/622) -- Cluster ID now matches, but text formatting inconsistent within Tendrl UI and with Dashboards
+* [Inconsistent status icon for node down (disconnected)](https://github.com/Tendrl/ui/issues/664)
 * [Clusters List: Remove kebab menu and move "Disable Profiling" to appear with other buttons](https://github.com/Tendrl/ui/issues/659)
 * [Filter controls don’t seem to match PatternFly Filter control](https://github.com/Tendrl/ui/issues/638)
 * [Action buttons too far apart or too close](https://github.com/Tendrl/ui/issues/655)
@@ -19,6 +20,8 @@
 
 **Tendrl/monitoring-integration**
 * [Grafana dashboard panels missing light gray background fill](https://github.com/Tendrl/ui/issues/649)
+* [Conflicting capacity utilization percentages for the same volume in multiple view](https://github.com/Tendrl/monitoring-integration/issues/175)
+* [Brick says it's down when it's not down](https://github.com/Tendrl/monitoring-integration/issues/174)
 * [2 Throughput panels in Bricks dashboard](https://github.com/Tendrl/monitoring-integration/issues/152)
 * [Panels in Gluster-at-glance dashboard contain tables instead of graphs](https://github.com/Tendrl/monitoring-integration/issues/151)
 * [Missing Reads and Writes panel in Volumes dashboard](https://github.com/Tendrl/monitoring-integration/issues/150)
