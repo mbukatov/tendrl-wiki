@@ -10,9 +10,10 @@
     * `etcd_cert_file: /path/to/client_cert_file.pem`
     * `etcd_key_file: /path/to/client_key_file.pem`
 - Open `/etc/etcd/etcd.conf` and update (more etcd ssl related options available, check [examples](https://coreos.com/etcd/docs/latest/op-guide/security.html)
-    * `ETCD_CA_FILE="/path/to/ca_cert_file.pem"`
-    * `ETCD_CERT_FILE="/path/to/client_cert_file.pem"`
-    * `ETCD_KEY_FILE="/path/to/client_key_file.pem"`
+    * `ETCD_CLIENT_CERT_AUTH="true"`
+    * `ETCD_TRUSTED_CA_FILE="/path/to/ca_cert_file.pem"`
+    * `ETCD_CERT_FILE="/path/to/server_cert_file.pem"`
+    * `ETCD_KEY_FILE="/path/to/server_key_file.pem"`
     * `ETCD_LISTEN_CLIENT_URLS="https://<hostname_or_fqdn of etcd server>:2379"`
     * `ETCD_ADVERTISE_CLIENT_URLS="https://<hostname_or_fqdn of etcd server>:2379"`
 - Restart etcd service and restart all Tendrl services on all storage nodes and Tendrl server
