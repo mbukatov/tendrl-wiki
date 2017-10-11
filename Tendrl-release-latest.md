@@ -75,9 +75,9 @@ Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-
 ## Server Installation (Tendrl-Ansible)
 To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
-1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.2
+1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/master
 
-**Note: tendrl-ansible is not yet ready for v1.5.2, will be completed soon.**
+**Note: tendrl-ansible is not yet ready for v1.5.2 and v1.5.3, will be completed soon.**
 
 ## Server Installation (Manual)
 
@@ -120,12 +120,7 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable etcd
    systemctl start etcd
    ```
-   * **Enabling etcd user/password auth is optional, release testing shows increased CPU usage of Etcd processes when auth is enabled  (WARNING)**
-   * Enable the `root` user in etcd via `etcdctl user add root:replace_your_password_here`
-   * Enable authentication by cmd `etcdctl auth enable`
-   * Disable `guest` role/user in etcd `etcdctl --username root:replace_your_password_here role remove guest`
-   * Add the etcd_username and etcd_password to all Tendrl service config file
-
+   * ** To run secure ETCD (SSL/TLS based encryption and auth), please refer https://github.com/Tendrl/documentation/wiki/Tendrl-with-a-secure-etcd-cluster**
 6. Install Node Agent
 
     ```
@@ -141,9 +136,6 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     etcd_connection: <IP of etcd server>
     graphite_host: <IP of Graphite Server>
-    # If Etcd auth is required and enabled, define below options
-    etcd_username: root
-    etcd_password: replace_your_password_here
     ```
 
     Note that:
@@ -181,7 +173,6 @@ The following procedure outlines the procedure to install tendrl server componen
     Edit configuration file `/etc/tendrl/etcd.yml` for connecting to the etcd
     server and update `:production:` section:
 
-    If etcd auth is not enabled, define the following:
     ```
     :production:
         :base_key: ''
@@ -190,17 +181,6 @@ The following procedure outlines the procedure to install tendrl server componen
         :user_name: ''
         :password: ''
     ```
-
-    If etcd auth is enabled, define the following:
-    ```
-    :production:
-        :base_key: ''
-        :host: '<IP of etcd server>'
-        :port: 2379
-        :user_name: 'root'
-        :password: 'replace_your_etcd_password_here'
-    ```
-
     Then create the admin user:
 
     ```
@@ -280,9 +260,6 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     datasource_host: <IP of graphite server>
     etcd_connection: <IP of etcd server>
-    # If Etcd auth is required and enabled, define below options
-    etcd_username: root
-    etcd_password: replace_your_password_here
     ```
 
 19. Enable and start monitoring-integration
@@ -313,9 +290,7 @@ The following procedure outlines the procedure to install tendrl server componen
    
     ```
     etcd_connection: <IP of etcd server>
-    # If Etcd auth is required and enabled, define below options
-    etcd_username: root
-    etcd_password: replace_your_password_here
+    etcd_port: <Port of etcd server>
     ```
 
 23. Configure email source::
