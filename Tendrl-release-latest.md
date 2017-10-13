@@ -107,10 +107,10 @@ The following procedure outlines the procedure to install tendrl server componen
 
    Open `/etc/etcd/etcd.conf` and update:
 
-   * `ETCD_LISTEN_CLIENT_URLS="http://<IP of etcd server>:2379"`
-   * `ETCD_ADVERTISE_CLIENT_URLS="http://<IP of etcd server>:2379"`
+   * `ETCD_LISTEN_CLIENT_URLS="http://<FQDN of etcd server>:2379"`
+   * `ETCD_ADVERTISE_CLIENT_URLS="http://<FQDN of etcd server>:2379"`
 
-   As a value for *etcd server ip address*, use some *public ip address of the
+   As a value for *etcd server FQDN*, use some *public FQDN address of the
    tendrl server machine* (which is the server you are installing etcd on right
    now).
 
@@ -134,14 +134,14 @@ The following procedure outlines the procedure to install tendrl server componen
     Open `/etc/tendrl/node-agent/node-agent.conf.yaml` and update:
 
     ```
-    etcd_connection: <IP of etcd server>
-    graphite_host: <IP of Graphite Server>
+    etcd_connection: <FQDN of etcd server>
+    graphite_host: <FQDN of Graphite Server>
     ```
 
     Note that:
 
-    * we configured *ip address of etcd server* just few steps ago
-    * a safe default value for *ip address of graphite* is the same one we
+    * we configured *FQDN address of etcd server* just few steps ago
+    * a safe default value for *FQDN address of graphite* is the same one we
       use for etcd here (this guide places both services on tendrl server
       machine)
     * graphite stack is installed later as a dependency of
@@ -176,7 +176,7 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
     :production:
         :base_key: ''
-        :host: '<IP of etcd server>'
+        :host: '<FQDN of etcd server>'
         :port: 2379
         :user_name: ''
         :password: ''
@@ -258,8 +258,8 @@ The following procedure outlines the procedure to install tendrl server componen
     Modify `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`:
    
     ```
-    datasource_host: <IP of graphite server>
-    etcd_connection: <IP of etcd server>
+    datasource_host: <FQDN of graphite server>
+    etcd_connection: <FQDN of etcd server>
     ```
 
 19. Enable and start monitoring-integration
@@ -289,7 +289,7 @@ The following procedure outlines the procedure to install tendrl server componen
     and update:
    
     ```
-    etcd_connection: <IP of etcd server>
+    etcd_connection: <FQDN of etcd server>
     etcd_port: <Port of etcd server>
     ```
 
@@ -328,7 +328,7 @@ The following procedure outlines the procedure to install tendrl server componen
 25. Open the following URL in the browser
 
     ```
-    http://<IP of the server>
+    http://<FQDN of the server>
     ```
 
 
@@ -358,8 +358,8 @@ The following procedure outlines the procedure to install tendrl server componen
    Open `/etc/tendrl/node-agent/node-agent.conf.yaml` and update:
 
    ```
-   etcd_connection = <IP of etcd server>
-   graphite_host = <IP of Graphite Server>
+   etcd_connection = <FQDN of etcd server>
+   graphite_host = <FQDN of Graphite Server>
    ```
 
 5. Enable and start Node Agent
