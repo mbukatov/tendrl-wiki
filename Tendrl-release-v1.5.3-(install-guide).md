@@ -292,10 +292,10 @@ The following procedure outlines the procedure to install tendrl server componen
     etcd_port: <Port of etcd server>
     ```
 
-23. Configure email source::
+23. Configure email/snmp source::
 
     ```
-
+    Email:
     Open /etc/tendrl/notifier/email.conf.yaml
    
     update -->
@@ -314,6 +314,48 @@ The following procedure outlines the procedure to install tendrl server componen
         auth = <ssl/tls>
 
         email_pass = <password corresponding to email_id for authenticating to smtp server>
+
+    
+    SNMP:
+    Open /etc/tendrl/notifier/snmp.conf.yaml
+
+    For v2_endpoint:
+    # For more hosts you can add more entry with endpoint2, endpoint3, etc
+    endpoint1:
+    # Name or IP address of the remote SNMP host.
+    host_ip: <Receiving machine ip>
+    community: <community name>
+
+    # In receiving host machine:
+    yum install net-snmp
+    open file snmptrapd.conf
+    # write below line inside file
+    disableAuthorization yes
+    # Run command
+    snmptrapd -f -Lo -c snmptrapd.conf
+
+    For v3_endpoint:
+    # For more hosts you can add more entry with endpoint2, endpoint3, etc
+    endpoint1:
+
+    # Name or IP address of the remote SNMP host.
+    host_ip: <Receiving machine ip>
+    # Name of the user on the host that connects to the agent.
+    username: <Username of receiver>
+    # Enables the agent to receive packets from the host.
+    auth_key: <md5 password>
+    #  The private user password
+    priv_key: <des password>
+
+    # In receiving host machine:
+    yum install net-snmp
+    open file snmptrapd.conf
+    # write below line inside file
+    authUser log <username of receiver>
+    createUser -e 8000000001020304 <user name of receiver> MD5 <md5 password> DES <des password>
+    # Run command
+    snmptrapd -f -Lo -c snmptrapd.conf
+
     ```
 
 24. Enable and start notifier service::
