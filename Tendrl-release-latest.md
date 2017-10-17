@@ -75,9 +75,9 @@ Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-
 ## Server Installation (Tendrl-Ansible)
 To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
 
-1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/master
+1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.3
 
-**Note: tendrl-ansible is not yet ready for v1.5.2 and v1.5.3, will be completed soon.**
+
 
 ## Server Installation (Manual)
 
