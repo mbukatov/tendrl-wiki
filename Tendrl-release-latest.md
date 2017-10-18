@@ -56,15 +56,6 @@ iptables --flush
 Make sure you keep time synchronized on all storage machines and Tendrl server.
 When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
 
-## Ansible
-
-Make sure Ansible is installed on Tendrl server and all storage nodes, and that the Tendrl server can ssh to each of the storage nodes.
-
-```
-yum install epel-release
-yum install ansible
-```
-
 ## Https Configuration
 
 Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
