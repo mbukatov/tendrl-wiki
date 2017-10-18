@@ -1,7 +1,21 @@
-## Tendrl (Monitoring Server) System Requirements
+This wiki page describes installation of Tendrl, Software Defined Storage Controller.
+
+From Tendrl's point of view, there are these server roles:
+
+* **Tendrl Server**: single machine which runs Tendrl itself (eg. Tendrl web ui and api runs there)
+* **Tendrl Storage Node** aka **Storage Server**: machine on which  Software Defined Storage server (such as GlusterFS) is installed. There are multiple such machines, together forming a storage cluster.
+
+Each role has a dedicated section with Tendrl installation steps specific for the role, but first few sections with
+configuration common for all roles are provided.
+
+When you already have a storage cluster installed (eg. GlusterFS Trusted Storage Pool hosting multiple Gluster volumes), you need one additional machine for Tendrl Server.
+
+## Tendrl Server System Requirements
+
 The server hosting tendrl-api/central_store should have minimum 12 GB of memory and 4 VCPUs (or equivalent)(due to alerts, logs being stored on this node)
 
 ## Supported SDS
+
 * Tendrl requires **Gluster>=3.12.0**
 
 ## SELinux Configuration
