@@ -365,7 +365,7 @@ The following procedure outlines the procedure to install tendrl server componen
     ```
 
 
-## Storage Node Installation
+## Tendrl Storage Node Installation
 
 1. Install CentOS 7.3 and Gluster. Ensure all the participating nodes in the Gluster cluster are peer probed (i.e. present in gluster trusted storage pool), only after which tendrl-node-agent should be installed on all nodes, without peer probe, the node wont be detected by tendrl as a gluster node.
 
