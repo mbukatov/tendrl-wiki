@@ -18,6 +18,40 @@ The server hosting tendrl-api/central_store should have minimum 12 GB of memory 
 
 * Tendrl requires **Gluster>=3.12.0**
 
+## Installation using Tendrl Ansible
+
+You can perform installation of both Tendrl Server and Tendrl Storage Node
+machines either manually (step by step following installation sections below)
+or using tendrl-ansible. Using tendrl-ansible is highly recommended.
+
+While tendrl-ansible automates the installation almost entirely, you still
+need to roughly understand what steps are performed during installation of each
+machine role, especially wrt configuration you may want to tweak.
+
+Tendrl Ansible gives you option to change default configuration via ansible
+variables. Description of all variables is provided in README file of each
+ansible role.
+
+To install tendrl-ansible, it's highly recommended to use rpm package provided
+in the tendrl release repository:
+
+```
+# yum copr enable tendrl/release
+# yum install tendrl-ansible
+```
+
+Quick introduction is provided in the README file provided with the package:
+
+```
+# less /usr/share/doc/tendrl-ansible-1.5.3/README.md
+```
+
+That said, you can also consult the release branch of tendrl-ansbile
+repository:
+
+https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.3/
+
+
 ## SELinux Configuration
 
 Tendrl provides [independent SELinux policy](https://fedoraproject.org/wiki/SELinux/IndependentPolicy), which is integral part of Tendrl.
@@ -63,12 +97,6 @@ Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-
 Please note that [there are known
 issues](https://github.com/Tendrl/api/issues/303) and that https configuration
 is not actively tested right now.
-
-## Server Installation (Tendrl-Ansible)
-To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
-
-1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.3
-
 
 ## Tendrl Server Installation
 
