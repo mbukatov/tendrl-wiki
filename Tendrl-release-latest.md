@@ -5,8 +5,8 @@ From Tendrl's point of view, there are these server roles:
 * **Tendrl Server**: single machine which runs Tendrl itself (eg. Tendrl web ui and api runs there)
 * **Tendrl Storage Node** aka **Storage Server**: machine on which  Software Defined Storage server (such as GlusterFS) is installed. There are multiple such machines, together forming a storage cluster.
 
-Each role has a dedicated section with Tendrl installation steps specific for the role, but first few sections with
-configuration common for all roles are provided.
+Each role has a dedicated section with Tendrl installation steps specific for the role, but first there are few sections with
+information not specific for any particular role.
 
 When you already have a storage cluster installed (eg. GlusterFS Trusted Storage Pool hosting multiple Gluster volumes), you need one additional machine for Tendrl Server.
 
