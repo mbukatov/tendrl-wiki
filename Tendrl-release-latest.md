@@ -60,7 +60,9 @@ When you install Tendrl on machines with already existing storage cluster, an nt
 
 Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
 
-
+Please note that [there are known
+issues](https://github.com/Tendrl/api/issues/303) and that https configuration
+is not actively tested right now.
 
 ## Server Installation (Tendrl-Ansible)
 To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
