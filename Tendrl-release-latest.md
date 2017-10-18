@@ -6,26 +6,24 @@ The server hosting tendrl-api/central_store should have minimum 12 GB of memory 
 
 ## SELinux Configuration
 
-Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
+Tendrl provides [independent SELinux policy](https://fedoraproject.org/wiki/SELinux/IndependentPolicy), which is integral part of Tendrl.
 
-**Server**
+To install the Tendrl SELinux policies, you need to switch SELinux mode to `permissive` on all Tendrl machines first: set `SELINUX=permissive` in `/etc/selinux/config` and then either run `setenforce 0` or reboot. Then you can install packages with Tendrl SELinux policies as described below.
+
+On **Tendrl Server**:
+
 * yum install carbon-selinux
 * yum install tendrl-grafana-selinux
-* yum install tendrl-server-selinux
+* yum install tendrl-selinux
 
-**Storage Nodes**
+On **Tendrl Storage Nodes**:
+
 *  yum install tendrl-collectd-selinux
-*  yum install tendrl-node-selinux
+*  yum install tendrl-selinux
 
-**Enabling selinux is optional and not tested completely (WARNING)**
+Warning: **running Tendrl on machines in enforcing mode doesn't work yet**, as Tendrl SELinux policies are in early stage of development. See [current list of known tendrl-selinux issues](https://github.com/Tendrl/tendrl-selinux/issues). Only when we gain more confidence in Tendrl SELinux polices based on fixing known issues and our testing, we will suggest to run Tendrl on machines in enforcing mode instead.
 
-In case there are problems running tendrl on such systems, please set SELinux to
-'permissive' mode:
-
-```
-Modify /etc/selinux/config, so that SELINUX=permissive
-reboot 
-```
+If you want to help with improvement of SELinux policies for Tendrl, [create issue for tendrl-selinux](https://github.com/Tendrl/tendrl-selinux/issues/new) and attach output of `ausearch -m avc` command along with your use case, which causes the avc denials.
 
 ## Firewall Configuration
 
