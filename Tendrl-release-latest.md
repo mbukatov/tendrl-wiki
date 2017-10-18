@@ -56,11 +56,6 @@ iptables --flush
 Make sure you keep time synchronized on all storage machines and Tendrl server.
 When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
 
-```
-yum install ntpdate
-ntpdate <ntp_host>
-```
-
 ## Python DNS 
 
 Make sure Python DNS is installed on Tendrl server.
