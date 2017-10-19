@@ -230,12 +230,10 @@ tendrl-ansible:
 
     ```
     :production:
-        :base_key: ''
         :host: '<FQDN of etcd server>'
         :port: 2379
-        :user_name: ''
-        :password: ''
     ```
+
     Then create the admin user:
 
     ```
