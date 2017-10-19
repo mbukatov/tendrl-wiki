@@ -14,6 +14,8 @@ When you already have a storage cluster installed (eg. GlusterFS Trusted Storage
 
 The server hosting tendrl-api/central_store should have minimum 12 GB of memory and 4 VCPUs (or equivalent)(due to alerts, logs being stored on this node)
 
+See also tendrl-ansible `prechecks.yml` playbook file.
+
 ## Supported SDS
 
 * Tendrl requires **Gluster>=3.12.0**
@@ -73,6 +75,9 @@ Warning: **running Tendrl on machines in enforcing mode doesn't work yet**, as T
 
 If you want to help with improvement of SELinux policies for Tendrl, [create issue for tendrl-selinux](https://github.com/Tendrl/tendrl-selinux/issues/new) and attach output of `ausearch -m avc` command along with your use case, which causes the avc denials.
 
+SELinux configuration is covered in tednrl-ansible. By default all
+machines are switched to permissive mode and listed packages are installed.
+
 ## Firewall Configuration
 
 Tendrl does not currently support running on firewall enabled system as the
@@ -85,10 +90,18 @@ systemctl disable firewalld
 iptables --flush
 ```
 
+Firewall configuration is covered in tednrl-ansible via
+`workaround.disable-firewall.yml` playbook, which is included in
+`site.yml.sample` example playbook.
+
 ## NTP
 
 Make sure you keep time synchronized on all storage machines and Tendrl server.
 When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
+
+NTP configuration is out of scope of tendrl-ansible. Playbook `prechecks.yml`,
+which is included in `site.yml.sample` playbook, only checks if the time
+synchronization is configured.
 
 ## Https Configuration
 
@@ -98,9 +111,18 @@ Please note that [there are known
 issues](https://github.com/Tendrl/api/issues/303) and that https configuration
 is not actively tested right now.
 
+Configuration of https is not yet part of tendrl-ansible.
+
 ## Tendrl Server Installation
 
-The following procedure outlines the procedure to install tendrl server components manually
+The following procedure outlines the procedure to install tendrl server components manually.
+
+Installation steps listed there are covered in the following roles of
+tendrl-ansible:
+
+* grafana-repo
+* tendrl-copr
+* tendrl-server
 
 1. Install CentOS 7.3
 
@@ -394,6 +416,12 @@ The following procedure outlines the procedure to install tendrl server componen
 
 
 ## Tendrl Storage Node Installation
+
+Installation steps listed there are covered in the following roles of
+tendrl-ansible:
+
+* tendrl-copr
+* tendrl-storage-node
 
 1. Install CentOS 7.3 and Gluster. Ensure all the participating nodes in the Gluster cluster are peer probed (i.e. present in gluster trusted storage pool), only after which tendrl-node-agent should be installed on all nodes, without peer probe, the node wont be detected by tendrl as a gluster node.
 
