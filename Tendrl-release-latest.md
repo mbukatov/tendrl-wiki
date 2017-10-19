@@ -326,14 +326,6 @@ tendrl-ansible:
     systemctl start tendrl-monitoring-integration
     ```
 
-20. Enable and start httpd
-
-    ```
-    systemctl enable httpd
-    systemctl start httpd
-
-    ```
-
 21. Install Notifier
 
     ```
@@ -424,8 +416,15 @@ tendrl-ansible:
     systemctl start tendrl-notifier
 
     ```
-   
-25. Open the following URL in the browser
+
+25. Enable and start httpd
+
+    ```
+    systemctl enable httpd
+    systemctl start httpd
+    ```
+
+26. Open the following URL in the browser
 
     ```
     http://<FQDN of the server>
