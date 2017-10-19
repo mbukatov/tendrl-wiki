@@ -115,14 +115,14 @@ Configuration of https is not yet part of tendrl-ansible.
 
 ## Tendrl Server Installation
 
-The following procedure outlines the procedure to install tendrl server components manually.
-
 Installation steps listed there are covered in the following roles of
 tendrl-ansible:
 
 * grafana-repo
 * tendrl-copr
 * tendrl-server
+
+The following procedure outlines the procedure to install tendrl server components manually:
 
 1. Install CentOS 7.3
 
@@ -438,6 +438,8 @@ tendrl-ansible:
 
 * tendrl-copr
 * tendrl-storage-node
+
+The following procedure outlines the procedure to install tendrl storage node components manually:
 
 1. Install CentOS 7.3 and Gluster. Ensure all the participating nodes in the Gluster cluster are peer probed (i.e. present in gluster trusted storage pool), only after which tendrl-node-agent should be installed on all nodes, without peer probe, the node wont be detected by tendrl as a gluster node.
 
