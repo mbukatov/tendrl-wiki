@@ -282,8 +282,8 @@ tendrl-ansible:
     Open `/etc/sysconfig/grafana-server` and update:
 
     ```
-    CONF_DIR: /etc/tendrl/monitoring-integration/grafana/
-    CONF_FILE: /etc/tendrl/monitoring-integration/grafana/grafana.ini
+    CONF_DIR=/etc/tendrl/monitoring-integration/grafana/
+    CONF_FILE=/etc/tendrl/monitoring-integration/grafana/grafana.ini
     ```
 
 17. Enable and start grafana service
