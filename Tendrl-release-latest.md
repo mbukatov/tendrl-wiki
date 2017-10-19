@@ -286,6 +286,8 @@ tendrl-ansible:
     CONF_FILE=/etc/tendrl/monitoring-integration/grafana/grafana.ini
     ```
 
+16. TODO: describe configuration of `grafana_admin_passwd` in grafana.ini
+
 17. Enable and start grafana service
 
     ```
@@ -314,6 +316,8 @@ tendrl-ansible:
     datasource_host: <FQDN of graphite server>
     etcd_connection: <FQDN of etcd server>
     ```
+
+18. TODO: describe configuration of `grafana_admin_passwd` in monitoring-integration.conf.yaml
 
 19. Enable and start monitoring-integration
 
