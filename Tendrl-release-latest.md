@@ -192,8 +192,11 @@ tendrl-ansible:
 
     Note that:
 
-    * we configured *FQDN address of etcd server* just few steps ago
-    * a safe default value for *FQDN address of graphite* is the same one we
+    * when we use dns query to translate FQDN of etcd server to an ip address,
+      the resulting value should match *ip address of etcd server* we
+      configured just few steps ago
+    * a safe default value for *FQDN address of graphite* would be a domain
+      name which translates to ip address we
       use for etcd here (this guide places both services on tendrl server
       machine)
     * graphite stack is installed later as a dependency of
