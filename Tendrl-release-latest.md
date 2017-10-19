@@ -347,7 +347,6 @@ tendrl-ansible:
    
     ```
     etcd_connection: <FQDN of etcd server>
-    etcd_port: <Port of etcd server>
     ```
 
 23. Configure email/snmp source::
