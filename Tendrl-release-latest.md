@@ -148,12 +148,16 @@ tendrl-ansible:
 
    Open `/etc/etcd/etcd.conf` and update:
 
-   * `ETCD_LISTEN_CLIENT_URLS="http://<FQDN of etcd server>:2379"`
-   * `ETCD_ADVERTISE_CLIENT_URLS="http://<FQDN of etcd server>:2379"`
+   * `ETCD_LISTEN_CLIENT_URLS="http://<ip address of etcd server>:2379"`
+   * `ETCD_ADVERTISE_CLIENT_URLS="http://<ip address of etcd server>:2379"`
 
-   As a value for *etcd server FQDN*, use some *public FQDN address of the
+   As a value for *etcd server ip address*, use some *public ip address of the
    tendrl server machine* (which is the server you are installing etcd on right
-   now).
+   now). This options controls where etcd server will listen on for client
+   traffic.
+
+   For more details, see [etcd configuration
+   documentation](https://coreos.com/etcd/docs/3.2.5/op-guide/configuration.html).
 
 5. Enable and start the etcd service
 
