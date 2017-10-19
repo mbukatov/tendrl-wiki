@@ -159,13 +159,20 @@ tendrl-ansible:
    For more details, see [etcd configuration
    documentation](https://coreos.com/etcd/docs/3.2.5/op-guide/configuration.html).
 
+   **To run secure ETCD (SSL/TLS based client server encryption and auth),
+   please refer to:
+   https://github.com/Tendrl/documentation/wiki/Tendrl-with-a-secure-etcd-cluster**
+   Note: this is covered by tendrl-ansible, but it's disabled by default, as
+   the issuing and deployment of tls certificates on all machines is out of
+   scope of tendrl-ansible and you need to do it yourself first.
+
 5. Enable and start the etcd service
 
    ```
    systemctl enable etcd
    systemctl start etcd
    ```
-   * ** To run secure ETCD (SSL/TLS based encryption and auth), please refer https://github.com/Tendrl/documentation/wiki/Tendrl-with-a-secure-etcd-cluster**
+
 6. Install Node Agent
 
     ```
