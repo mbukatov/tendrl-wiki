@@ -415,6 +415,8 @@ tendrl-ansible:
 
     ```
 
+    Note: [SNMP configuration is not yet implemented by tendrl-ansible](https://github.com/Tendrl/tendrl-ansible/issues/59)
+
 24. Enable and start notifier service::
 
     ```
