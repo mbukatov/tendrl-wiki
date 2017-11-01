@@ -425,7 +425,9 @@ The following procedure outlines the procedure to install tendrl server componen
 
     ```
 
-    Note: [SNMP configuration is not yet implemented by tendrl-ansible](https://github.com/Tendrl/tendrl-ansible/issues/59)
+    When using tendrl-ansible, you create this `snmp.conf.yaml` file locally
+    and set it's local path as a value of `tendrl_notifier_snmp_conf_file`
+    ansible variable. See readme file of tendrl-server role for details.
 
 24. Enable and start notifier service::
 
