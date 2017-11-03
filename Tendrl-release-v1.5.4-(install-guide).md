@@ -1,31 +1,82 @@
-## Tendrl (Monitoring Server) System Requirements
+This wiki page describes installation of Tendrl, Software Defined Storage Controller.
+
+From Tendrl's point of view, there are these server roles:
+
+* **Tendrl Server**: single machine which runs Tendrl itself (eg. Tendrl web ui and api runs there)
+* **Tendrl Storage Node** aka **Storage Server**: machine on which  Software Defined Storage server (such as GlusterFS) is installed. There are multiple such machines, together forming a storage cluster.
+
+Each role has a dedicated section with Tendrl installation steps specific for the role, but first there are few sections with
+information not specific for any particular role.
+
+When you already have a storage cluster installed (eg. GlusterFS Trusted Storage Pool hosting multiple Gluster volumes), you need one additional machine for Tendrl Server.
+
+## Tendrl Server System Requirements
+
 The server hosting tendrl-api/central_store should have minimum 12 GB of memory and 4 VCPUs (or equivalent)(due to alerts, logs being stored on this node)
 
+See also tendrl-ansible `prechecks.yml` playbook file.
+
 ## Supported SDS
+
 * Tendrl requires **Gluster>=3.12.0**
+
+## Installation using Tendrl Ansible
+
+You can perform installation of both Tendrl Server and Tendrl Storage Node
+machines either manually (step by step following installation sections below)
+or using tendrl-ansible. Using tendrl-ansible is highly recommended.
+
+While tendrl-ansible automates the installation almost entirely, you still
+need to roughly understand what steps are performed during installation of each
+machine role, especially wrt configuration you may want to tweak.
+
+Tendrl Ansible gives you option to change default configuration via ansible
+variables. Description of all variables is provided in README file of each
+ansible role.
+
+To install tendrl-ansible, it's highly recommended to use rpm package provided
+in the tendrl release repository:
+
+```
+# yum copr enable tendrl/release
+# yum install tendrl-ansible
+```
+
+Quick introduction is provided in the README file provided with the package:
+
+```
+# less /usr/share/doc/tendrl-ansible-1.5.4/README.md
+```
+
+That said, you can also consult the release branch of tendrl-ansbile
+repository:
+
+https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.4/
+
 
 ## SELinux Configuration
 
-Tendrl support running on SELinux enabled systems. Procedure to install the policies a are mentioned below.
+Tendrl provides [independent SELinux policy](https://fedoraproject.org/wiki/SELinux/IndependentPolicy), which is integral part of Tendrl.
 
-**Server**
+To install the Tendrl SELinux policies, you need to switch SELinux mode to `permissive` on all Tendrl machines first: set `SELINUX=permissive` in `/etc/selinux/config` and then either run `setenforce 0` or reboot. Then you can install packages with Tendrl SELinux policies as described below.
+
+On **Tendrl Server**:
+
 * yum install carbon-selinux
 * yum install tendrl-grafana-selinux
-* yum install tendrl-server-selinux
+* yum install tendrl-selinux
 
-**Storage Nodes**
+On **Tendrl Storage Nodes**:
+
 *  yum install tendrl-collectd-selinux
-*  yum install tendrl-node-selinux
+*  yum install tendrl-selinux
 
-**Enabling selinux is optional and not tested completely (WARNING)**
+Warning: **running Tendrl on machines in enforcing mode doesn't work yet**, as Tendrl SELinux policies are in early stage of development. See [current list of known tendrl-selinux issues](https://github.com/Tendrl/tendrl-selinux/issues). Only when we gain more confidence in Tendrl SELinux polices based on fixing known issues and our testing, we will suggest to run Tendrl on machines in enforcing mode instead.
 
-In case there are problems running tendrl on such systems, please set SELinux to
-'permissive' mode:
+If you want to help with improvement of SELinux policies for Tendrl, [create issue for tendrl-selinux](https://github.com/Tendrl/tendrl-selinux/issues/new) and attach output of `ausearch -m avc` command along with your use case, which causes the avc denials.
 
-```
-Modify /etc/selinux/config, so that SELINUX=permissive
-reboot 
-```
+SELinux configuration is covered in tednrl-ansible. By default all
+machines are switched to permissive mode and listed packages are installed.
 
 ## Firewall Configuration
 
@@ -39,48 +90,39 @@ systemctl disable firewalld
 iptables --flush
 ```
 
+Firewall configuration is covered in tednrl-ansible via
+`workaround.disable-firewall.yml` playbook, which is included in
+`site.yml.sample` example playbook.
+
 ## NTP
 
 Make sure you keep time synchronized on all storage machines and Tendrl server.
 When you install Tendrl on machines with already existing storage cluster, an ntp daemon (such as chrony or ntpd) is usually already configured because it's part of the storage cluster installation.
 
-```
-yum install ntpdate
-ntpdate <ntp_host>
-```
-
-## Python DNS 
-
-Make sure Python DNS is installed on Tendrl server.
-
-```
-yum install python-dns 
-```
-
-## Ansible
-
-Make sure Ansible is installed on Tendrl server and all storage nodes, and that the Tendrl server can ssh to each of the storage nodes.
-
-```
-yum install epel-release
-yum install ansible
-```
+NTP configuration is out of scope of tendrl-ansible. Playbook `prechecks.yml`,
+which is included in `site.yml.sample` playbook, only checks if the time
+synchronization is configured.
 
 ## Https Configuration
 
 Please refer to  https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
 
+Please note that [there are known
+issues](https://github.com/Tendrl/api/issues/303) and that https configuration
+is not actively tested right now.
 
+Configuration of https is not yet part of tendrl-ansible.
 
-## Server Installation (Tendrl-Ansible)
-To install (tendrl server, tendrl agents on storage nodes) via tendrl-ansible:
+## Tendrl Server Installation
 
-1) Follow readme at https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.4
+Installation steps listed there are covered in the following roles of
+tendrl-ansible:
 
+* grafana-repo
+* tendrl-copr
+* tendrl-server
 
-## Server Installation (Manual)
-
-The following procedure outlines the procedure to install tendrl server components manually
+The following procedure outlines the procedure to install tendrl server components manually:
 
 1. Install CentOS 7.3
 
@@ -106,12 +148,23 @@ The following procedure outlines the procedure to install tendrl server componen
 
    Open `/etc/etcd/etcd.conf` and update:
 
-   * `ETCD_LISTEN_CLIENT_URLS="http://<FQDN of etcd server>:2379"`
-   * `ETCD_ADVERTISE_CLIENT_URLS="http://<FQDN of etcd server>:2379"`
+   * `ETCD_LISTEN_CLIENT_URLS="http://<ip address of etcd server>:2379"`
+   * `ETCD_ADVERTISE_CLIENT_URLS="http://<ip address of etcd server>:2379"`
 
-   As a value for *etcd server FQDN*, use some *public FQDN address of the
+   As a value for *etcd server ip address*, use some *public ip address of the
    tendrl server machine* (which is the server you are installing etcd on right
-   now).
+   now). This options controls where etcd server will listen on for client
+   traffic.
+
+   For more details, see [etcd configuration
+   documentation](https://coreos.com/etcd/docs/3.2.5/op-guide/configuration.html).
+
+   **To run secure ETCD (SSL/TLS based client server encryption and auth),
+   please refer to:
+   https://github.com/Tendrl/documentation/wiki/Tendrl-with-a-secure-etcd-cluster**
+   Note: this is covered by tendrl-ansible, but it's disabled by default, as
+   the issuing and deployment of tls certificates on all machines is out of
+   scope of tendrl-ansible and you need to do it yourself first.
 
 5. Enable and start the etcd service
 
@@ -119,7 +172,7 @@ The following procedure outlines the procedure to install tendrl server componen
    systemctl enable etcd
    systemctl start etcd
    ```
-   * ** To run secure ETCD (SSL/TLS based encryption and auth), please refer https://github.com/Tendrl/documentation/wiki/Tendrl-with-a-secure-etcd-cluster**
+
 6. Install Node Agent
 
     ```
@@ -139,8 +192,11 @@ The following procedure outlines the procedure to install tendrl server componen
 
     Note that:
 
-    * we configured *FQDN address of etcd server* just few steps ago
-    * a safe default value for *FQDN address of graphite* is the same one we
+    * when we use dns query to translate FQDN of etcd server to an ip address,
+      the resulting value should match *ip address of etcd server* we
+      configured just few steps ago
+    * a safe default value for *FQDN address of graphite* would be a domain
+      name which translates to ip address we
       use for etcd here (this guide places both services on tendrl server
       machine)
     * graphite stack is installed later as a dependency of
@@ -174,12 +230,10 @@ The following procedure outlines the procedure to install tendrl server componen
 
     ```
     :production:
-        :base_key: ''
         :host: '<FQDN of etcd server>'
         :port: 2379
-        :user_name: ''
-        :password: ''
     ```
+
     Then create the admin user:
 
     ```
@@ -228,9 +282,19 @@ The following procedure outlines the procedure to install tendrl server componen
     Open `/etc/sysconfig/grafana-server` and update:
 
     ```
-    CONF_DIR: /etc/tendrl/monitoring-integration/grafana/
-    CONF_FILE: /etc/tendrl/monitoring-integration/grafana/grafana.ini
+    CONF_DIR=/etc/tendrl/monitoring-integration/grafana/
+    CONF_FILE=/etc/tendrl/monitoring-integration/grafana/grafana.ini
     ```
+
+16. Create new strong password and set is as a value of `admin_password`
+    option in `/etc/tendrl/monitoring-integration/grafana/grafana.ini` file.
+
+    This password is used by Tendrl for internal purposes only.
+
+    When one uses tendrl-ansible, this password is generated by [ansible
+    password lookup
+    plugin](https://docs.ansible.com/ansible/latest/playbooks_lookups.html#the-password-lookup)
+    and stored in `grafana_admin_passwd` file.
 
 17. Enable and start grafana service
 
@@ -261,19 +325,23 @@ The following procedure outlines the procedure to install tendrl server componen
     etcd_connection: <FQDN of etcd server>
     ```
 
+18. Recall the password you created and added into `grafana.ini` config file
+    few steps back, locate *Grafana credentials* section in
+    `/etc/tendrl/monitoring-integration/monitoring-integration.conf.yaml`
+    config file and set the same password there:
+
+    ```
+    # Grafana credentials
+    credentials:
+      user: admin
+      password: set_the_same_password_as_used_for_grafana_admin_password
+    ```
+
 19. Enable and start monitoring-integration
 
     ```
     systemctl enable tendrl-monitoring-integration
     systemctl start tendrl-monitoring-integration
-    ```
-
-20. Enable and start httpd
-
-    ```
-    systemctl enable httpd
-    systemctl start httpd
-
     ```
 
 21. Install Notifier
@@ -289,7 +357,6 @@ The following procedure outlines the procedure to install tendrl server componen
    
     ```
     etcd_connection: <FQDN of etcd server>
-    etcd_port: <Port of etcd server>
     ```
 
 23. Configure email/snmp source::
@@ -358,6 +425,10 @@ The following procedure outlines the procedure to install tendrl server componen
 
     ```
 
+    When using tendrl-ansible, you create this `snmp.conf.yaml` file locally
+    and set it's local path as a value of `tendrl_notifier_snmp_conf_file`
+    ansible variable. See readme file of tendrl-server role for details.
+
 24. Enable and start notifier service::
 
     ```
@@ -365,15 +436,30 @@ The following procedure outlines the procedure to install tendrl server componen
     systemctl start tendrl-notifier
 
     ```
-   
-25. Open the following URL in the browser
+
+25. Enable and start httpd
+
+    ```
+    systemctl enable httpd
+    systemctl start httpd
+    ```
+
+26. Open the following URL in the browser
 
     ```
     http://<FQDN of the server>
     ```
 
 
-## Storage Node Installation
+## Tendrl Storage Node Installation
+
+Installation steps listed there are covered in the following roles of
+tendrl-ansible:
+
+* tendrl-copr
+* tendrl-storage-node
+
+The following procedure outlines the procedure to install tendrl storage node components manually:
 
 1. Install CentOS 7.3 and Gluster. Ensure all the participating nodes in the Gluster cluster are peer probed (i.e. present in gluster trusted storage pool), only after which tendrl-node-agent should be installed on all nodes, without peer probe, the node wont be detected by tendrl as a gluster node.
 
