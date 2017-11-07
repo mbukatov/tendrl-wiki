@@ -15,7 +15,7 @@ The following are suggested best practices for acceptable response times and lat
         * Feedback during the delay is especially important if the response time is likely to be highly variable, since users will then not know what to expect.
 * Alerts latency
     * Alerts should be visible in < 10 sec and not exceed 60 sec.
-    * As a rule of thumb, the average alert latency should be less than 60 sec in a well-performing system, but an even latency of between 60 to 90 sec is also acceptable.
+    * As a rule of thumb, the average alert latency should be < 60 sec in a well-performing system, but event latency of between 60 to 90 sec is also acceptable.
 * Network latency
     * Up to 150 ms: great user experience
     * 150ms – 300 ms: good/acceptable user experience
