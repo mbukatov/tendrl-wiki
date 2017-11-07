@@ -30,8 +30,7 @@ The following are suggested best practices for acceptable response times and lat
 * [Acceptable waiting time for users in time sensitive actions](https://ux.stackexchange.com/questions/58163/acceptable-waiting-time-for-users-in-time-sensitive-actions)
 * [Analyzing SCOM 2012 Alert logging latency](https://blogs.technet.microsoft.com/dirkbri/2014/08/19/analyzing-scom-2012-alert-logging-latency/)
 * [Essential Microsoft Operations Manager](https://books.google.com/books?id=7v1dQCX4HEIC&pg=PA296&lpg=PA296&dq=system+logging+acceptable+latency&source=bl&ots=8yAhts8K0q&sig=NfssIsOywt79PhcW_1RqqXojk4k&hl=en&sa=X&ved=0ahUKEwiFnNixka3XAhVilVQKHb_rDqUQ6AEIZTAJ#v=onepage&q=system%20logging%20acceptable%20latency&f=false)
-* [What is the expected response time to deliver good user experience?
-](https://www.dynatrace.com/blog/what-is-the-expected-response-time-for-a-good-user-experience/)
 * [How Network Latency Impacts User Experience](https://www.citrix.com/blogs/2017/09/25/how-network-latency-impacts-user-experience/)
 * [Website Response Times](https://www.nngroup.com/articles/website-response-times/)
-
+* [What is the expected response time to deliver good user experience?
+](https://www.dynatrace.com/blog/what-is-the-expected-response-time-for-a-good-user-experience/)
