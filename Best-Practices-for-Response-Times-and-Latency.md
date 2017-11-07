@@ -20,9 +20,9 @@ The following are suggested best practices for acceptable response times and lat
     * Up to 150 ms: great user experience
     * 150ms – 300 ms: good/acceptable user experience
     * Over 300 ms: degraded user experience
-    * Minimize network latency between the infrastructure components to < 8 ms and does not exceed 200 ms.  The minimum bandwidth is ? Kbps with n% utilization for the agents and etcd central store.
+    * Minimize network latency between the infrastructure components to < 8 ms and does not exceed 200 ms.  The minimum bandwidth is ? kbps with n% utilization for the agents and etcd central store.
     * Ensure latency between UI and infrastructure < 50 ms
-    * Higher latency will result in slower but error-free performance and can potentially cause slow updates to the etcd central store in large deployments or stretch configurations.
+    * Higher latency will result in slower but error-free performance and can potentially cause slow updates to the etcd central store in large deployments or stretched configurations.
    
 
 
