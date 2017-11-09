@@ -450,6 +450,8 @@ The following procedure outlines the procedure to install tendrl server componen
     http://<FQDN of the server>
     ```
 
+    and login as ``admin`` user with default password ``adminuser``.
+
 
 ## Tendrl Storage Node Installation
 
