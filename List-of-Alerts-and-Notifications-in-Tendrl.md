@@ -1,5 +1,5 @@
 In the Tendrl stack, the following channels originate alerts:
-* grafana
+* grafana (based on time-series data)
 * gluster integration state sync
 * glusterfs native events
 
