@@ -1,4 +1,4 @@
-Tendrl generates alerts primarily from following channels:
+In the Tendrl stack, the following channels originate alerts:
 * grafana
 * gluster integration state sync
 * glusterfs native events
