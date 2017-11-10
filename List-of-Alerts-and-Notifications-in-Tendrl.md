@@ -1,5 +1,3 @@
-# List of Alerts and Notifications in Tendrl
-
 Tendrl generates alerts primarily from following channels:
 * grafana
 * gluster integration state sync
