@@ -14,13 +14,13 @@ You can find the list of tendrl alerts below, along with the entities those aler
 
 ## Status alerts
 
-### Sds related alerts
+#### Sds related alerts
 * volume status (volume, cluster)
 * volume state (volume, cluster)
 * brick status (volume, host, cluster)
 * peer status (cluster)
 * rebalance status (volume, cluster)
-* georeplication status (cluster)
+* geo-replication status (cluster)
 * quorum of volume lost (volume, cluster)
 * quorum of volume regained (volume, cluster)
 * svc  connected (cluster)
@@ -34,12 +34,12 @@ You can find the list of tendrl alerts below, along with the entities those aler
 
 ## Utilization alerts
 
-### Host related alerts
+#### Host related alerts
 * cpu utilization (host)
 * memory utilization (host)
 * swap utilization (host)
 
-### Sds related alerts
+#### Sds related alerts
 * volume utilization (volume, cluster)
 * brick utilization (volume, cluster)
 
@@ -57,4 +57,4 @@ You can find the list of tendrl alerts below, along with the entities those aler
 * Peer rejected
 * Rebalance status update failed for volume
 * Scv reconfigure failed for service
-* Georeplication checkpoint completed for session
+* Geo-replication checkpoint completed for session
