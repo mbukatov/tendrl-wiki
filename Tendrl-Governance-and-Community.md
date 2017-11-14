@@ -2,10 +2,6 @@
 * "**Tendrl core**" - The Tendrl core team consists of ([Mrugesh Karnik](https://github.com/brainfunked), [Rohan Kanade](https://github.com/r0h4n), [Nishant Thomas](https://github.com/nthomas-redhat)).
 * "**Reviewers**": reviewers are per component, all PRs on said component need sign-off from reviewers if not signed-off by "Tendrl core".
    * Reviewers:
-       * [Jeff Applewhite](https://github.com/japplewhite) (For Components: specifications, dashboard, SDS metrics/monitoring dashboard and Alerting, documentation)
-       * [Shubhendu Tripathi](https://github.com/shtripat) (For Components: ceph-integration)
-       * [Darshan Narayana Murthy](https://github.com/nnDarshan) (For Components: gluster-integration)
-       * [Anmol Babu](https://github.com/anmolbabu) (For Components: SDS metrics/monitoring dashboard and Alerting)
        * [Ju lim](https://github.com/julienlim) (For Components: dashboard, SDS metrics/monitoring dashboard and Alerting)
        * [Sankarshan Mukhopadhyay](https://github.com/sankarshanmukhopadhyay) (For Components: documentation)
 
@@ -27,15 +23,14 @@
 
 ## Components/Repos:
 * commons: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/commons }
-* node-agent: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/node-agent }
+* node-agent: {Owner: [[Darshan Narayana Murthy](https://github.com/nnDarshan), [Rohan Kanade](https://github.com/r0h4n)], Repo: https://github.com/Tendrl/node-agent }
 * api: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/api }
 * python-tendrlclient: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/python-tendrlclient }
 * ruby-tendrlclient: {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/tendrl-ruby }
-* ceph-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/ceph-integration }
-* gluster-integration: {Owner: [Rohan Kanade](https://github.com/r0h4n), Repo: https://github.com/Tendrl/gluster-integration }
+* gluster-integration: {Owner: [[Darshan Narayana Murthy](https://github.com/nnDarshan), [Shubhendu Tripathi](https://github.com/shtripat)], Repo: https://github.com/Tendrl/gluster-integration }
 * python-gdeploy : {Owner: [Darshan Narayana Murthy](https://github.com/nnDarshan), Repo: https://github.com/Tendrl/python-gdeploy }
-* monitoring-integration (SDS metrics/monitoring dashboard and Alerting): {Owner: [Anup Nivargi](https://github.com/anivargi), Repo: https://github.com/Tendrl/monitoring-integration}
-* dashboard: {Owner: [Ankush Behl](https://github.com/cloudbehl), [Neha Gupta](https://github.com/gnehapk), Repo: https://github.com/Tendrl/dashboard }
+* monitoring-integration (SDS metrics/monitoring dashboard and Alerting): {Owner: [Shubhendu Tripathi](https://github.com/shtripat), Repo: https://github.com/Tendrl/monitoring-integration}
+* UI: {Owner: [[Ankush Behl](https://github.com/cloudbehl), [Neha Gupta](https://github.com/gnehapk)], Repo: https://github.com/Tendrl/ui }
 * tendrl.org: {Owner: Tendrl core, [Jeff Applewhite](https://github.com/japplewhite), Repo: https://github.com/Tendrl/tendrl.github.io }
 * tendrl-ansible: {Owner: [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/Tendrl/tendrl-ansible }
 * documentation: {Owner: Tendrl core, [Martin Bukatovic](https://github.com/mbukatov), Repo: https://github.com/tendrl/documentation }
