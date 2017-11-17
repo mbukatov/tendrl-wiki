@@ -239,10 +239,9 @@ Graphite table name:
 ![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)
 ![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-At-A-Glance-1.png)
 
-
 ### Gluster Hosts
 ![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Hosts.png)
-![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Hosts-1.png
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Hosts-1.png)
 ### Gluster Bricks
 ![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Bricks.png)
 
