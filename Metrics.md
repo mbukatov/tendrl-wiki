@@ -236,14 +236,16 @@ Graphite table name:
 
 ##  Screenshots
 ### Gluster at a Glance
-![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-At-A-Glance.png)
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-At-A-Glance.png)
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-At-A-Glance-1.png)
+
 
 ### Gluster Hosts
-![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Hosts.png)
-
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Hosts.png)
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Hosts-1.png
 ### Gluster Bricks
-![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Bricks.png)
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Bricks.png)
 
 ### Gluster Volumes
-![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Volume.png)
-![](https://github.com/cloudbehl/grafana-dashboards/blob/master/snapshots/Tendrl-Volume1.png)
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Volumes.png)
+![](https://github.com/Tendrl/monitoring-integration/blob/master/etc/grafana/screenshots/Tendrl-Gluster-Volumes-1.png)
