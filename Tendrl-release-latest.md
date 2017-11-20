@@ -1,4 +1,4 @@
-This wiki page describes installation of Tendrl, Software Defined Storage Controller.
+This wiki page describes how to install/uninstall of Tendrl, Software Defined Storage Controller.
 
 From Tendrl's point of view, there are these server roles:
 
@@ -497,3 +497,12 @@ The following procedure outlines the procedure to install tendrl storage node co
    systemctl enable tendrl-node-agent
    systemctl start tendrl-node-agent
    ```
+
+## Uninstall Tendrl
+1. Stop and uninstall all tendrl-* services and collectd on Tendrl managed storage nodes.
+
+2. Stop and uninstall all tendrl-* and related services like Grafana, Graphite on Tendrl server.
+
+3. Backup (optional) Tendrl etcd cluster and delete all data from etcd (i.e. Delete the etcd %data_dir from all nodes of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
+
+4. Uninstall etcd from Tendrl server.
