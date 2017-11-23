@@ -506,3 +506,5 @@ The following procedure outlines the procedure to install tendrl storage node co
 3. Backup (optional) Tendrl etcd cluster and delete all data from etcd (i.e. Delete the etcd %data_dir from all nodes of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
 
 4. Uninstall etcd from Tendrl server.
+
+The above sequence of steps can also be invoked in a scripted form. See more at https://github.com/cloudbehl/clean-tendrl
