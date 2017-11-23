@@ -19,7 +19,7 @@
 * Weekly Growth Rate -  MB/GB/TB according to the Bytes
 * Disk Load - kbps
 * Disk Operation - No units
-* Disk IO - ms(millisecond)
+* Disk IO - ms(millisecond) [see https://github.com/Tendrl/monitoring-integration/issues/195]
 * Network(Throughput) - kbps
 * Dropped packets per sec - No units
 * Error per sec - No units
