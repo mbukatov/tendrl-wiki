@@ -504,10 +504,10 @@ The following procedure outlines the procedure to install tendrl storage node co
 
 2. Stop and uninstall all tendrl-* and related services like Grafana, Graphite on Tendrl server.
 
-3. Delete data directories of Graphite, Carbon services to ensure stale metrics do not persist.
+3. Backup (optional) and Delete data directories for Graphite, Carbon services to ensure stale metrics do not persist.
 
-3. Backup (optional) Tendrl Etcd and delete all data from etcd (i.e. Delete the etcd %data_dir from all nodes of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
-
-4. Uninstall etcd from Tendrl server.
+4. Backup (optional) and uninstall Etcd from Tendrl server and delete all data from etcd (i.e. Delete the etcd %data_dir from all members of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
 
 5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide)#tendrl-server-installation
+
+6. Re-install Tendrl on storage nodes, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide)#tendrl-storage-node-installation
