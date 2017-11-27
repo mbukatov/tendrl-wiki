@@ -510,4 +510,4 @@ The following procedure outlines the procedure to install tendrl storage node co
 
 4. Uninstall etcd from Tendrl server.
 
-5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-%28install-guide%29#tendrl-server-installation
+5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide)#tendrl-server-installation
