@@ -499,11 +499,15 @@ The following procedure outlines the procedure to install tendrl storage node co
    systemctl start tendrl-node-agent
    ```
 
-## Uninstall Tendrl
-1. Stop and uninstall all tendrl-* services and collectd on Tendrl managed storage nodes.
+## Un-manage Cluster from Tendrl
+1. Stop and uninstall all tendrl-* services and Collectd on Tendrl managed storage nodes.
 
 2. Stop and uninstall all tendrl-* and related services like Grafana, Graphite on Tendrl server.
 
-3. Backup (optional) Tendrl etcd cluster and delete all data from etcd (i.e. Delete the etcd %data_dir from all nodes of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
+3. Delete data directories of Graphite, Carbon services to ensure stale metrics do not persist.
+
+3. Backup (optional) Tendrl Etcd and delete all data from etcd (i.e. Delete the etcd %data_dir from all nodes of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
 
 4. Uninstall etcd from Tendrl server.
+
+5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-%28install-guide%29#tendrl-server-installation
