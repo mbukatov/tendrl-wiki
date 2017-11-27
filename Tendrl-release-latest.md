@@ -12,7 +12,8 @@ When you already have a storage cluster installed (eg. GlusterFS Trusted Storage
 
 ## Tendrl Server System Requirements
 
-The server hosting tendrl-api/central_store should have minimum 12 GB of memory and 4 VCPUs (or equivalent)(due to alerts, logs being stored on this node)
+- The server hosting tendrl-api/central_store should have minimum 32 GB of memory and 8 VCPUs (or equivalent)(due to alerts, logs being stored on this node) available to be used by the Tendrl server
+- On the Tendrl server, ensure that Etcd data directory is hosted/located on an separate disk (which is not being used by any other process) and graphite/carbon/whisper (time series) data directories are hosted on a separate disk other than the Etcd disk.
 
 See also tendrl-ansible `prechecks.yml` playbook file.
 
@@ -498,13 +499,15 @@ The following procedure outlines the procedure to install tendrl storage node co
    systemctl start tendrl-node-agent
    ```
 
-## Uninstall Tendrl
-1. Stop and uninstall all tendrl-* services and collectd on Tendrl managed storage nodes.
+## Un-manage Cluster from Tendrl
+1. Stop and uninstall all tendrl-* services and Collectd on Tendrl managed storage nodes.
 
 2. Stop and uninstall all tendrl-* and related services like Grafana, Graphite on Tendrl server.
 
-3. Backup (optional) Tendrl etcd cluster and delete all data from etcd (i.e. Delete the etcd %data_dir from all nodes of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
+3. Backup (optional) and Delete data directories for Graphite, Carbon services to ensure stale metrics do not persist.
 
-4. Uninstall etcd from Tendrl server.
+4. Backup (optional) and uninstall Etcd from Tendrl server and delete all data from etcd (i.e. Delete the etcd %data_dir from all members of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
 
-The above sequence of steps can also be invoked in a scripted form. See more at https://github.com/cloudbehl/clean-tendrl
+5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide)#tendrl-server-installation
+
+6. Re-install Tendrl on storage nodes, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide)#tendrl-storage-node-installation
