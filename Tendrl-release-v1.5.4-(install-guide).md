@@ -12,8 +12,9 @@ When you already have a storage cluster installed (eg. GlusterFS Trusted Storage
 
 ## Tendrl Server System Requirements
 
-- The server hosting tendrl-api/central_store should have minimum 32 GB of memory and 12 VCPUs (or equivalent)(due to alerts, logs being stored on this node) available to be used by the Tendrl server
-- On the Tendrl server, ensure that Etcd data directory is hosted/located on an separate disk (which is not being used by any other process) and graphite/carbon/whisper (time series) data directories are hosted on a separate disk other than the Etcd disk.
+- The server hosting tendrl-api/central_store should have minimum 32 GB of memory and 8 VCPUs (or equivalent)(due to alerts, logs being stored on this node) available to be used by the Tendrl server
+- On the Tendrl server, ensure that Etcd data directory is hosted/located on an separate dedicated disk (use ext4, btrfs, xfs or any platform supported filesystem); which is not being used by any other process or the OS. Install the `etcd` package with the instructions below. This will create the default data directory, which is `/var/lib/etcd`. Mount the disk at this location and ensure that the directory is owned by `etcd:etcd` and that its permissions are `0755`. _The permissions need to be applied after mounting the disk._ The corresponding `fstab` entry would also be required.
+- Optionally, a dedicated disk can be used for graphite as well. This disk needs to be mounted at `/var/lib/carbon` with the ownership of `root:root` and permissions `0755`. _The permissions need to be applied after mounting the disk._ The corresponding `fstab` entry would also be required.
 
 See also tendrl-ansible `prechecks.yml` playbook file.
 
