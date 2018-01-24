@@ -11,5 +11,5 @@
 |---|---|---|
 | [Tendrl – The Unified Storage](https://a2batic.wordpress.com/2018/01/09/tendrl-the-unified-storage/) | Kanika Murarka | 9 Jan 2018 |
 | [Multinode Glusterfs with All-in-1 Tendrl for Monitoring Vagrant](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant) | Ju Lim | 23 Jan 2018 |
-| [Gluster & Tendrl Install Instructions](https://github.com/Daniel-Pivonka/gluster-tendrl-install) | Daniel Pivonka | 25 Aug 2018 |
+| [Gluster & Tendrl Install Instructions](https://github.com/Daniel-Pivonka/gluster-tendrl-install) | Daniel Pivonka | 25 Aug 2017 |
 
