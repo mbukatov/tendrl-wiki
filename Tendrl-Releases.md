@@ -3,7 +3,7 @@
 | Release | Date | Summary | Install Guide |
 |---|---|---|---|
 |1.5.5 (milestone-1) |02 Feb 2018|[Latest Release](https://github.com/Tendrl/documentation/wiki/Tendrl-release-latest)|[v1.5.5 Install Guide](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.5-(install-guide))|
-|1.5.4 (bugfixes-2) |17 Nov 2017|[Latest Release](https://github.com/Tendrl/documentation/wiki/Tendrl-release-latest)|[v1.5.4 Install Guide](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide))|
+|1.5.4 (bugfixes-2) |17 Nov 2017|[v1.5.4 Release (bugfixes-2)](https://github.com/Tendrl/documentation/wiki/Tendrl-release-latest)|[v1.5.4 Install Guide](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide))|
 |1.5.4 (bugfixes) |10 Nov 2017|[v1.5.4 Release](https://github.com/Tendrl/documentation/wiki/Tendrl-release-latest)|[v1.5.4 Install Guide](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide))|
 |1.5.4 |2 Nov 2017|[v1.5.4 Release](https://github.com/Tendrl/documentation/wiki/Tendrl-release-latest)|[v1.5.4 Install Guide](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.4-(install-guide))|
 |1.5.3 |11 Oct 2017||[v1.5.3 Install Guide](https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.3-(install-guide))|
