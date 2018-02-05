@@ -524,3 +524,19 @@ The following procedure outlines the procedure to install tendrl storage node co
 5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.5-(install-guide)#tendrl-server-installation
 
 6. Re-install Tendrl on storage nodes, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.5-(install-guide)#tendrl-storage-node-installation
+
+## Changelog
+### Backend
+- Move gluster.event_utils to commons
+- Fix geo-rep classification
+- Raise alert when node goes down, when cluster health changes
+- Add georep related alert also for volume alert count increment
+- Add volume status related alert also for volume alert count increment
+- Raising brick alert when peer is disconnected or node goes down
+- Fix conflicting gluster "cliutils" python module
+
+### UI
+- Single Cluster / Element Manager Concept with Context Switcher Navigation
+- Toast Notification ( PR http://github.com/Tendrl/ui/pulls/782 )
+- Sort ( PR http://github.com/Tendrl/ui/pulls/781 )
+- Datepicker (PR http://github.com/Tendrl/ui/pulls/786 )
