@@ -446,10 +446,10 @@ The following procedure outlines the procedure to install tendrl server componen
     systemctl start httpd
     ```
 
-26. Re-load rsyslog daemon
+26. Restart rsyslog daemon
 
     ```
-    systemctl reload rsyslog
+    systemctl restart rsyslog
     ```
 
 27. Open the following URL in the browser
@@ -506,10 +506,10 @@ The following procedure outlines the procedure to install tendrl storage node co
    systemctl start tendrl-node-agent
    ```
 
-6. Re-load rsyslog daemon
+6. Restart rsyslog daemon
 
     ```
-    systemctl reload rsyslog
+    systemctl restart rsyslog
     ```
 
 ## Un-manage Cluster from Tendrl
