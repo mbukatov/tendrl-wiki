@@ -1,4 +1,29 @@
-# Feb 6 2018
+## Feb 13 2018
+Agenda
+* Discussed scenarios for handling misconfigured cluster, unmanage cluster, and import cluster
+* A misconfigured cluster occurs when the following is true
+```
+- IsManaged = no
+- The import job failed
+- There is no error message
+```
+  This typically means that the user needs to do something in the CLI or tendrl-ansible to address the misconfiguration issue(s).  Upon resolving the issue(s) outside the UI, then only should an "Unmanage" (cleanup) action be performed prior to the "Import" Cluster.
+
+* If cluster import fails or if Tendrl reports cluster as misconfigured, the Unmanage button should be enabled to allow for cleanup, i.e. Unmanage should work on failed to import and misconfigured cluster, in addition to managed cluster.
+* UI should be able to handle unmanage first then import.
+* For edge cases we identify, UI should not automatically unmanage and then import.
+* For short term (upcoming Milestone 2), if cluster had a previous import failure or misconfiguration, then it will show a pop-up with some appropriate text to indicate that they've done some fixing in the CLI to resolve the issues first before Proceeding with Import or Cancel.
+* Goal is to complete all this work mentioned (and in the Action Items) below in Milestone 3, though Unmanage will work in Milestone 2.
+
+
+**Action Items**
+* [Ju] new dialog (some issue with import, here are the logs, etc. click checkbox to cleanup)
+* [Kanika, Neha, Anukush] Figure out persistent key value store in browser (cookies, html, etc.) to handle state of the tasks, i.e. UI fires an unmanage job, maintains state (unmanage job id) then fire import job (import job id)
+* [Kanika, Neha, Ankush, Shubhendu] Enable Unmanage button if import fails or cluster misconfigured
+* [Kanika, Shubhendu] Update Unmanage spec with changes mentioned
+
+
+## Feb 6 2018
 
 
 Reminder from last week's Architecture call was that we needed to clarify HW requirements for Tendrl deployment.  Decided to test on known sizes: 3 nodes, 6 nodes, 9 nodes
