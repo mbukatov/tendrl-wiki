@@ -1,7 +1,7 @@
 ## Feb 13 2018
 Agenda
 * Discussed scenarios for handling misconfigured cluster, unmanage cluster, and import cluster
-* A misconfigured cluster occurs when the following is true
+* A misconfigured cluster occurs when the following is true:
 ```
 - IsManaged = no
 - The import job failed
