@@ -21,6 +21,7 @@ Agenda
 * [Kanika, Neha, Anukush] Figure out persistent key value store in browser (cookies, html, etc.) to handle state of the tasks, i.e. UI fires an unmanage job, maintains state (unmanage job id) then fire import job (import job id)
 * [Kanika, Neha, Ankush, Shubhendu] Enable Unmanage button if import fails or cluster misconfigured
 * [Kanika, Shubhendu] Update Unmanage spec with changes mentioned
+* [Shubhendu] In backend if there is a earlier import failure, allow the un-manage flow to go ahead
 
 
 ## Feb 6 2018
