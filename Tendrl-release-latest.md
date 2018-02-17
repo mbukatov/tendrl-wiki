@@ -47,13 +47,13 @@ in the tendrl release repository:
 Quick introduction is provided in the README file provided with the package:
 
 ```
-# less /usr/share/doc/tendrl-ansible-1.5.4/README.md
+# less /usr/share/doc/tendrl-ansible-1.5.5/README.md
 ```
 
 That said, you can also consult the release branch of tendrl-ansbile
 repository:
 
-https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.4/
+https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.5/
 
 
 ## SELinux Configuration
@@ -446,10 +446,10 @@ The following procedure outlines the procedure to install tendrl server componen
     systemctl start httpd
     ```
 
-26. Re-load rsyslog daemon
+26. Restart rsyslog daemon
 
     ```
-    systemctl reload rsyslog
+    systemctl restart rsyslog
     ```
 
 27. Open the following URL in the browser
@@ -506,37 +506,15 @@ The following procedure outlines the procedure to install tendrl storage node co
    systemctl start tendrl-node-agent
    ```
 
-6. Re-load rsyslog daemon
+6. Restart rsyslog daemon
 
     ```
-    systemctl reload rsyslog
+    systemctl restart rsyslog
     ```
-
-## Un-manage Cluster from Tendrl
-1. Stop and uninstall all tendrl-* services and Collectd on Tendrl managed storage nodes.
-
-2. Stop and uninstall all tendrl-* and related services like Grafana, Graphite on Tendrl server.
-
-3. Backup (optional) and Delete data directories for Graphite, Carbon services to ensure stale metrics do not persist.
-
-4. Backup (optional) and uninstall Etcd from Tendrl server and delete all data from etcd (i.e. Delete the etcd %data_dir from all members of the etcd cluster, more details https://coreos.com/etcd/docs/latest/v2/admin_guide.html)
-
-5. Re-install Tendrl server, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.5-(install-guide)#tendrl-server-installation
-
-6. Re-install Tendrl on storage nodes, Follow steps at https://github.com/Tendrl/documentation/wiki/Tendrl-release-v1.5.5-(install-guide)#tendrl-storage-node-installation
 
 ## Changelog
 ### Backend
-- Move gluster.event_utils to commons
-- Fix geo-rep classification
-- Raise alert when node goes down, when cluster health changes
-- Add georep related alert also for volume alert count increment
-- Add volume status related alert also for volume alert count increment
-- Raising brick alert when peer is disconnected or node goes down
-- Fix conflicting gluster "cliutils" python module
+- Un-manage cluster
 
 ### UI
-- Single Cluster / Element Manager Concept with Context Switcher Navigation
-- Toast Notification ( PR http://github.com/Tendrl/ui/pulls/782 )
-- Sort ( PR http://github.com/Tendrl/ui/pulls/781 )
-- Datepicker (PR http://github.com/Tendrl/ui/pulls/786 )
+- Un-manage cluster
