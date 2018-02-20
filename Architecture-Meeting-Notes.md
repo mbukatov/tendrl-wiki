@@ -1,3 +1,9 @@
+## Feb 20 2018
+Agenda
+* Handling automatic unmanage as part of import flow will be too big an epic to perform, so we will keep them as 2 separate workflow.  
+* Enabling/disabling volume profiling make take some time to perform and are handled as tasks -- see https://github.com/Tendrl/ui/issues/819#issuecomment-366959919.
+
+
 ## Feb 13 2018
 Agenda
 * Discussed scenarios for handling misconfigured cluster, unmanage cluster, and import cluster
