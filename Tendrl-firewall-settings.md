@@ -4,7 +4,6 @@
 * Graphite : 2003/tcp
 * GraphiteWeb : 10080/tcp
 * tendrl http : 80/tcp(http) or 443/tcp(https)
-* tendrl-api : 9292/tcp
 * Grafana Server : 3000/tcp
 * tendrl-monitoring-integration : 8789/tcp  (grafana alerts callback)
 
