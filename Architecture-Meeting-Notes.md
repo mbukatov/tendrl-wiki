@@ -1,10 +1,25 @@
-## Feb 20 2018
+## 6 March 2018
+Agenda
+* [Multiple Thresholds Bug](https://github.com/Tendrl/monitoring-integration/issues/346)
+  - Do we change severity of old alert or clear the previous alert and generate a new alert?
+  - Currently we generate warning alerts and not critical alerts
+  - Cleaner to generate a new alert per threshold and easier to consume (recommended approach) vs. going back and updating the original alert with the newer threshold
+  - Time lapse between clearing and creating new alert is seconds
+  - How to handle throttling for emails and SNMP traps?  Extra intelligence to suppress certain emails needed later.  Address this issue later.
+  - AI: Lubos T. to file an issue on the notifier issue
+
+* [Expand Cluster handling](https://github.com/Tendrl/commons/issues/849)
+* Support for FQDN and IP for Gluster - issue to be filed in the Tendrl/commons soon
+
+
+
+## 20 February 2018
 Agenda
 * Handling automatic unmanage as part of import flow will be too big an epic to perform, so we will keep them as 2 separate workflow.  
 * Enabling/disabling volume profiling make take some time to perform and are handled as tasks -- see https://github.com/Tendrl/ui/issues/819#issuecomment-366959919.
 
 
-## Feb 13 2018
+## 13 February  2018
 Agenda
 * Discussed scenarios for handling misconfigured cluster, unmanage cluster, and import cluster
 * A misconfigured cluster occurs when the following is true:
