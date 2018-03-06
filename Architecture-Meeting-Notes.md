@@ -20,6 +20,7 @@ Topics
   - Concern: failure handling when the expansion fails for the added nodes?  Currently, user has to unmanage the entire cluster (though in the future it will be possible to unmanage partially or on a per node basis)
   - Note: No steps for user to reuse archive data currently
   - Question: what do we do with View Details (Cluster details) during expansion?
+  - AI: UX design updates needed
 
 * Support for FQDN and IP for Gluster - issue to be filed in the Tendrl/commons soon
   - gluster allows you to peer probe fqdn, gluster supports short names for bricks, host + bricks uniquely identified via ip or fqdn
