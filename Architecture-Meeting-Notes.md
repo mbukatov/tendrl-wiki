@@ -9,22 +9,24 @@ Topics
   - AI: Lubos T. to file an issue on the notifier issue
 
 * [Expand Cluster handling](https://github.com/Tendrl/commons/issues/849)
-- Implemented but while testing but came across some corner cases
-- If user prepares all the new nodes and waits and does not do anything to setup Tendrl, should we wait for node-agent is installed?
-- Do we document it or do we not document and provide explicit way to import these new nodes?
-- Rohan does not think it should be automatic, i.e. you need some control over what’s installed without user acknowledging it, user should be given a chance there are 10 new nodes, and user authorizes the go ahead
-- Recommendation is to take conservative approach, and user has to “authorize” after tendrl-ansible is run
-- Provide 1 button to import the new nodes from cluster list and host list (if based on host list)
-- cluster would go to intermediate state to say it’s pending
-- Concern: what happens to cluster state when you don’t expand (i.e. user does not authorize the import)?
-- Concern: failure handling when the expansion fails for the added nodes?  Currently, user has to unmanage the entire cluster (though in the future it will be possible to unmanage partially or on a per node basis)
-- Note: No steps for user to reuse archive data currently
-- Question: what do we do with View Details (Cluster details) during expansion?
+  - Implemented but while testing but came across some corner cases
+  - If user prepares all the new nodes and waits and does not do anything to setup Tendrl, should we wait for node-agent is installed?
+  - Do we document it or do we not document and provide explicit way to import these new nodes?
+  - Rohan does not think it should be automatic, i.e. you need some control over what’s installed without user acknowledging it, user should be given a chance there are 10 new nodes, and user authorizes the go ahead
+  - Recommendation is to take conservative approach, and user has to “authorize” after tendrl-ansible is run
+  - Provide 1 button to import the new nodes from cluster list and host list (if based on host list)
+  - cluster would go to intermediate state to say it’s pending
+  - Concern: what happens to cluster state when you don’t expand (i.e. user does not authorize the import)?
+  - Concern: failure handling when the expansion fails for the added nodes?  Currently, user has to unmanage the entire cluster (though in the future it will be possible to unmanage partially or on a per node basis)
+  - Note: No steps for user to reuse archive data currently
+  - Question: what do we do with View Details (Cluster details) during expansion?
 
 * Support for FQDN and IP for Gluster - issue to be filed in the Tendrl/commons soon
-- gluster allows you to peer probe fqdn, gluster supports short names for bricks, host + bricks uniquely identified via ip or fqdn
-- if we support both, it’s not big changes, need to simply figure out if fqdn available or not and also in central store and graphite
-- should be able to get this done by end of March 2018
+  - gluster allows you to peer probe fqdn, gluster supports short names for bricks, host + bricks uniquely identified via ip or fqdn
+  - if we support both, it’s not big changes, need to simply figure out if fqdn available or not and also in central store and graphite
+  - should be able to get this done by end of March 2018
+
+AI: All participants/contributors asked to comment on the above topics in GitHub
 
 
 ## 20 February 2018
