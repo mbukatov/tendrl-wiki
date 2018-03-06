@@ -22,7 +22,7 @@ Topics
   - Question: what do we do with View Details (Cluster details) during expansion?
   - AI: UX design updates needed
 
-* Support for FQDN and IP for Gluster - issue to be filed in the Tendrl/commons soon
+* [Support for FQDN and IP for Gluster](https://github.com/Tendrl/commons/issues/852)
   - gluster allows you to peer probe fqdn, gluster supports short names for bricks, host + bricks uniquely identified via ip or fqdn
   - if we support both, it’s not big changes, need to simply figure out if fqdn available or not and also in central store and graphite
   - should be able to get this done by end of March 2018
