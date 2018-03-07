@@ -514,7 +514,7 @@ The following procedure outlines the procedure to install tendrl storage node co
 
 ## Changelog
 ### Backend
-- Un-manage cluster
+- Expand cluster
 
 ### UI
-- Un-manage cluster
+- https://github.com/Tendrl/ui/milestone/3
