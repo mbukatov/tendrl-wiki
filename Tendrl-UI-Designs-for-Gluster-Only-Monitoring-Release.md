@@ -3,7 +3,6 @@ The following are the specific links to [Tendrl UI Designs](https://github.com/T
 [First Login by admin User](https://redhat.invisionapp.com/share/6T900V2ZX) - Password reset for first-time login by the default admin user after Tendrl installed using [tendrl-ansible](https://github.com/Tendrl/tendrl-ansible).  If no clusters found, user sees a [blank slate](https://redhat.invisionapp.com/share/6T900V2ZX#/screens/198042644). 
 
 Upon successful login and if a cluster is detected (after tendrl-ansible completed, user will go through the following [workflow, and see the cluster list as the landing page] (https://redhat.invisionapp.com/share/8QCOEVEY9).
-* Related GitHub Issue: https://github.com/Tendrl/specifications/issues/200
 
 If user clicks the volume name (hyperlink) from the [Volumes List](https://redhat.invisionapp.com/share/8QCOEVEY9#/screens/244738623), they should see the following:
 object details for a volume — initially just the [Bricks tab](https://redhat.invisionapp.com/share/XMAOW3UC5#/screens/221662357)
