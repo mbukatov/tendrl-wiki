@@ -47,13 +47,13 @@ in the tendrl release repository:
 Quick introduction is provided in the README file provided with the package:
 
 ```
-# less /usr/share/doc/tendrl-ansible-1.5.5/README.md
+# less /usr/share/doc/tendrl-ansible-1.6.1/README.md
 ```
 
 That said, you can also consult the release branch of tendrl-ansbile
 repository:
 
-https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.5/
+https://github.com/Tendrl/tendrl-ansible/tree/release/1.6.1/
 
 
 ## SELinux Configuration
