@@ -1,3 +1,6 @@
+## Tendrl Releases
+Information about [Tendrl Releases](https://github.com/Tendrl/documentation/wiki/Tendrl-Releases).
+
 ## Talks about Tendrl:
 | Event | Presenter | Link |
 |---|---|---|
