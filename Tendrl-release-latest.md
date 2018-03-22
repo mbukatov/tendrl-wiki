@@ -514,6 +514,10 @@ The following procedure outlines the procedure to install tendrl storage node co
 
 ## Changelog
 ### Backend
+- Tendrl will now generate alerts with severity "critical" (this is a threshold alert)
+- Aggregate more gluster metric collection instead of per node
+- Alert on new peer addition
+- Multipath disk layout detection support
 - Bugfixes for expand cluster etc
 - https://github.com/Tendrl/commons/milestone/4
 - https://github.com/Tendrl/node-agent/milestone/4
