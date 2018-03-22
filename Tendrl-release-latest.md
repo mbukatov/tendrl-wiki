@@ -47,13 +47,13 @@ in the tendrl release repository:
 Quick introduction is provided in the README file provided with the package:
 
 ```
-# less /usr/share/doc/tendrl-ansible-1.5.5/README.md
+# less /usr/share/doc/tendrl-ansible-1.6.2/README.md
 ```
 
 That said, you can also consult the release branch of tendrl-ansbile
 repository:
 
-https://github.com/Tendrl/tendrl-ansible/tree/release/1.5.5/
+https://github.com/Tendrl/tendrl-ansible/tree/release/1.6.2/
 
 
 ## SELinux Configuration
@@ -514,12 +514,16 @@ The following procedure outlines the procedure to install tendrl storage node co
 
 ## Changelog
 ### Backend
-- Expand cluster
-
-### UI
-- https://github.com/Tendrl/ui/milestone/3
+- Bugfixes for expand cluster etc
+- https://github.com/Tendrl/commons/milestone/4
+- https://github.com/Tendrl/node-agent/milestone/4
+- https://github.com/Tendrl/gluster-integration/milestone/4
+- https://github.com/Tendrl/monitoring-integration/milestone/4
 
 ### API
-- https://github.com/Tendrl/api/milestone/4
-- Bugfixes
-- API call for expand cluster
+- Expand cluster via API
+- https://github.com/Tendrl/commons/milestone/4
+
+### UI
+- Expand cluster button
+- https://github.com/Tendrl/ui/milestone/4
