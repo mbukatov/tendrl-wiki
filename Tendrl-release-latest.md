@@ -518,3 +518,7 @@ The following procedure outlines the procedure to install tendrl storage node co
 
 ### UI
 - https://github.com/Tendrl/ui/milestone/3
+
+### API
+- https://github.com/Tendrl/api/milestone/4
+- Bugfixes, API call for expand cluster
