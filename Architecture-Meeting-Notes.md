@@ -1,3 +1,59 @@
+## 27 March 2018
+Topics
+* Discussed bugs and plans to address them
+(1) FQDN issue - plans to fix this. Estimated 1.5 week to do this work.
+
+(2) Race condition with etcd (serialization of objects) - modifications needed on how we save object.  Gluster is working on something like this.  They serialize the objects as they save them and unmarshall them during retrieval.  A lot of secondary issues result from these, e.g. repeated import.  Approx. 2 weeks to do this work.  Verification may take longer as all flows need to be verified.  Note: (1) and (2) can be worked on in parallel.
+
+(3) 5 bugs/issues previously discussed — all fixed except FQDN issue and Short brick names issue outstanding. 
+ dm-cache support not critical at this point.
+
+Next proposed milestone date is 9 April 2018, need QE team to test these fixes.  Date is TBD.
+
+(4) A cluster friendly name that user can specify
+    - can we consider setting name (short name) only during Import as to do all the work for changing names after will be considerable.
+    - would need to be visible everywhere (Tendrl UI, grafana dashboard)
+
+(5) Prevent users from easily adding any Gluster cluster (like trusted or initial login/password from the cluster to be imported)
+    - didn’t quite understand it as user has to be privileged to do this currently
+    - not a priority at the moment, deferred for now
+    - future discussion to ensure we understand use case properly
+
+(6) Add /remove/maintenance mode for gluster nodes and or bricks - expansion already addressed
+    - (1) nodes addition is supported as part of expand cluster
+    - Future: no support for node removal (many manual Gluster steps today). Need to document and describe behavior.  E.g. if node is removed, the node will show up as down, volume would be shown down/unhealthy if brick is removed.
+    - add / remove bricks support - tendrl detects this, i.e. when brick is removed, Tendrl detects that peer is detached.
+
+(7) retention policy for carbon (/var/lib/carbon), disk size calculation, /var/lib/carbon growing from 50GB to 100GB
+- retention policy and disk size calculation is already in the plan to get addressed
+- how does preallocated changed from 50GB -> 100 GB?  Likely increases due to cluster expansion?  What triggers this?  @qe to investigate.
+ 
+(8) Gluster log grows a lot - @qe to file bug for tendrl services generating a lot of logs with default settings
+- logs are from gluster (heal log, gluster events, bricks)
+- tendrl is triggering these logs as we run the commands to perform queries.  Note: before import, there is no such logs, these logs grow after triggering self-heal.
+
+(9) extend Gluster volume should not require uninstall and reinstall+import to recognize new capacity - out-of-band volume expansion is already supported.
+
+(10) support removal of volume and not seeing it in the UI - needs to be verified.  See https://github.com/Tendrl/ui/issues/894#issuecomment-376519703 for more details.
+
+(11) high hw requirements - already addressed but more performance and scale benchmarking work still outstanding
+- serialization topic related to it (high network util)
+
+(12) Docs recommendations
+- Maintained and editable via GitHub to enable community contributions, and accessible from the Tendrl GitHub repo and Tendrl website
+- Consider a https://github.com/Tendrl/tendrl-docs repo
+- Should include the following:
+```
+- Getting Started & Install Guide
+- Should include Performance and Sizing Guidelines
+- Release Notes
+- Administration / User Guide
+- Troubleshooting Guide
+- Developer’s / Contributor’s Guide
+- Upgrade Guide
+- Glossary
+```
+
 ## 6 March 2018
 Topics
 * [Multiple Thresholds Bug](https://github.com/Tendrl/monitoring-integration/issues/346)
