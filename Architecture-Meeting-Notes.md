@@ -4,7 +4,7 @@
 
 (1) FQDN issue - plans to fix this. Estimated 1.5 week to do this work.  Reference: https://github.com/Tendrl/commons/issues/852.
 
-(2) Race condition with etcd (serialization of objects) - modifications needed on how we save object.  Gluster is working on something like this.  They serialize the objects as they save them and unmarshall them during retrieval.  A lot of secondary issues result from these, e.g. repeated import.  Approx. 2 weeks to do this work.  Verification may take longer as all flows need to be verified.  Note: (1) and (2) can be worked on in parallel.
+(2) Race condition with etcd (serialization of objects) - modifications needed on how we save object.  Gluster is working on something like this.  They serialize the objects as they save them and unmarshall them during retrieval.  A lot of secondary issues result from these, e.g. repeated import.  Approx. 2 weeks to do this work.  Verification may take longer as all flows need to be verified.  Note: (1) and (2) can be worked on in parallel. Reference: https://github.com/Tendrl/commons/issues/885.
 
 (3) 5 bugs/issues previously discussed — all fixed except FQDN issue and Short brick names issue outstanding. 
  dm-cache support not critical at this point.
@@ -19,6 +19,7 @@ Next proposed milestone date is 9 April 2018, need QE team to test these fixes. 
     - didn’t quite understand it as user has to be privileged to do this currently
     - not a priority at the moment, deferred for now
     - future discussion to ensure we understand use case properly
+    - Reference: https://github.com/Tendrl/ui/issues/656
 
 (6) Add /remove/maintenance mode for gluster nodes and or bricks - expansion already addressed
     - (1) nodes addition is supported as part of expand cluster
