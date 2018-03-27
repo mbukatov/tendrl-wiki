@@ -2,7 +2,7 @@
 **Topics**
 * Discussed bugs and plans to address them:
 
-(1) FQDN issue - plans to fix this. Estimated 1.5 week to do this work.
+(1) FQDN issue - plans to fix this. Estimated 1.5 week to do this work.  Reference: https://github.com/Tendrl/commons/issues/852.
 
 (2) Race condition with etcd (serialization of objects) - modifications needed on how we save object.  Gluster is working on something like this.  They serialize the objects as they save them and unmarshall them during retrieval.  A lot of secondary issues result from these, e.g. repeated import.  Approx. 2 weeks to do this work.  Verification may take longer as all flows need to be verified.  Note: (1) and (2) can be worked on in parallel.
 
