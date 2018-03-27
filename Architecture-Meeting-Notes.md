@@ -1,6 +1,7 @@
 ## 27 March 2018
-Topics
-* Discussed bugs and plans to address them
+**Topics**
+* Discussed bugs and plans to address them:
+
 (1) FQDN issue - plans to fix this. Estimated 1.5 week to do this work.
 
 (2) Race condition with etcd (serialization of objects) - modifications needed on how we save object.  Gluster is working on something like this.  They serialize the objects as they save them and unmarshall them during retrieval.  A lot of secondary issues result from these, e.g. repeated import.  Approx. 2 weeks to do this work.  Verification may take longer as all flows need to be verified.  Note: (1) and (2) can be worked on in parallel.
@@ -55,7 +56,7 @@ Next proposed milestone date is 9 April 2018, need QE team to test these fixes. 
 ```
 
 ## 6 March 2018
-Topics
+**Topics**
 * [Multiple Thresholds Bug](https://github.com/Tendrl/monitoring-integration/issues/346)
   - Do we change severity of old alert or clear the previous alert and generate a new alert?
   - Currently we generate warning alerts and not critical alerts
@@ -93,7 +94,7 @@ Topics
 
 
 ## 13 February  2018
-Topics
+**Topics**
 * Discussed scenarios for handling misconfigured cluster, unmanage cluster, and import cluster
 * A misconfigured cluster occurs when the following is true:
 ```
