@@ -14,12 +14,12 @@ Next proposed milestone date is 9 April 2018, need QE team to test these fixes. 
 (4) A cluster friendly name that user can specify
     - can we consider setting name (short name) only during Import as to do all the work for changing names after will be considerable.
     - would need to be visible everywhere (Tendrl UI, grafana dashboard)
+    - Reference: https://github.com/Tendrl/ui/issues/656
 
 (5) Prevent users from easily adding any Gluster cluster (like trusted or initial login/password from the cluster to be imported)
     - didn’t quite understand it as user has to be privileged to do this currently
     - not a priority at the moment, deferred for now
     - future discussion to ensure we understand use case properly
-    - Reference: https://github.com/Tendrl/ui/issues/656
 
 (6) Add /remove/maintenance mode for gluster nodes and or bricks - expansion already addressed
     - (1) nodes addition is supported as part of expand cluster
