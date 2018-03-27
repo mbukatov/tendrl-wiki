@@ -29,6 +29,7 @@ Next proposed milestone date is 9 April 2018, need QE team to test these fixes. 
 (7) retention policy for carbon (/var/lib/carbon), disk size calculation, /var/lib/carbon growing from 50GB to 100GB
 - retention policy and disk size calculation is already in the plan to get addressed
 - how does preallocated changed from 50GB -> 100 GB?  Likely increases due to cluster expansion?  What triggers this?  @qe to investigate.
+- Reference: https://github.com/Tendrl/monitoring-integration/issues/261 (disk size calculation)
  
 (8) Gluster log grows a lot - @qe to file bug for tendrl services generating a lot of logs with default settings
 - logs are from gluster (heal log, gluster events, bricks)
