@@ -15,6 +15,7 @@ Next proposed milestone date is 9 April 2018, need QE team to test these fixes. 
     - can we consider setting name (short name) only during Import as to do all the work for changing names after will be considerable.
     - would need to be visible everywhere (Tendrl UI, grafana dashboard)
     - Reference: https://github.com/Tendrl/ui/issues/656 and https://github.com/Tendrl/ui/issues/582
+    - Proposal: https://github.com/Tendrl/commons/issues/888
 
 (5) Prevent users from easily adding any Gluster cluster (like trusted or initial login/password from the cluster to be imported)
     - didn’t quite understand it as user has to be privileged to do this currently
