@@ -517,6 +517,7 @@ The following procedure outlines the procedure to install tendrl storage node co
 - Support gluster nodes/bricks with fqdn, IP and short names 
 - Pack/Unpack entire Tendrl object during write/read to/from etcd, earlier each attribute of the object required its own http request for write/read to/from etcd.
 - Support for Cluster short names/alias
+- Improved log/alert/notification messages
 - https://github.com/Tendrl/commons/milestone/6
 - https://github.com/Tendrl/node-agent/milestone/6
 - https://github.com/Tendrl/gluster-integration/milestone/5
