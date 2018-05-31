@@ -1,3 +1,7 @@
+## 05 June 2018
+**Topics**
+* Upgrade procedure
+
 ## 27 March 2018
 **Topics**
 * Discussed bugs and plans to address them:
