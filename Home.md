@@ -13,7 +13,6 @@ Information about [Tendrl Releases](https://github.com/Tendrl/documentation/wiki
 | Reference / Link | Author | Date |
 |---|---|---|
 | [Vagrant setup for a tendrl-managed cluster](https://github.com/Tendrl/tendrl-vagrant) | [Shirshendu Mukherjee](https://github.com/shirshendu) | 4 June 2018 |
-
 | [Tendrl – The Unified Storage](https://a2batic.wordpress.com/2018/01/09/tendrl-the-unified-storage/) | Kanika Murarka | 9 Jan 2018 |
 | [Multinode Glusterfs with All-in-1 Tendrl for Monitoring Vagrant](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant) | [Ju Lim](https://github.com/julienlim) | 23 Jan 2018 |
 | [Multinode Glusterfs with All-in-1 Tendrl for Monitoring Vagrant (Intern Edition)](https://github.com/Tendrl/documentation/wiki/Multinode-Glusterfs-with-All-in-1-Tendrl-for-Monitoring-Vagrant---Intern-Edition---Notes) | Nathan Weinberg | 5 June 2018 |
