@@ -1,6 +1,7 @@
 ## 05 June 2018
 **Topics**
 * Upgrade procedure
+* https://github.com/Tendrl/documentation/wiki/Import-Failure-Modes
 
 ## 27 March 2018
 **Topics**
