@@ -1,7 +1,23 @@
 ## 05 June 2018
 **Topics**
-* Upgrade procedure
-* https://github.com/Tendrl/documentation/wiki/Import-Failure-Modes
+
+(1) Upgrade procedure
+
+There are good amount changes in the etcd schema with respect to last release, most of them came in as part of the re-factoring activity. So if you just upgrade the bits, it will not work with the older schema. We need to write migration scripts which transform the older schema to newer one to work with newer bits. 
+
+If we don't provide migration scripts, the procedure would be something like this(Needs to be verified):
+
+ - Stop services
+ - Clean up etcd
+ - Run tendrl-ansible to upgrade the bits
+ - Re-import the cluster
+
+Since not many using older version, the decision is to provide manual upgrade path(as above) Or no upgrade path at all.
+
+(2) https://github.com/Tendrl/documentation/wiki/Import-Failure-Modes
+    - decided to go with option-2
+    
+
 
 ## 27 March 2018
 **Topics**
