@@ -3,7 +3,7 @@
 # Author: Nathan Weinberg
 # Date: 5 June 2018
 
-#### Based heavily off README by julenlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
+#### Based heavily off README by julienlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
 
 
 ## Initial Setup
