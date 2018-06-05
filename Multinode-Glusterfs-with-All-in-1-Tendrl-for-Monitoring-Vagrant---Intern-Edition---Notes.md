@@ -3,7 +3,7 @@
 # Author: Nathan Weinberg
 # Date: 5 June 2018
 
-#### Based heavily off README by julim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
+#### Based heavily off README by julenlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
 
 
 ## Initial Setup
@@ -34,13 +34,14 @@ On nodes 1-3, run `$ ssh-keygen`, then paste your clipbaord contents (SSH key fr
 On *all* nodes, do the following:
 
 - Edit /etc/ssh/sshd_config such that the following settings are configured
+```
 	- Permit root login yes
 	- RSAAuthentication yes
 	- Pubkey Authentication yes
 	- PasswordAuth no
-
-- Edit /etc/hosts such that each node has the ip address of the others follwed by the node name
-	- ip addresses can be found `$ ip a`
+```
+- Edit /etc/hosts so that each node has the ip address of the others followed by the node name
+	- ip addresses can be found using `$ ip a`
 
 - Run `$ service sshd restart`
 
