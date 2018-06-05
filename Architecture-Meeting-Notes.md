@@ -15,6 +15,7 @@ If we don't provide migration scripts, the procedure would be something like thi
 Since not many using older version, the decision is to provide manual upgrade path(as above) Or no upgrade path at all.
 
 (2) https://github.com/Tendrl/documentation/wiki/Import-Failure-Modes
+    
     - decided to go with option-2
     
 
