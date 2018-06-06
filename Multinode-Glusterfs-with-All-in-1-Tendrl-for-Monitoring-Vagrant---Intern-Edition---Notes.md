@@ -14,7 +14,9 @@ Install VirtualBox and Vagrant (rpm/yum)
 You may have to run the command `$ sudo dnf install kernel-devel dkms kernel-headers`
 
 ### Step 2
-Put Ju's "Vagrantfile" and "bootstrap.sh" in a new directory
+Put Ju's "Vagrantfile" and "bootstrap.sh" in a new directory. 
+
+You'll have to make changes to "bootstrap.sh" to reflect your specific ntpdate config requirements.
 
 ### Step 3
 Navigate to your new directory and run `$ vagrant up --provider virtualbox`
@@ -27,21 +29,21 @@ $ vagrant ssh node0
 $ ssh-keygen
 $ cat /root/.ssh/id_rsa.pub
 ```
-Copy the contents of this file to your clipboard
+Copy the contents of this file to your clipboard.
 
 ### Step 5
-On all nodes, run `$ ssh-keygen`, then paste your clipbaord contents (SSH key from node0) into a new file located at /root/.ssh/authorized_keys
+On all nodes, run `$ ssh-keygen`, then paste your clipboard contents (SSH key from node0) into a new file located at `/root/.ssh/authorized_keys`
 
 ### Step 6
 On *all* nodes, do the following:
 
-- Edit /etc/ssh/sshd_config such that the following settings are configured
+- Edit `/etc/ssh/sshd_config` such that the following settings are configured
 	- Permit root login yes
 	- RSAAuthentication yes
 	- Pubkey Authentication yes
 	- PasswordAuth no
 
-- Edit /etc/hosts such that each node has the ip address of the others follwed by the node name
+- Edit `/etc/hosts` such that each node has the ip address of the others follwed by the node name
 	- ip addresses can be found `$ ip a`
 
 - Run `$ service sshd restart`
@@ -63,6 +65,7 @@ Verify with `$df -k`
 
 ### Step 8
 SSH into node1 and run
+
 ```bash
 $ gluster peer probe node2
 $ gluster peer probe node3
@@ -76,7 +79,9 @@ $ gstatus -a
 By this point your gluster cluster should be up and running.
 
 ### Step 9
+#### (if tendrl-ansible is not yet installed on node0)
 Exit back into node0 and run
+
 ```bash
 $ cd /etc/yum.repos.d 
 $ wget https://copr.fedorainfracloud.org/coprs/tendrl/release/repo/epel-7/tendrl-release-epel-7.repo
@@ -84,6 +89,7 @@ $ yum install tendrl-ansible
 ```
 
 ### Step 10
+#### (if you skipped Step 9 ensure you have exited back into node0)
 
 Run `$ cp /usr/share/doc/tendrl-ansible-VERSION/site.yml .` such that VERSION is your version of tendrl-ansible.
 
