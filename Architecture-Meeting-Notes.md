@@ -20,8 +20,13 @@ Since not many using older version, the decision is to provide manual upgrade pa
 
 (2) https://github.com/Tendrl/documentation/wiki/Import-Failure-Modes
     
-    - decided to go with option-2
-    
+ - decided to go with option-2
+ - suggest user to resolve the issue, unmanage, import again after failed import
+ - the work flow described above is the only supported recovery procedure  which is supported and tested    
+ - unmanage task is not run automatically, user needs to run it in explicit way (so that no log files or 
+   configuration won't disappear without user being aware of it)
+ - disable option to run import after failed import without unmanage, so that use can't avoid running 
+   unmanage first
 
 
 ## 27 March 2018
