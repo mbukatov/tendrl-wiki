@@ -1,9 +1,9 @@
-# Multinode Glusterfs with All-in-1 Tendrl for Monitoring Vagrant - Intern Edition
-#
-# Author: Nathan Weinberg
-# Date: 5 June 2018
-#
-#### Based heavily off README by julenlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
+## Multinode Glusterfs with All-in-1 Tendrl for Monitoring Vagrant - Intern Edition
+
+Author: Nathan Weinberg
+Date: 6 June 2018
+
+Based heavily off README by julenlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
 
 
 ## Initial Setup
