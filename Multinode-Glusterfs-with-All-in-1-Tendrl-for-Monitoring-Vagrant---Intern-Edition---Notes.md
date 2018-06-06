@@ -2,14 +2,16 @@
 #
 # Author: Nathan Weinberg
 # Date: 5 June 2018
-
-#### Based heavily off README by julienlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
+#
+#### Based heavily off README by julenlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
 
 
 ## Initial Setup
 
 ### Step 1
 Install VirtualBox and Vagrant (rpm/yum)
+
+You may have to run the command `$ sudo dnf install kernel-devel dkms kernel-headers`
 
 ### Step 2
 Put Ju's "Vagrantfile" and "bootstrap.sh" in a new directory
@@ -34,14 +36,13 @@ On nodes 1-3, run `$ ssh-keygen`, then paste your clipbaord contents (SSH key fr
 On *all* nodes, do the following:
 
 - Edit /etc/ssh/sshd_config such that the following settings are configured
-```
 	- Permit root login yes
 	- RSAAuthentication yes
 	- Pubkey Authentication yes
 	- PasswordAuth no
-```
-- Edit /etc/hosts so that each node has the ip address of the others followed by the node name
-	- ip addresses can be found using `$ ip a`
+
+- Edit /etc/hosts such that each node has the ip address of the others follwed by the node name
+	- ip addresses can be found `$ ip a`
 
 - Run `$ service sshd restart`
 
@@ -83,7 +84,10 @@ $ yum install tendrl-ansible
 ```
 
 ### Step 10
-Create Ansible inventory file "hosts" as follows (IP address may vary):
+
+Run `$ cp /usr/share/doc/tendrl-ansible-VERSION/site.yml .` such that VERSION is your version of tendrl-ansible.
+
+Then create a new file "inventory_file" that looks as follows (IP address may vary):
 
 ```text
 [gluster_servers]
@@ -108,6 +112,6 @@ configure_firewalld_for_tendrl=false
 ```
 
 ### Step 11
-Run `$ ansible-playbook -i inventory_file site.yml`
+Run `$ ansible-playbook -i inventory_file site.yml`. If you run into issues try running `$ ansible -i inventory_file -m ping all` and ensure all nodes are able to communicate with one another.
 
 You should now be able to access the Tendrl dashboard from you machine via a browser at this URL: `http://<node0-ip-address>/`
