@@ -1,9 +1,9 @@
 ## Multinode Glusterfs with All-in-1 Tendrl for Monitoring Vagrant - Intern Edition
 
-Author: Nathan Weinberg
+Author: [Nathan Weinberg](https://github.com/nathan-weinberg)
 Date: 6 June 2018
 
-Based heavily off README by julenlim found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
+Based heavily off README by [julienlim](https://github.com/julienlim) found [here](https://github.com/julienlim/multinode-glusterfs-with-tendrl-vagrant)
 
 
 ## Initial Setup
@@ -30,7 +30,7 @@ $ cat /root/.ssh/id_rsa.pub
 Copy the contents of this file to your clipboard
 
 ### Step 5
-On nodes 1-3, run `$ ssh-keygen`, then paste your clipbaord contents (SSH key from node0) into a new file located at /root/.ssh/authorized_keys
+On all nodes, run `$ ssh-keygen`, then paste your clipbaord contents (SSH key from node0) into a new file located at /root/.ssh/authorized_keys
 
 ### Step 6
 On *all* nodes, do the following:
