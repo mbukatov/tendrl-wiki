@@ -1,6 +1,7 @@
 ## 12 June 2018
 **Topics**
 
+(1) Listing Gluster features Tendrl uses
 
 ## 05 June 2018
 **Topics**
