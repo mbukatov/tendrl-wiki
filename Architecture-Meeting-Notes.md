@@ -7,6 +7,8 @@
 
 (3) https://bugzilla.redhat.com/show_bug.cgi?id=1587804
 
+(4) https://bugzilla.redhat.com/show_bug.cgi?id=1588650 (UX edge case)
+
 ## 05 June 2018
 **Topics**
 
