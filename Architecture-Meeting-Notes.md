@@ -3,6 +3,8 @@
 
 (1) Listing Gluster features Tendrl uses
 
+(2) Latency of node detection related to import and reimport (dahorak)
+
 ## 05 June 2018
 **Topics**
 
