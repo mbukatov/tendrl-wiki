@@ -5,6 +5,8 @@
 
 (2) Latency of node detection related to import and reimport (dahorak)
 
+(3) https://bugzilla.redhat.com/show_bug.cgi?id=1587804
+
 ## 05 June 2018
 **Topics**
 
