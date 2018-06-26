@@ -1,7 +1,7 @@
 # Tendrl 2 + Gluster 4.x (GD2) Architecture
 
 Arch Diagram:
-![Link](https://i.imgur.com/pQqiiAZ.jpg)
+![Link](https://i.imgur.com/nt6drkp.jpg)
 **Requirements**: 
 - At Parity with monitoring/alerting/notification capabilities and metrics provided by Tendrl 1.x
 https://github.com/Tendrl/documentation/wiki/metrics
