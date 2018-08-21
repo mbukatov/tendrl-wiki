@@ -8,7 +8,7 @@ to: https://support.invisionapp.com/hc/en-us/articles/209192426-How-do-I-comment
 
 
 == UI Designs for Gluster-Only Monitoring Release
-* https://github.com/Tendrl/documentation/wiki/Tendrl-UI-Designs-for-Gluster-Only-Monitoring-Release-(Tendrl-Release-1.6.3-and-earlier)[List of UI Design Artifacts for Gluster-Only Monitoring for Tendrl 1.6.3]
+* https://github.com/Tendrl/documentation/wiki/Tendrl-UI-Designs-for-Gluster-Only-Monitoring-Release-(Tendrl-Release-1.6.3-and-earlier)[List of UI Design Artifacts for Gluster-Only Monitoring for Tendrl 1.6.3 and Earlier]
 * https://github.com/julienlim/tendrl-designs/blob/master/tendrl%20ui%20with%20embed%20grafana%20dashboards.pdf[Design for the embedded grafana dashboards into the Tendrl UI for Tendrl 1.6.3+]
 
 
