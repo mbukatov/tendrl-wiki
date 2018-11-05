@@ -6,7 +6,11 @@ This is overview of pending work related to SSL configuration for Tendrl.
 
 ## What needs to be done
 
-* [ ] figure out which components need to use ssl
+* [ ] figure out which components need to use ssl:
+   - tendrl (via httpd)
+   - graphite
+   - grafana
+   - etcd
 * [ ] code changes needed?
 * [ ] how to configure it (initial dev docs)
 * [ ] how to implement default via tendrl-ansible
