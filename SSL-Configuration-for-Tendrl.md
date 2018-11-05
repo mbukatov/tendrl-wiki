@@ -9,8 +9,8 @@ This is overview of pending work related to SSL configuration for Tendrl.
 * [ ] figure out which components need to use ssl:
    - web browser - tendrl (via httpd)
    - web browser - grafana (via httpd)
-   - graphite
-   - etcd
+   - graphite - various tendrl components
+   - etcd - various tendrl components
 * [ ] code changes needed?
 * [ ] how to configure it (initial dev docs)
 * [ ] how to implement default via tendrl-ansible
