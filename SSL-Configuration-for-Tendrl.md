@@ -1,8 +1,11 @@
 This is overview of pending work related to SSL configuration for Tendrl.
 
-## What needs to be secured via SSL
+## What are the use cases?
 
-* etcd (already possible)
+* Secure all user facing interfaces of Tendrl server machine (tendrl, grafana, graphite)
+* Secure all communications within storage cluster (etcd, carbon, ...)
+
+Since Tendrl server machine hosts all Tendrl services listening on some tpc port, we need to secure all of them.
 
 ## What needs to be done
 
@@ -11,7 +14,7 @@ This is overview of pending work related to SSL configuration for Tendrl.
    - web browser - grafana (via httpd)
    - web browser - graphite
    - graphite - various tendrl components
-   - etcd - various tendrl components
+   - etcd - various tendrl components (already partially implemented via tendrl-ansible)
 * [ ] code changes needed?
 * [ ] how to configure it (initial dev docs)
 * [ ] how to implement default via tendrl-ansible
