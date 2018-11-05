@@ -2,10 +2,10 @@ This is overview of pending work related to SSL configuration for Tendrl.
 
 ## What are the use cases?
 
-* Secure all user facing interfaces of Tendrl server machine (tendrl, grafana, graphite)
+* Secure all direct user facing interfaces of Tendrl server machine (tendrl web, grafana)
 * Secure all communications within storage cluster (etcd, carbon, ...)
 
-Since Tendrl server machine hosts all Tendrl services listening on some tpc port, we need to secure all of them.
+Since Tendrl server machine hosts all Tendrl services listening on some tcp port, we need to secure all of them.
 
 ## What needs to be done
 
