@@ -1,0 +1,1 @@
+This is overview of pending work related to SSL configuration for Tendrl.
