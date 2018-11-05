@@ -9,6 +9,7 @@ This is overview of pending work related to SSL configuration for Tendrl.
 * [ ] figure out which components need to use ssl:
    - web browser - tendrl (via httpd)
    - web browser - grafana (via httpd)
+   - web browser - graphite (via httpd)
    - graphite - various tendrl components
    - etcd - various tendrl components
 * [ ] code changes needed?
