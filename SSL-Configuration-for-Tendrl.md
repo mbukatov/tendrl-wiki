@@ -2,25 +2,44 @@ This is overview of pending work related to SSL configuration for Tendrl.
 
 ## What are the use cases?
 
-* Secure all direct user facing interfaces of Tendrl server machine (tendrl web, grafana).
-* Secure all remaining services running on Tendrl server machine (graphite, etcd, ...).
+* Secure all direct user facing interfaces of Tendrl server machine (tendrl web, grafana web).
+* Secure all remaining services running on Tendrl server machine (etcd, carbon, ...).
 * Secure all communication channels within storage cluster (etcd, carbon, ...).
+
+By **secure** we mean both:
+
+* TLS based encryption (aka SSL) of the communication channel
+* authentication of all encrypted channels (there is no point in encrypting communication channel when one can open one for themselves without authentication)
 
 Ports opened on Tendrl server: 2379/tcp 2003/tcp 10080/tcp 9292/tcp 3000/tcp 8789/tcp 80/tcp
 
-Use case 1) Make user facing Tendrl server interfaces (tendrl web and grafana) available on separate network.
+## Recent or Planned features related to SSL Configuration
+
+### Make grafana available via http instead of using dedicated port 3000/tcp
+
+* https://github.com/Tendrl/ui/pull/1074
+* https://github.com/Tendrl/api/pull/447
+* https://github.com/Tendrl/monitoring-integration/pull/578
+* https://github.com/Tendrl/tendrl-ansible/issues/127
 
 ## What needs to be done
 
-* [ ] figure out which components need to use ssl:
-   - web browser - tendrl (via httpd)
-   - web browser - grafana (via httpd)
-   - web browser - graphite
-   - graphite - various tendrl components
-   - etcd - various tendrl components (already partially implemented via tendrl-ansible)
-* [ ] code changes needed?
+* [ ] figure out which components need to use SSL:
+   - web browser -> tendrl (served via httpd)
+   - web browser -> grafana (served via httpd)
+   - web browser -> graphite:
+      - [ ] do we want to have graphite web available?
+      - [ ] if yes, we need to proxy it through httpd as well
+   - various tendrl components -> graphite
+   - various tendrl components -> etcd (TLS client-server based authentication)
+      - [x] already documented
+      - [x] partially implemented via tendrl-ansible (when users generate TLS CA files themselves)
+      - [ ] deployment of default Tendrl CA for TLS client-server based authentication
+* [ ] implement tendrl - grafana authentication
+* [ ] additional code changes may be needed (excluding tendrl-ansible), eg: some hardcoded http urls
 * [ ] how to configure it (initial dev docs)
 * [ ] how to implement default via tendrl-ansible
+* [ ] document when default CA deployment provided by tendrl-ansible is a good idea
 
 ## Previous now deprecated work
 
