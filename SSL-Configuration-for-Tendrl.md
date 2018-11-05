@@ -1,5 +1,16 @@
 This is overview of pending work related to SSL configuration for Tendrl.
 
+## What needs to be secured via SSL
+
+* etcd (already possible)
+
+## What needs to be done
+
+* [ ] figure out which components need to use ssl
+* [ ] code changes needed?
+* [ ] how to configure it (initial dev docs)
+* [ ] how to implement default via tendrl-ansible
+
 ## Previous now deprecated work
 
 Previous guide:
