@@ -2,10 +2,13 @@ This is overview of pending work related to SSL configuration for Tendrl.
 
 ## What are the use cases?
 
-* Secure all direct user facing interfaces of Tendrl server machine (tendrl web, grafana)
-* Secure all communications within storage cluster (etcd, carbon, ...)
+* Secure all direct user facing interfaces of Tendrl server machine (tendrl web, grafana).
+* Secure all remaining services running on Tendrl server machine (graphite, etcd, ...).
+* Secure all communication channels within storage cluster (etcd, carbon, ...).
 
-Since Tendrl server machine hosts all Tendrl services listening on some tcp port, we need to secure all of them.
+Ports opened on Tendrl server: 2379/tcp 2003/tcp 10080/tcp 9292/tcp 3000/tcp 8789/tcp 80/tcp
+
+Use case 1) Make user facing Tendrl server interfaces (tendrl web and grafana) available on separate network.
 
 ## What needs to be done
 
@@ -29,4 +32,3 @@ Previous work done in tendrl-ansible:
 
 * https://github.com/Tendrl/tendrl-ansible/issues/30
 * https://github.com/Tendrl/tendrl-ansible/pull/46
-
