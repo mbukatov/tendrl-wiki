@@ -11,7 +11,15 @@ By **secure** we mean both:
 * TLS based encryption (aka SSL) of the communication channel
 * authentication of all encrypted channels (there is no point in encrypting communication channel when one can open one for themselves without authentication)
 
-Ports opened on Tendrl server: 2379/tcp 2003/tcp 10080/tcp 9292/tcp 3000/tcp 8789/tcp 80/tcp
+Ports opened on Tendrl server:
+
+* 2379/tcp
+* 2003/tcp
+* 10080/tcp
+* 9292/tcp
+* ~3000/tcp~ Grafana dashboard used to be available there
+* 8789/tcp
+* 80/tcp (apache web server, hosting Tendrl web, API and Grafana dashboard)
 
 ## Recent or Planned features related to SSL Configuration
 
