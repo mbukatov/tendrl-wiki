@@ -49,11 +49,15 @@ Ports opened on Tendrl server:
 * [ ] how to implement default via tendrl-ansible
 * [ ] document when default CA deployment provided by tendrl-ansible is a good idea
 
+## Current documentation
+
+https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
+
 ## Previous now deprecated work
 
-Previous guide:
+Previous guide was available on (use history to get to old state):
 
-* https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
+https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server 
 
 Previous work done in tendrl-ansible:
 
