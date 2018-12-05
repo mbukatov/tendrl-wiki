@@ -1,7 +1,7 @@
 ## 1. Etcd SSL configuration:
 
 For enabling SSL for etcd follow 
-[Etcd SSL enabling using tendrl-ansible](https://github.com/GowthamShanmugam/documentation/wiki/Etcd-SSL-configuration-using-tendrl-ansible)
+[Etcd SSL enabling using tendrl-ansible](https://github.com/Tendrl/documentation/wiki/Etcd-SSL-configuration-using-tendrl-ansible)
 
 ## 2. Enabling HTTPS for Tendrl-UI, Tendrl-API and Grafana:
 
