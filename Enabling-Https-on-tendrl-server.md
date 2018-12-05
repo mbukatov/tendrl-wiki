@@ -1,38 +1,42 @@
-## Scope
+Tendrl supports etcd’s TLS-based security model which supports authentication and encryption of traffic between etcd and tendrl components.
 
-This configuration enables two scenarios:
+By default, etcd functions without authentication and encryption but it is recommended to use TLS authentication for client-server encryption.
 
-1. https delivery for both the API and the UI on an IP address on the host.
-2. Automatic redirect for all http requests to https, for both the API and the UI.
+### Prerequisites
+The tendrl-ansible installation does not generate and deploy encryption certificates and keys. To configure etcd TLS client-server authentication, generate and deploy encryption certificates on all the nodes of the cluster before executing tendrl-ansible.
 
-## Pre-requisites:
+Before setting up the Transport Layer Security (TLS ) encryption, ensure the following encryption component is generated:
 
-* `mod_ssl` package installed and the default configurations left unmodified.
-* The default SSL certificate and key paths are used, this certificate would be a self-signed certificate.
+### Private Keys
+Generate a private key and a client certificate for each storage node and the tendrl server. For more information, see [Generating self-signed certificates](https://coreos.com/os/docs/latest/generate-self-signed-certificates.html). On each tendrl managed storage node, and on the tendrl server, place the PEM-encoded private key and the client/CA certificates in a secure place that is only accessible by the tendrl server’s root user.
 
-## Limitations
+### Configuring TLS Encryption
+After generating and placing the TLS certificate files in the preferred directory, update the value of the Ansible variables in the inventory file with the respective file paths of the certificate files.
 
-This configuration file avoids modification to any of the configuration files installed by system packages. As such, this configuration file can only serve the scenarios where the requests are served over a specific IP. If this is undesirable, the `VirtualHost` for `_default_:443` needs to be commented out in `/etc/httpd/conf.d/ssl.conf` (which is installed by the `mod_ssl` package) and the `%ssl_virtualhost_ip%` in both these files needs to be changed to `_default_`.
+In the **inventory file**, add and modify the etcd TLS variables under **[all:vars]**.
 
-Please refer to the [apache wiki](https://wiki.apache.org/httpd/NameBasedSSLVHosts) for more details.
+* **etcd_tls_client_auth**= this variable is to enable or disable TLS authentication.
 
-## Deployment Instructions
+* **etcd_cert_file**= certificate used for SSL/TLS connections to etcd. When this option is turned on, advertise-
+client-urls can use the HTTPS schema.
 
-### https support over a specific IP with no redirect
+* **etcd_key_file**= key for the certificate which must be unencrypted.
 
-copy (NOT move) the `/etc/httpd/conf.d/tendrl-ssl.conf.sample` file without the `.sample` extension. Make the following changes to this file:
+* **etcd_trusted_ca_file**= the trusted Certificate Authority.
 
-* Replace `%ssl_virtualhost_ip%` with the correct IP.
-* Adjust `ServerName`.
+#### Configuring TLS
+1. Open the **inventory file** playbook file under **[all:vars]**.
 
-Thereafter, check if the configuration is valid using `apachectl -t` and reload httpd using `systemctl reload httpd.service`.
+2. Set the value for **etcd_tls_client_auth** variable to **True** for both the Ansible roles: 
+   tendrl_server and gluster_servers. By default, the value of this variable is False.
 
-### Automatic redirect of all http urls to https
+3. Edit the file path for the **etcd_cert_file** variable as per required. The default value is: 
+   /etc/pki/tls/certs/etcd.crt
 
-After following the steps to enable https, as listed above, update the `/etc/httpd/conf.d/tendrl.conf` file  as follows:
+4. Edit the file path for **etcd_key_file** variable as per required. The default value is: 
+   /etc/pki/tls/private/etcd.key
 
-* Replace `%ssl_virtualhost_ip%` with the IP used in the SSL configuration file.
-* Un-comment the line which has the `Redirect` rule.
-* Comment out the lines which have the `DocumentRoot`, `ProxyPass` and `ProxyPassReverse` directives.
+5. Edit the file path for the **etcd_trusted_ca_file** variable. The default value is: 
+   /etc/pki/tls/certs/ca-etcd.crt
 
-Thereafter, check if the configuration is valid using `apachectl -t` and reload httpd using `systemctl reload httpd.service`.
+6. Continue the tendrl installation process by following the [Tendrl Installation](https://github.com/Tendrl/tendrl-ansible)
