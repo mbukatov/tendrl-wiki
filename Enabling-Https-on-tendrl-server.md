@@ -29,6 +29,8 @@ copy (NOT move) the `/etc/httpd/conf.d/tendrl-ssl.conf.sample` file without the 
 
 * Replace `%ssl_virtualhost_ip%` with the correct IP.
 * Adjust `ServerName`.
+* Edit the file path for the `SSLCertificateFile` variable as per required. The default value is: `/etc/pki/tls/certs/localhost.crt`
+* Edit the file path for the `SSLCertificateKeyFile` variable as per required. The default value is: `/etc/pki/tls/private/localhost.key`
 
 Thereafter, check if the configuration is valid using `apachectl -t` and reload httpd using `systemctl reload httpd.service`.
 
