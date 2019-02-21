@@ -53,11 +53,18 @@ List of items to consider:
 
 ## Minimal SSL support
 
-Idea: 
+Idea here is to document how to setup SSL for HTTP in a minimal way, without resolving all items as listed in *What needs to be done* section. Such SSL support is incomplete.
 
-## Current documentation
+Overview of this ssl minimal solution:
 
-https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
+* Tendrl web, API and Grafana dashboard, which are provided by apache server, will be secured with SSL by reconfiguration of apache.
+* Tendrl contains sample configuration files for apache to simplify the SSL setup.
+* Setup of ssl is described in documentation wikipage [Enabling Https on tendrl server](https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server)
+* Setup of ssl configuration for Tendrl web, API and Grafana dashboard is not part of tendrl-ansible.
+* Nothing else will be secured or restricted compared to current setup.
+* Resolve all issues in Tendrl itself which prevents this minimal ssl use case to work properly (either by breaking ssl somehow or introcuding regressions in tendrl functionality).
+
+This is drafted in current documentation: [Enabling Https on tendrl server](https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server)
 
 ## Previous (now deprecated) work
 
