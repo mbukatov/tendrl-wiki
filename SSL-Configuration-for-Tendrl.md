@@ -36,8 +36,8 @@ Ports opened on Tendrl server:
    - web browser -> tendrl (served via httpd)
    - web browser -> grafana (served via httpd)
    - web browser -> graphite:
-      - [ ] do we want to have graphite web available?
-      - [ ] if yes, we need to proxy it through httpd as well
+      - [x] Do we want to have graphite web available? The answer is no (the port has been recently disabled).
+      - [x] ~If yes, we need to proxy it through httpd as well.~ Not applicable (see above).
    - various tendrl components -> graphite
    - various tendrl components -> etcd (TLS client-server based authentication)
       - [x] already documented
