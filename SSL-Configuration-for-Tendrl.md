@@ -32,6 +32,8 @@ Ports opened on Tendrl server:
 
 ## What needs to be done
 
+List of items to consider:
+
 * [ ] figure out which components need to use SSL:
    - web browser -> tendrl (served via httpd)
    - web browser -> grafana (served via httpd)
@@ -49,17 +51,19 @@ Ports opened on Tendrl server:
 * [ ] how to implement default via tendrl-ansible
 * [ ] document when default CA deployment provided by tendrl-ansible is a good idea
 
+## Minimal SSL support
+
+Idea: 
+
 ## Current documentation
 
 https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server
 
-## Previous now deprecated work
+## Previous (now deprecated) work
 
-Previous guide was available on (use history to get to old state):
+Original plan was to have ssl supported and included in tendrl-ansible as an option, but this haven't been done because of several issues with the design. See *What needs to be done* section above or issues and pull requests linked below:
 
-https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server 
-
-Previous work done in tendrl-ansible:
-
-* https://github.com/Tendrl/tendrl-ansible/issues/30
-* https://github.com/Tendrl/tendrl-ansible/pull/46
+* [Original idea described in the documentation wikipage *Enabling Https on tendrl server*](https://github.com/Tendrl/documentation/wiki/Enabling-Https-on-tendrl-server/ec23602bf63a744c307bfcb336b46b9ae31384a0)
+* Previous work done in tendrl-ansible:
+    * https://github.com/Tendrl/tendrl-ansible/issues/30
+    * https://github.com/Tendrl/tendrl-ansible/pull/46
