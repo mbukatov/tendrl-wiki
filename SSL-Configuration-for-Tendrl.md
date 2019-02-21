@@ -15,9 +15,9 @@ Ports opened on Tendrl server:
 
 * 2379/tcp etcd (could be encrypted and authenticated via ssl, which is documented)
 * 2003/tcp carbon
-* 10080/tcp graphite
-* 9292/tcp puma (tendrl-api)
-* ~3000/tcp~ Grafana dashboard used to be available there
+* ~10080/tcp~ graphite is no longer available via this port from the outside
+* ~9292/tcp~ puma (tendrl-api) is now available via httpd: `http(s)://hostname/api/1.0/`
+* ~3000/tcp~ Grafana dashboard is now available via httpd: `http(s)://hostname/grafana/`
 * 8789/tcp webhook receiver
 * 80/tcp (apache web server, hosting Tendrl web, API and Grafana dashboard)
 
