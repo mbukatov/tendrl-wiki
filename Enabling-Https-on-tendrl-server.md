@@ -1,45 +1,111 @@
-## 1. Etcd SSL configuration:
+# Enabling HTTPS for Tendrl-UI, Tendrl-API and Grafana
 
-For enabling SSL for etcd follow 
-[Etcd SSL enabling using tendrl-ansible](https://github.com/Tendrl/documentation/wiki/Etcd-SSL-configuration-using-tendrl-ansible)
+This wikipage describes how to set up SSL access for Tendrl Web UI, Tendrl REST
+API and Grafana based dashboard.
 
-## 2. Enabling HTTPS for Tendrl-UI, Tendrl-API and Grafana:
+## Overview of the solution
 
-### Scope
-This is achieved through apache redirection configuration and this configuration enables two scenarios:
-  - HTTPS delivery for the tendrl-API, tendrl-UI, and grafana on an IP address on the host.
-  - Automatic redirect for all HTTP requests to HTTPS, for tendrl-API,  tendrl-UI, and grafana.
+* Tendrl Web, API and Grafana dashboard, which are provided by apache server,
+  will be secured with SSL by reconfiguration of apache.
+* Access to unencrypted http port is redirected to encrypted https port.
+* Tendrl contains sample configuration files for apache to simplify the SSL
+  setup.
+* Nothing else is secured or restricted compared to default setup without
+  HTTPS enabled.
 
 ## Pre-requisites:
 
-* `mod_ssl` package installed and the default configurations left unmodified.
-* The default SSL certificate and key paths are used, this certificate would be a self-signed certificate.
+* Package `mod_ssl` is installed and the default configuration
+  in `/etc/httpd/conf.d/ssl.conf` is left unmodified.
 
-## Limitations
+* SSL key and certificate files are deployed on the Tendrl server.
+  For testing purposes, one can use local self signed key and certificate
+  pair created during installation of `mod_ssl` package (file paths for this
+  option are used as a default in tendrl ssl sample config file).
 
-This configuration file avoids modification to any of the configuration files installed by system packages. As such, this configuration file can only serve the scenarios where the requests are served over a specific IP. If this is undesirable, the `VirtualHost` for `_default_:443` needs to be commented out in `/etc/httpd/conf.d/ssl.conf` (which is installed by the `mod_ssl` package) and the `%ssl_virtualhost_ip%` in both these files needs to be changed to `_default_`.
+## Known Limitations
 
-Please refer to the [apache wiki](https://wiki.apache.org/httpd/NameBasedSSLVHosts) for more details.
+* Access to Grafana dashboard is not authenticated, so that anyone who can
+  access Tendrl web login page can also access and read all panels in Tendrl
+  dashboard without any password (and learn about cluster structure, current
+  workload and historic trends). This is happening because Tendrl uses
+  anonymous access to Grafana main dashboard.
+
+* Tendrl server is listening on few other ports, which are not secured and
+  which are needed for internal communication (eg. to receive gluster hooks or
+  metrics data from storage machines). The only other component of Tendrl stack
+  which can be protected via SSL is Etcd, as described in wikipage
+  [Etcd SSL enabling using tendrl-ansible](https://github.com/Tendrl/documentation/wiki/Etcd-SSL-configuration-using-tendrl-ansible).
+
+* This configuration file avoids modification to any of the configuration files
+  installed by system packages. As such, this configuration file can only serve
+  the scenarios where the requests are served over a specific ip address. If
+  this is undesirable, the `VirtualHost` for `_default_:443` needs to be
+  commented out in `/etc/httpd/conf.d/ssl.conf` (which is installed by the
+  `mod_ssl` package) and the `%ssl_virtualhost_ip%` in both these files needs
+  to be changed to `_default_`.
+  Please refer to the [apache
+  wiki](https://wiki.apache.org/httpd/NameBasedSSLVHosts) for more details.
+  TODO: this needs to be updated wrt recent fixes (prefix, ip/hostname change)
 
 ## Deployment Instructions
 
-### https support over a specific IP with no redirect
+On a machine where Tendrl server is installed, perform the following steps:
 
-copy (NOT move) the `/etc/httpd/conf.d/tendrl-ssl.conf.sample` file without the `.sample` extension. Make the following changes to this file:
+#. Make sure `mod_ssl` rpm package is installed and
+   `/etc/httpd/conf.d/ssl.conf` file is not modified:
 
-* Replace `%ssl_virtualhost_ip%` with the correct IP.
-* Adjust `ServerName`.
-* Edit the file path for the `SSLCertificateFile` variable as per required. The default value is: `/etc/pki/tls/certs/localhost.crt`
-* Edit the file path for the `SSLCertificateKeyFile` variable as per required. The default value is: `/etc/pki/tls/private/localhost.key`
+   ```
+   # rpm -V mod_ssl
+   #
+   ```
 
-Thereafter, check if the configuration is valid using `apachectl -t` and reload httpd using `systemctl reload httpd.service`.
+#. Create new `tendrl-ssl.conf` file using the sample configuration file:
 
-### Automatic redirect of all http urls to https
+   ```
+   # cp /etc/httpd/conf.d/tendrl-ssl.conf.sample /etc/httpd/conf.d/tendrl-ssl.conf
+   ```
 
-After following the steps to enable https, as listed above, update the `/etc/httpd/conf.d/tendrl.conf` file  as follows:
+   TODO: use correct prefix
 
-* Replace `%ssl_virtualhost_ip%` with the IP used in the SSL configuration file.
-* Un-comment the line which has the `Redirect` rule.
-* Comment out the lines which have the `DocumentRoot`, `ProxyPass` and `ProxyPassReverse` directives.
+#. Make the following changes to the `tendrl-ssl.conf` file:
 
-Thereafter, check if the configuration is valid using `apachectl -t` and reload httpd using `systemctl reload httpd.service`.
+	* Replace `%ssl_virtualhost_ip%` with ip address of Tendrl server.
+	* Set `ServerName` to hostname (fqdn) of Tendrl server.
+	* Edit the file path for the `SSLCertificateFile` variable if you want to
+      use your own certificate instead of
+	  default self-signed `/etc/pki/tls/certs/localhost.crt` generated by
+      `mod_ssl`.
+	* Edit the file path for the `SSLCertificateKeyFile` variable if you have
+      changed cert file in the previous step.
+	  The default value points to `/etc/pki/tls/private/localhost.key` file
+      generated by `mod_ssl`.
+
+#. Make the following changes to the `tendrl.conf` file (this is necessary for
+   http redirection to work):
+
+	* Replace `%ssl_virtualhost_ip%` with hostname (fqdn) of Tendrl server.
+      TODO: [issue #460](https://github.com/Tendrl/api/issues/460)
+	* Un-comment the line which has the `Redirect` rule (this line has been
+      edited in the previous step).
+	* Comment out the lines which have the `DocumentRoot`, `ProxyPass` and
+	  `ProxyPassReverse` directives.
+
+#. Thereafter, check if the configuration is valid using `apachectl -t` and
+reload httpd using `systemctl reload httpd.service`.
+
+#. Make sure https port is open:
+
+   ```
+   # firewall-cmd --add-service=https
+   # firewall-cmd --add-service=https --permanent
+   ```
+
+See [Firewall Configuration]() section for more details.
+
+Note: If you have a web browser open with Tendrl web during this procedure and
+you use default self signed SSL certificates, your browser won't be able to
+display Tendrl web correctly and you will need to TODO reload/restart it to
+be able to access Tendrl web. In normal cases when you use custom certificate
+signed with CA which is already trusted by your browser, the transition is
+smooth, without any distruptions.
