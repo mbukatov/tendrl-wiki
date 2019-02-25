@@ -86,7 +86,8 @@ reload httpd using `systemctl reload httpd.service`.
    # firewall-cmd --add-service=https --permanent
    ```
 
-See [Firewall Configuration]() section for more details.
+   See [Firewall Configuration]() section for more details (especially if you
+   are using iptables or firewalld zones).
 
 Note: If you have a web browser open with Tendrl web during this procedure and
 you use default self signed SSL certificates, your browser won't be able to
