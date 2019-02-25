@@ -89,9 +89,6 @@ reload httpd using `systemctl reload httpd.service`.
    See [Firewall Configuration]() section for more details (especially if you
    are using iptables or firewalld zones).
 
-Note: If you have a web browser open with Tendrl web during this procedure and
-you use default self signed SSL certificates, your browser won't be able to
-display Tendrl web correctly and you will need to TODO reload/restart it to
-be able to access Tendrl web. In normal cases when you use custom certificate
-signed with CA which is already trusted by your browser, the transition is
-smooth, without any distruptions.
+If you have a web browser open with Tendrl web or Grafana dashboard during this
+procedure, you will need to reload the page. This step is important especially
+if you use self signed SSL certificates.
