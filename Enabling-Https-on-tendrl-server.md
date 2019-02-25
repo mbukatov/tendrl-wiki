@@ -60,15 +60,13 @@ On a machine where Tendrl server is installed, perform the following steps:
    #
    ```
 
-1. Create new `tendrl-ssl.conf` file using the sample configuration file:
+1. Create new `00_tendrl-ssl.conf` file using the sample configuration file:
 
    ```
-   # cp /etc/httpd/conf.d/tendrl-ssl.conf.sample /etc/httpd/conf.d/tendrl-ssl.conf
+   # cp /etc/httpd/conf.d/00_tendrl-ssl.conf.sample /etc/httpd/conf.d/00_tendrl-ssl.conf
    ```
 
-   TODO: use correct prefix
-
-1. Make the following changes to the `tendrl-ssl.conf` file:
+1. Make the following changes to the `00_tendrl-ssl.conf` file:
 
     * Replace `%ssl_virtualhost_ip%` with ip address of Tendrl server.
     * Set `ServerName` to hostname (fqdn) of Tendrl server.
