@@ -84,10 +84,9 @@ On a machine where Tendrl server is installed, perform the following steps:
 1. Make the following changes to the `tendrl.conf` file (this is necessary for
    http redirection to work):
 
-	* Replace `%ssl_virtualhost_ip%` with hostname (fqdn) of Tendrl server.
-      TODO: [issue #460](https://github.com/Tendrl/api/issues/460)
-	* Un-comment the line which has the `Redirect` rule (this line has been
-      edited in the previous step).
+    * Un-comment the line which has the `Redirect` rule and replace
+      `%ssl_virtualhost_fqdn%` with fully qualified domain name of Tendrl
+      server.
 	* Comment out the lines which have the `DocumentRoot`, `ProxyPass` and
 	  `ProxyPassReverse` directives.
 
