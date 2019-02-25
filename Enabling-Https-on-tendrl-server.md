@@ -37,17 +37,6 @@ API and Grafana based dashboard.
   which can be protected via SSL is Etcd, as described in wikipage
   [Etcd SSL enabling using tendrl-ansible](https://github.com/Tendrl/documentation/wiki/Etcd-SSL-configuration-using-tendrl-ansible).
 
-* This configuration file avoids modification to any of the configuration files
-  installed by system packages. As such, this configuration file can only serve
-  the scenarios where the requests are served over a specific ip address. If
-  this is undesirable, the `VirtualHost` for `_default_:443` needs to be
-  commented out in `/etc/httpd/conf.d/ssl.conf` (which is installed by the
-  `mod_ssl` package) and the `%ssl_virtualhost_ip%` in both these files needs
-  to be changed to `_default_`.
-  Please refer to the [apache
-  wiki](https://wiki.apache.org/httpd/NameBasedSSLVHosts) for more details.
-  TODO: this needs to be updated wrt recent fixes (prefix, ip/hostname change)
-
 ## Deployment Instructions
 
 On a machine where Tendrl server is installed, perform the following steps:
@@ -68,7 +57,6 @@ On a machine where Tendrl server is installed, perform the following steps:
 
 1. Make the following changes to the `00_tendrl-ssl.conf` file:
 
-    * Replace `%ssl_virtualhost_ip%` with ip address of Tendrl server.
     * Set `ServerName` to hostname (fqdn) of Tendrl server.
     * Edit the file path for the `SSLCertificateFile` variable if you want to
       use your own certificate instead of
